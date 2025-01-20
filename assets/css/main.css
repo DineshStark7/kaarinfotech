@@ -1051,6 +1051,10 @@ section,
   padding: 30px;
 }
 
+.stats .stats-item:hover {
+  box-shadow: 0 0 30px 5px #2d72ba, 0 0 3px 3px #2d72ba; /* Neon glow effect */
+  transform: scale(1); /* Slightly enlarges the item on hover */
+}
 .stats .stats-item i {
   color: var(--accent-color);
   font-size: 42px;
@@ -1775,11 +1779,11 @@ section,
 --------------------------------------------------------------*/
 .clients .swiper-slide img {
   transition: 0.3s;
-  opacity: 0.5;
+  opacity: 1;
 }
 
 .clients .swiper-slide img:hover {
-  opacity: 1;
+  opacity: 1.5;
 }
 
 .clients .swiper-wrapper {
