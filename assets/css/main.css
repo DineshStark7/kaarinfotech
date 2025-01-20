@@ -1806,6 +1806,11 @@ section,
   background-color: var(--accent-color);
 }
 
+.client-logo {
+  width: auto;
+  height: 60px;
+}
+
 /*--------------------------------------------------------------
 # Recent Posts Section
 --------------------------------------------------------------*/
