@@ -40,7 +40,7 @@
     <link href="assets/css/careers.css" rel="stylesheet" />
   </head>
   <body>
-    <header id="header" class="header d-flex align-items-center">
+    <header id="header" class="header d-flex align-items-center fixed-top">
       <div
         class="container-fluid container-xl position-relative d-flex align-items-center"
       >
@@ -64,6 +64,14 @@
         </nav>
       </div>
     </header>
+    <div class="search-container">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search for jobs..."
+        class="search-bar"
+      />
+    </div>
     <div class="container">
       <div class="job-posting">
         <div class="job-title">Principal Software Engineer</div>
@@ -118,7 +126,7 @@
         </div>
       </div>
       <div class="job-posting">
-        <div class="job-title">Principal Software Engineer</div>
+        <div class="job-title">Frontend Developer</div>
         <div class="job-details">
           <h4>Responsibilities:</h4>
           <ul>
@@ -170,7 +178,7 @@
         </div>
       </div>
       <div class="job-posting">
-        <div class="job-title">Principal Software Engineer</div>
+        <div class="job-title">Backend Developer</div>
         <div class="job-details">
           <h4>Responsibilities:</h4>
           <ul>
@@ -222,7 +230,7 @@
         </div>
       </div>
       <div class="job-posting">
-        <div class="job-title">Principal Software Engineer</div>
+        <div class="job-title">Full Stack Developer</div>
         <div class="job-details">
           <h4>Responsibilities:</h4>
           <ul>
@@ -310,6 +318,24 @@
         if (event.target === modal) {
           modal.style.display = "none";
         }
+      });
+
+      const searchInput = document.getElementById("searchInput");
+      const jobContainer = document.getElementById("jobContainer");
+      const jobPostings = document.querySelectorAll(".job-posting");
+
+      searchInput.addEventListener("input", () => {
+        const query = searchInput.value.toLowerCase();
+        jobPostings.forEach((posting) => {
+          const title = posting
+            .querySelector(".job-title")
+            .textContent.toLowerCase();
+          if (title.includes(query)) {
+            posting.style.display = "block";
+          } else {
+            posting.style.display = "none";
+          }
+        });
       });
     </script>
   </body>
