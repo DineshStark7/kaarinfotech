@@ -3,7 +3,7 @@
   --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Nunito", sans-serif;
+  --heading-font: "Segoe UI";
   --nav-font: "Poppins", sans-serif;
 }
 
@@ -1618,6 +1618,12 @@ h6 {
 /*--------------------------------------------------------------
 # Clients Section
 --------------------------------------------------------------*/
+.clients-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
 .clients .swiper-slide img {
   transition: 0.3s;
   opacity: 1;
