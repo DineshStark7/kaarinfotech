@@ -1,4 +1,4 @@
-const OPENROUTER_API_KEY =
+/*const OPENROUTER_API_KEY =
   "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"; // 🔥 Replace with your key
 
 // Toggle Chatbot Visibility
@@ -81,3 +81,42 @@ document
       sendMessage();
     }
   });
+*/
+async function sendMessage() {
+  const userInput = document.getElementById("user-message");
+  const chatBody = document.getElementById("chatbot-body");
+
+  if (userInput.value.trim() === "") return;
+
+  let userMessage = document.createElement("div");
+  userMessage.className = "user-message";
+  userMessage.textContent = userInput.value;
+  chatBody.appendChild(userMessage);
+
+  try {
+    // 🔥 Use your Vercel API URL
+    const response = await fetch(
+      "https://kaarinfotech-ebhu88pkk-dineshstark7.vercel.app/api/chatbot",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message: userInput.value }),
+      }
+    );
+
+    if (!response.ok) {
+      throw new Error(`HTTP Error! Status: ${response.status}`);
+    }
+
+    const data = await response.json();
+    let botMessage = document.createElement("div");
+    botMessage.className = "bot-message";
+    botMessage.textContent = data.response;
+    chatBody.appendChild(botMessage);
+
+    userInput.value = "";
+  } catch (error) {
+    console.error("API Call Error:", error);
+    alert("Error: Unable to get response. Check API key and console.");
+  }
+}
