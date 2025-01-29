@@ -1040,6 +1040,12 @@ h6 {
 .stats-counter {
   display: flex;
   flex-direction: row;
+  align-items: center;
+}
+
+.experience-text {
+  font-size: 30px;
+  margin-right: 10px;
 }
 
 /*--------------------------------------------------------------
@@ -1128,7 +1134,6 @@ h6 {
 }
 
 .success-story-btn:hover {
-  background: #0056b3;
   color: #ffffff;
   transform: translateY(-3px);
 }
