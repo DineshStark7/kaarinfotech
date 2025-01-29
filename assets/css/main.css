@@ -144,7 +144,8 @@ h6 {
   width: 100%;
   z-index: 999; /* Ensure it's above other content */
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  overflow: hidden; /* Prevent pseudo-element from overflowing */
+  overflow: visible;
+  background-color: white;
 }
 
 .scrolled .header::before {
@@ -227,6 +228,7 @@ h6 {
   .dropdown {
     position: relative;
     display: inline-block;
+    z-index: 9999;
   }
 
   /* Style the button to be clickable */
@@ -239,14 +241,17 @@ h6 {
     cursor: pointer;
   }
 
-  /* Dropdown content (hidden by default) */
+  /* Dropdown content */
   .dropdown-content {
     display: none;
     position: absolute;
+    top: 100%; /* Ensure it appears below the button */
+    left: 0;
     background-color: #f9f9f9;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
+    z-index: 9999; /* Ensure it stays on top */
+    overflow: visible;
   }
 
   /* Links inside the dropdown */
@@ -262,9 +267,21 @@ h6 {
     background-color: #ddd;
   }
 
-  /* Show the dropdown content when hovering over the dropdown */
+  /* Show the dropdown when hovering over the dropdown */
   .dropdown:hover .dropdown-content {
     display: block;
+  }
+
+  /* Fix dropdown visibility issue */
+  .navmenu {
+    position: relative; /* Ensures the nav is positioned correctly */
+    z-index: 10000; /* Ensure it appears above other sections */
+  }
+
+  /* Ensure dropdown doesn't get cut off in any section */
+  .navmenu .dropdown-content {
+    position: absolute; /* Prevents clipping */
+    z-index: 10000;
   }
 }
 
@@ -1074,7 +1091,7 @@ h6 {
 }
 
 .success-story-card:hover .success-story-image {
-  transform: scale(1.1);
+  transform: scale(1);
 }
 
 /* Content Section */
@@ -1100,7 +1117,7 @@ h6 {
 /* Call-to-Action Button */
 .success-story-btn {
   display: inline-block;
-  background: #007bff;
+  background: #2d72ba;
   color: #fff;
   padding: 10px 20px;
   text-decoration: none;
@@ -2755,4 +2772,7 @@ h6 {
   padding-left: 5px;
   color: color-mix(in srgb, var(--default-color), transparent 60%);
   font-size: 14px;
+}
+a {
+  text-decoration: none !important;
 }
