@@ -82,6 +82,18 @@ document
     }
   });
 */
+
+function toggleChat() {
+  const chatbot = document.getElementById("chatbot-modal");
+  chatbot.style.display = chatbot.style.display === "flex" ? "none" : "flex";
+}
+
+// Function to Auto-Scroll Chat to Bottom
+function scrollToBottom() {
+  const chatBody = document.getElementById("chatbot-body");
+  chatBody.scrollTop = chatBody.scrollHeight;
+}
+
 async function sendMessage() {
   const userInput = document.getElementById("user-message");
   const chatBody = document.getElementById("chatbot-body");
@@ -91,7 +103,11 @@ async function sendMessage() {
   let userMessage = document.createElement("div");
   userMessage.className = "user-message";
   userMessage.textContent = userInput.value;
+  userInputValue = userInput.value;
+  userInput.value = "";
   chatBody.appendChild(userMessage);
+
+  scrollToBottom();
 
   try {
     // 🔥 Use your Vercel API URL
@@ -100,7 +116,7 @@ async function sendMessage() {
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ message: userInput.value }),
+        body: JSON.stringify({ message: userInputValue }),
       }
     );
 
@@ -120,3 +136,11 @@ async function sendMessage() {
     alert("Error: Unable to get response. Check API key and console.");
   }
 }
+document
+  .getElementById("user-message")
+  .addEventListener("keypress", function (event) {
+    if (event.key === "Enter") {
+      event.preventDefault(); // Prevent default form submission
+      sendMessage();
+    }
+  });
