@@ -140,13 +140,23 @@ h6 {
 }
 
 .scrolled .header {
+  position: fixed;
+  width: 100%;
+  z-index: 999; /* Ensure it's above other content */
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  color: var(--default-color);
-  background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
-  backdrop-filter: blur(10px); /* Frosted glass effect */
-  -webkit-backdrop-filter: blur(10px); /* For Safari support */
-  padding: 20px 0;
-  z-index: 997;
+  overflow: hidden; /* Prevent pseudo-element from overflowing */
+}
+
+.scrolled .header::before {
+  content: ""; /* Necessary for pseudo-element */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.6); /* Semi-transparent white */
+  filter: blur(10px); /* Apply blur */
+  z-index: -1; /* Place it behind the content */
 }
 
 /* Index Page Header
@@ -213,61 +223,48 @@ h6 {
   .navmenu .active:focus {
     color: var(--nav-hover-color);
   }
+  /* Style the dropdown container */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
 
-  .navmenu .dropdown ul {
-    margin: 0;
-    padding: 10px 0;
-    background: var(--nav-dropdown-background-color);
-    display: block;
+  /* Style the button to be clickable */
+  .dropbtn {
+    background-color: transparent;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+
+  /* Dropdown content (hidden by default) */
+  .dropdown-content {
+    display: none;
     position: absolute;
-    visibility: hidden;
-    left: 14px;
-    top: 130%;
-    opacity: 0;
-    transition: 0.3s;
-    border-radius: 4px;
-    z-index: 99;
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
   }
 
-  .navmenu .dropdown ul li {
-    min-width: 200px;
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
   }
 
-  .navmenu .dropdown ul a {
-    padding: 10px 20px;
-    font-size: 15px;
-    text-transform: none;
-    color: var(--nav-dropdown-color);
+  /* Change color when hovering over a link */
+  .dropdown-content a:hover {
+    background-color: #ddd;
   }
 
-  .navmenu .dropdown ul a i {
-    font-size: 12px;
-  }
-
-  .navmenu .dropdown ul a:hover,
-  .navmenu .dropdown ul .active:hover,
-  .navmenu .dropdown ul li:hover > a {
-    color: var(--nav-dropdown-hover-color);
-  }
-
-  .navmenu .dropdown:hover > ul {
-    opacity: 1;
-    top: 100%;
-    visibility: visible;
-  }
-
-  .navmenu .dropdown .dropdown ul {
-    top: 0;
-    left: -90%;
-    visibility: hidden;
-  }
-
-  .navmenu .dropdown .dropdown:hover > ul {
-    opacity: 1;
-    top: 0;
-    left: -100%;
-    visibility: visible;
+  /* Show the dropdown content when hovering over the dropdown */
+  .dropdown:hover .dropdown-content {
+    display: block;
   }
 }
 
@@ -1021,6 +1018,114 @@ h6 {
   margin: 0;
   font-family: var(--heading-font);
   font-size: 16px;
+}
+
+.stats-counter {
+  display: flex;
+  flex-direction: row;
+}
+
+/*--------------------------------------------------------------
+# Success Stories Section
+--------------------------------------------------------------*/
+
+/* Title and Intro */
+.success-stories-container {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+/* Success Story Card */
+.success-story-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  z-index: 2;
+}
+
+.success-story-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Image Section */
+.success-story-image-wrapper {
+  flex: 1;
+  min-width: 300px;
+  overflow: hidden;
+}
+
+.success-story-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1);
+  transition: transform 0.5s ease;
+}
+
+.success-story-card:hover .success-story-image {
+  transform: scale(1.1);
+}
+
+/* Content Section */
+.success-story-content {
+  flex: 1;
+  padding: 30px;
+}
+
+.success-story-title {
+  color: var(--accent-color);
+  font-family: var(--default-font);
+  margin-bottom: 15px;
+  animation: fadeInUp 1.4s ease-in-out;
+}
+
+.success-story-description {
+  font-size: 1rem;
+  color: var(--default-color);
+  margin-bottom: 20px;
+  font-style: italic;
+  animation: fadeInUp 1.6s ease-in-out;
+}
+/* Call-to-Action Button */
+.success-story-btn {
+  display: inline-block;
+  background: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.3s ease;
+  animation: fadeInUp 1.8s ease-in-out;
+}
+
+.success-story-btn:hover {
+  background: #0056b3;
+  color: #ffffff;
+  transform: translateY(-3px);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /*--------------------------------------------------------------

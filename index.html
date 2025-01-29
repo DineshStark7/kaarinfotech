@@ -37,6 +37,14 @@
 
     <!-- Main CSS File -->
     <link href="assets/css/main.css" rel="stylesheet" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap JS -->
   </head>
 
   <body class="index-page">
@@ -54,7 +62,14 @@
               <a href="#hero" class="active">Home<br /></a>
             </li>
             <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
+            <li class="dropdown">
+              <a href="#services" class="dropbtn">Services</a>
+              <div class="dropdown-content">
+                <a href="#service1">Service 1</a>
+                <a href="#service2">Service 2</a>
+                <a href="#service3">Service 3</a>
+              </div>
+            </li>
             <li><a href="#portfolio">Portfolio</a></li>
             <li><a href="#team">Team</a></li>
             <li><a href="careers-page-v2.html" target="_blank">Careers</a></li>
@@ -218,82 +233,148 @@
       <section id="stats" class="stats section">
         <div class="container" data-aos="fade-up" data-aos-delay="100">
           <div class="row gy-4">
-            <div class="col-lg-3 col-md-6">
+            <!-- End Stats Item -->
+            <div class="col-lg-4 col-md-6">
               <div class="stats-item d-flex align-items-center w-100 h-100">
-                <i class="bi bi-emoji-smile color-blue flex-shrink-0"></i>
+                <i class="bi bi-person-check color-blue flex-shrink-0"></i>
                 <div>
-                  <span
-                    data-purecounter-start="0"
-                    data-purecounter-end="232"
-                    data-purecounter-duration="1"
-                    class="purecounter"
-                  ></span>
-                  <p>Happy Clients</p>
+                  <div class="stats-counter">
+                    <span
+                      data-purecounter-start="0"
+                      data-purecounter-end="25"
+                      data-purecounter-duration="1"
+                      class="purecounter"
+                    ></span
+                    ><span>+</span>
+                  </div>
+                  <p>Success Stories</p>
                 </div>
               </div>
             </div>
-            <!-- End Stats Item -->
 
-            <div class="col-lg-3 col-md-6">
+            <div class="col-lg-4 col-md-6">
               <div class="stats-item d-flex align-items-center w-100 h-100">
-                <i
-                  class="bi bi-journal-richtext color-orange flex-shrink-0"
-                  style="color: #ee6c20"
-                ></i>
+                <i class="bi bi-clock color-blue flex-shrink-0"></i>
                 <div>
-                  <span
-                    data-purecounter-start="0"
-                    data-purecounter-end="521"
-                    data-purecounter-duration="1"
-                    class="purecounter"
-                  ></span>
-                  <p>Projects</p>
+                  <div class="stats-counter">
+                    <span
+                      data-purecounter-start="0"
+                      data-purecounter-end="6"
+                      data-purecounter-duration="1"
+                      class="purecounter"
+                    ></span
+                    ><span>+</span>
+                  </div>
+                  <p>Years of Experience</p>
                 </div>
               </div>
             </div>
-            <!-- End Stats Item -->
 
-            <div class="col-lg-3 col-md-6">
+            <div class="col-lg-4 col-md-6">
               <div class="stats-item d-flex align-items-center w-100 h-100">
-                <i
-                  class="bi bi-headset color-green flex-shrink-0"
-                  style="color: #15be56"
-                ></i>
+                <i class="bi bi-person-lines-fill color-blue flex-shrink-0"></i>
                 <div>
-                  <span
-                    data-purecounter-start="0"
-                    data-purecounter-end="1463"
-                    data-purecounter-duration="1"
-                    class="purecounter"
-                  ></span>
-                  <p>Hours Of Support</p>
+                  <div class="stats-counter">
+                    <span
+                      data-purecounter-start="0"
+                      data-purecounter-end="130"
+                      data-purecounter-duration="1"
+                      class="purecounter"
+                    ></span
+                    ><span>+</span>
+                  </div>
+                  <p>Head Count</p>
                 </div>
               </div>
             </div>
-            <!-- End Stats Item -->
 
-            <div class="col-lg-3 col-md-6">
+            <div class="col-lg-4 col-md-6">
               <div class="stats-item d-flex align-items-center w-100 h-100">
-                <i
-                  class="bi bi-people color-pink flex-shrink-0"
-                  style="color: #bb0852"
-                ></i>
+                <i class="bi bi-flag color-blue flex-shrink-0"></i>
                 <div>
-                  <span
-                    data-purecounter-start="0"
-                    data-purecounter-end="15"
-                    data-purecounter-duration="1"
-                    class="purecounter"
-                  ></span>
-                  <p>Hard Workers</p>
+                  <div class="stats-counter">
+                    <span
+                      data-purecounter-start="0"
+                      data-purecounter-end="30"
+                      data-purecounter-duration="1"
+                      class="purecounter"
+                    ></span
+                    ><span>+</span>
+                  </div>
+                  <p>Flagship Events Supported</p>
                 </div>
               </div>
             </div>
-            <!-- End Stats Item -->
+
+            <div class="col-lg-4 col-md-6">
+              <div class="stats-item d-flex align-items-center w-100 h-100">
+                <i class="bi bi-box color-blue flex-shrink-0"></i>
+                <div>
+                  <div class="stats-counter">
+                    <span
+                      data-purecounter-start="0"
+                      data-purecounter-end="5"
+                      data-purecounter-duration="1"
+                      class="purecounter"
+                    ></span
+                    ><span>+</span>
+                  </div>
+                  <p>Products Developed</p>
+                </div>
+              </div>
+            </div>
+
+            <!--end of stat item-->
           </div>
         </div>
       </section>
       <!-- /Stats Section -->
+
+      <!--Our success stories section-->
+      <section id="success-stories">
+        <div class="success-stories-container">
+          <!-- Title and Intro -->
+
+          <div class="container section-title" data-aos="fade-up">
+            <h2>Our Success Stories</h2>
+            <p>Check out the success stories of Our clients<br /></p>
+          </div>
+
+          <!-- Success Story Card -->
+          <div class="success-story-card">
+            <div class="success-story-image-wrapper">
+              <img
+                src="/assets/img/sem.jpg"
+                alt="Client Success"
+                class="success-story-image"
+              />
+            </div>
+            <div class="success-story-content">
+              <h3 class="success-story-title">
+                Security & Compliance Success Story
+              </h3>
+              <p class="success-story-description">
+                "Mike Wilson sincerely appreciates the security and compliance
+                team's extensive support for the Secure Future initiative and
+                other programs such as AzT and SDL. He is very pleased with the
+                team's performance, which is significantly enhancing the overall
+                security scorecard in the events space. The team's dedication
+                and hard work are making a substantial impact on our security
+                measures and overall success."
+              </p>
+              <p class="testimonial-author">
+                <strong>Mike Wilson</strong><br />
+                <span class="author-position">Company name or position</span>
+              </p>
+              <a href="full-story.html" class="success-story-btn"
+                >Read Full Story</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--end of success stories-->
 
       <!-- Features Section -->
       <section id="features" class="features section">
@@ -1821,6 +1902,7 @@
     <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
     <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
