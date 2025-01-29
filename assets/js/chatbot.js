@@ -1,5 +1,5 @@
-/*const OPENROUTER_API_KEY =
-  "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"; // 🔥 Replace with your key
+const OPENROUTER_API_KEY =
+  "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"; // 🔥 Replace with your key
 
 // Toggle Chatbot Visibility
 function toggleChat() {
@@ -14,6 +14,7 @@ function scrollToBottom() {
 }
 
 // Function to Send Message
+
 async function sendMessage() {
   const userInput = document.getElementById("user-message");
   const chatBody = document.getElementById("chatbot-body");
@@ -73,69 +74,6 @@ async function sendMessage() {
 }
 
 // **Fix 1: Send Message on "Enter" Key Press**
-document
-  .getElementById("user-message")
-  .addEventListener("keypress", function (event) {
-    if (event.key === "Enter") {
-      event.preventDefault(); // Prevent default form submission
-      sendMessage();
-    }
-  });
-*/
-
-function toggleChat() {
-  const chatbot = document.getElementById("chatbot-modal");
-  chatbot.style.display = chatbot.style.display === "flex" ? "none" : "flex";
-}
-
-// Function to Auto-Scroll Chat to Bottom
-function scrollToBottom() {
-  const chatBody = document.getElementById("chatbot-body");
-  chatBody.scrollTop = chatBody.scrollHeight;
-}
-
-async function sendMessage() {
-  const userInput = document.getElementById("user-message");
-  const chatBody = document.getElementById("chatbot-body");
-
-  if (userInput.value.trim() === "") return;
-
-  let userMessage = document.createElement("div");
-  userMessage.className = "user-message";
-  userMessage.textContent = userInput.value;
-  userInputValue = userInput.value;
-  userInput.value = "";
-  chatBody.appendChild(userMessage);
-
-  scrollToBottom();
-
-  try {
-    // 🔥 Use your Vercel API URL
-    const response = await fetch(
-      "https://kaarinfotech-ebhu88pkk-dineshstark7.vercel.app/api/chatbot",
-      {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ message: userInputValue }),
-      }
-    );
-
-    if (!response.ok) {
-      throw new Error(`HTTP Error! Status: ${response.status}`);
-    }
-
-    const data = await response.json();
-    let botMessage = document.createElement("div");
-    botMessage.className = "bot-message";
-    botMessage.textContent = data.response;
-    chatBody.appendChild(botMessage);
-
-    userInput.value = "";
-  } catch (error) {
-    console.error("API Call Error:", error);
-    alert("Error: Unable to get response. Check API key and console.");
-  }
-}
 document
   .getElementById("user-message")
   .addEventListener("keypress", function (event) {
