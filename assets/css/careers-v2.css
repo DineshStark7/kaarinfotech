@@ -1,29 +1,11 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
+  padding-top: 100px;
 }
-
-/* Navbar */
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: #2d72ba;
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  z-index: 1000;
+.top-header {
+  background-color: white !important;
 }
-
-.navbar a {
-  color: white;
-  text-decoration: none;
-  margin: 0 10px;
-}
-
 /* Search Bar */
 .search-bar {
   padding: 10px;
@@ -42,6 +24,8 @@ body {
 /* Main Container */
 .container {
   display: flex;
+  flex-direction: row;
+  justify-content: center;
   margin: 10px auto;
   padding: 10px;
   max-width: 1400px;
@@ -183,4 +167,25 @@ h4 {
   display: flex;
   flex-direction: row;
   justify-content: center;
+}
+
+.company-intro {
+  background: #f4f4f4;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.company-intro h2 {
+  color: #2d72ba;
+  margin-bottom: 15px;
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+
+.company-intro p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #333;
+  max-width: 900px;
+  margin: 0 auto 15px;
 }
