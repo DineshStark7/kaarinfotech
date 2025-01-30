@@ -1,5 +1,4 @@
-const OPENROUTER_API_KEY =
-  "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"; // 🔥 Replace with your key
+const OPENROUTER_API_KEY = ""; // 🔥 Replace with your key
 
 // Toggle Chatbot Visibility
 function toggleChat() {
