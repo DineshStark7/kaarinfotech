@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - KaarSite</title>
+    <link
+      rel="shortcut icon"
+      href="www.kaarinfotech.com/assets/img/favicon.png"
+    />
+    <link
+      rel="stylesheet"
+      href="www.kaarinfotech.com./assets/css/plugins.css"
+    />
+    <link rel="stylesheet" href="www.kaarinfotech.com./assets/css/style.css" />
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+
+      body {
+        overflow-x: hidden;
+        font-family: "Segoe UI" !important;
+      }
+
+      .Jobpost_container {
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+        border: 1px solid #ededed;
+      }
+
+      .header {
+        font-weight: 600;
+        font-size: 12px;
+        color: #605e5c;
+        width: 140px;
+        display: inline-block;
+        font-family: "Segoe UI" !important;
+      }
+
+      h3 {
+        font-family: "Segoe UI" !important;
+        color: #2d73ba;
+      }
+
+      .value {
+        font-size: 12px;
+        font-weight: 600; /* Semibold */
+        font-family: "Segoe UI" !important;
+      }
+
+      .btn_styling {
+        font-weight: 600;
+        background-color: #2d73ba !important;
+        width: 80px;
+        border: 0 !important;
+        box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .color-2d73ba {
+        color: #2d73ba;
+      }
+
+      .rightside-container {
+        background-color: #f9f9f9;
+      }
+
+      .font-size-14px {
+        font-size: 14px;
+      }
+
+      .font-weight-600 {
+        font-weight: 600 !important;
+      }
+
+      ul {
+        list-style-type: disc; /* Use disc for filled circles */
+        padding-left: 20px; /* Add some left padding for spacing */
+      }
+
+      .col-232323 {
+        color: rgb(23, 23, 23);
+      }
+
+      .col-323130 {
+        color: #323130;
+      }
+
+      .hidden {
+        display: none;
+      }
+
+      .apply-form {
+        margin-top: 20px;
+      }
+
+      .color-FF0000 {
+        color: #ff0000;
+      }
+
+      .input_dec {
+        border-radius: 2px !important;
+        border: 1px solid #d1d1d1 !important;
+        background-color: #fff !important;
+        box-shadow: 1px 1px 2px 0px #0000000d !important;
+        height: 35px !important;
+      }
+
+      .choose_fileinp {
+        font-size: 14px !important;
+        height: 35px !important;
+        border-radius: 2px !important;
+        border: 1px solid #d1d1d1 !important;
+      }
+
+      .lab_width {
+        width: 190px;
+      }
+
+      .marg-14 {
+        margin-right: 14px !important;
+      }
+
+      .labdiv1 label,
+      .labdiv2 label {
+        font-size: 14px !important;
+      }
+      .bord-d1d1d1 {
+        border-bottom: 1px solid #d1d1d1 !important;
+      }
+      .borda-d1d1d1 {
+        background-color: #fff !important;
+        box-shadow: 1px 1px 2px 0px #0000000d !important;
+        border: 1px solid #d1d1d1 !important;
+        font-size: 14px !important;
+      }
+      .bordt-d1d1d1 {
+        border-top: 1px solid #d1d1d1;
+      }
+    </style>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link
+      rel="stylesheet"
+      href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-core/11.0.0/css/fabric.min.css"
+    />
+  </head>
+  <body>
+    <div class="Jobpost_container m-3 px-3">
+      <div class="pt-5 pb-3 d-flex flex-wrap">
+        <div class="col-12 pb-3">
+          <h3>.NET Web Developer/Senior Software Engineer/Technical Lead</h3>
+        </div>
+        <div class="col-md-4 mb-3">
+          <span class="header">Date posted: </span>
+          <span class="value">Jun 13, 2024</span>
+        </div>
+        <div class="col-md-4 mb-3">
+          <span class="header">Work site: </span>
+          <span class="value">Work From Home/Hybrid</span>
+        </div>
+        <div class="col-md-4 mb-3">
+          <span class="header">Role type: </span>
+          <span class="value">.NET Web Developer</span>
+        </div>
+        <div class="col-md-4 mb-3">
+          <span class="header">Profession: </span>
+          <span class="value">Senior Software Engineer</span>
+        </div>
+        <div class="col-md-4 mb-3">
+          <span class="header">Discipline: </span>
+          <span class="value">Software Development</span>
+        </div>
+        <div class="col-md-4 mb-3">
+          <span class="header">Employment type: </span>
+          <span class="value">Full-Time</span>
+        </div>
+      </div>
+      <div class="bord-d1d1d1 mx-2"></div>
+      <div class="Jobpost_body row px-3 pt-3">
+        <div class="col-md-7">
+          <div class="d-flex flex-column">
+            <div class="font-weight-600 mb-2">Overview</div>
+            <div class="font-size-14px">
+              <p>
+                Tech enthusiasts, your moment has arrived! Dive into a dynamic
+                and inspiring workplace that celebrates your tech prowess. If
+                you're driven by curiosity and thrive on solving complex issues
+                with cutting-edge solutions, then you're the perfect fit for our
+                .NET/Web Developer role!
+              </p>
+              <p>
+                Seize this opportunity to contribute to inventive projects,
+                collaborate with talented colleagues, and propel your tech
+                career forward. Don't miss out apply today! Were on the hunt for
+                a dedicated .NET/Web developer eager to join our team. You'll
+                take the lead in crafting, coding, and upkeeping software
+                solutions, harnessing the power of the latest .NET frameworks
+                and Microsoft technologies.
+              </p>
+            </div>
+          </div>
+          <div class="d-flex flex-column">
+            <div class="font-weight-600 mb-2">Responsibilities</div>
+            <div class="font-size-14px">
+              <ul>
+                <li>
+                  To oversee the design and implementation of websites,
+                  programs, and applications that execute within Microsoft’s
+                  .NET framework
+                </li>
+                <li>
+                  Responsibilities include participating in the entire software
+                  development life cycle, debugging applications and configuring
+                  existing systems
+                </li>
+                <li>
+                  Mentor junior team members with the assistance of PM/Architect
+                </li>
+                <li>
+                  Communication with client business users and understand new
+                  requirements
+                </li>
+                <li>Assist development team and review development work</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-1"></div>
+        <div class="rightside-container col-md-4 p-3 mb-4">
+          <h6 class="col-232323 mb-3">Qualifications</h6>
+          <div>
+            <div class="font-size-14px font-weight-600 col-232323 mb-3">
+              Required/Minimum Qualifications
+            </div>
+            <ul class="font-size-14px">
+              <li>
+                Bachelor's degree in Computer Science, Engineering, or related
+                field
+              </li>
+              <li>
+                3 to 7 years of web development experience using ASP.NET, .NET
+                Core, C#, Web API, MVC, LINQ, Entity Framework, HTML, CSS,
+                JavaScript, and jQuery
+              </li>
+              <li>
+                Experience with database systems, such as SQL Server, Oracle, or
+                NoSQL
+              </li>
+              <li>
+                Experience with cloud platforms, such as Azure or AWS, is a plus
+              </li>
+              <li>
+                Excellent interpersonal and communication skills, both written
+                and verbal
+              </li>
+              <li>Excellent problem solving and analytical skills</li>
+              <li>
+                Zeal to learn new technologies and stay updated with the latest
+                trends
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 px-4 my-3">
+          <div class="font-weight-600 mb-2 bordt-d1d1d1 pt-4">
+            Perks and Benefits:
+          </div>
+          <div class="d-flex justify-content-between bord-d1d1d1 pb-4">
+            <div class="d-flex flex-column">
+              <div class="d-flex align-items-center font-size-14px mb-1">
+                <i
+                  class="ms-Icon ms-Icon--LaptopSelected mr-1 color-323130"
+                  aria-hidden="true"
+                ></i
+                ><span>Remote work mode to drive balance </span>
+              </div>
+              <div class="d-flex align-items-center font-size-14px mb-1">
+                <i
+                  class="ms-Icon ms-Icon--Contact mr-1 color-323130"
+                  aria-hidden="true"
+                ></i
+                ><span
+                  >Ample opportunities for interacting with customers and
+                  project managers</span
+                >
+              </div>
+              <div class="d-flex align-items-center font-size-14px mb-1">
+                <i
+                  class="ms-Icon ms-Icon--People mr-1 color-323130"
+                  aria-hidden="true"
+                ></i
+                ><span
+                  >Onsite Opportunities, meet with clients on Business Visa
+                </span>
+              </div>
+            </div>
+            <div class="d-flex flex-column">
+              <div class="d-flex align-items-center font-size-14px mb-1">
+                <i
+                  class="ms-Icon ms-Icon--Giftbox mr-1 color-323130"
+                  aria-hidden="true"
+                ></i
+                ><span>Performance bonus</span>
+              </div>
+              <div class="d-flex align-items-center font-size-14px mb-1">
+                <i
+                  class="ms-Icon ms-Icon--Money mr-1 color-323130"
+                  aria-hidden="true"
+                ></i
+                ><span>Reimbursement plans</span>
+              </div>
+            </div>
+            <div></div>
+          </div>
+        </div>
+        <div class="font-size-14px px-4 py-3">
+          KaarInfotech is an equal opportunity employer. All qualified
+          applicants will receive consideration for employment without regard to
+          age, ancestry, citizenship, color, family or medical care leave,
+          gender identity or expression, genetic information, immigration
+          status, marital status, medical condition, national origin, physical
+          or mental disability, political affiliation, protected veteran or
+          military status, race, ethnicity, religion, sex (including pregnancy),
+          sexual orientation, or any other characteristic protected by
+          applicable local laws, regulations and ordinances. If you need
+          assistance and/or a reasonable accommodation due to a disability
+          during the application process, read more about requesting
+          accommodations.
+        </div>
+        <div class="mt-3 mb-2 px-4">
+          <button
+            id="applyButton"
+            class="text-white border-0 py-1 px-3 btn_styling mr-4 font-size-14px"
+          >
+            Apply
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document
+        .getElementById("applyButton")
+        .addEventListener("click", function () {
+          const googleFormLink = "https://forms.gle/aC7RSvBE1TrBrSeq7"; // Replace with actual Google Form link
+          window.open(googleFormLink, "_blank"); // Open in a new tab
+        });
+    </script>
+
+    <script src="~/lib/moray/dist/js/polyfills.js"></script>
+    <script src="~/lib/moray/dist/js/bundle.min.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+  </body>
+</html>

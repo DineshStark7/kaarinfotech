@@ -37,7 +37,7 @@
 
     <!-- Main CSS File -->
     <link href="assets/css/main.css" rel="stylesheet" />
-    <link href="assets/css/careers-v2.css" rel="stylesheet" />
+    <link href="assets/css/careers-v3.css" rel="stylesheet" />
   </head>
   <body>
     <!-- Navbar -->
@@ -68,52 +68,19 @@
         </nav>
       </div>
     </header>
-
-    <!-- Company Introduction Section -->
-    <section class="company-intro">
-      <div class="container">
-        <h2>Join KAAR Infotech - A Microsoft Preferred Vendor</h2>
-        <p>
-          At KAAR Infotech, a preferred vendor for Microsoft, we are dedicated
-          to creating a flexible work environment that enhances productivity and
-          fosters creativity. We invite you to join our dynamic team and
-          collaborate with Microsoft clients.
-        </p>
-        <p>
-          As a people-centric company, we prioritize our employees, maintaining
-          a low attrition rate and offering continuous learning opportunities
-          within our Product division. Our team comprises over 100 professionals
-          with extensive experience in Microsoft products, ensuring ample
-          opportunities for career development and professional growth.
-        </p>
-        <p>
-          Committed to high standards of diversity and inclusion, we are an
-          equal opportunity employer recognized as a Great Place to Work for our
-          supportive and enriching workplace environment.
-        </p>
-        <p>
-          Ready to work on high-profile Microsoft client projects and contribute
-          to cutting-edge product development? Apply now and join us on our
-          mission to drive innovation and excellence in the tech industry!
-        </p>
+    <section>
+      <!-- Search Bar -->
+      <div class="search-bar">
+        <input
+          type="text"
+          id="search"
+          placeholder="Search by role/title..."
+          oninput="filterJobs()"
+        />
       </div>
     </section>
-
-    <!-- Search Bar -->
-    <div class="search-bar">
-      <input
-        type="text"
-        id="search"
-        placeholder="Search by role/title..."
-        oninput="filterJobs()"
-      />
-    </div>
-
     <!-- Main Container -->
     <div class="container">
-      <div class="open-positions-container">
-        <p class="open-positions">No. of Open Positions : <span>4</span></p>
-      </div>
       <!-- Left Section: Job List -->
       <div class="job-list" id="jobList">
         <div class="job-item" onclick="showJobDetails(0)">
@@ -122,24 +89,31 @@
           <p>Skills: .NET Core, C#, Web API, Azure DevOps, OOP Principles</p>
         </div>
         <div class="job-item" onclick="showJobDetails(1)">
-          <h4>Data Analyst</h4>
+          <h4>Technical Architect</h4>
           <p>Location: Remote / Hybrid</p>
-          <p>Skills: Power BI, SQL, Azure, Data Warehouse, SSIS, SSAS</p>
+          <p>
+            Skills: ASP .NET MVC, SQL Server, Microservices, JavaScript, jQuery
+          </p>
         </div>
         <div class="job-item" onclick="showJobDetails(2)">
-          <h4>Technical Project Manager</h4>
+          <h4>.NET Technical Project Manager</h4>
           <p>Location: Remote / Hybrid</p>
           <p>Skills: .NET, Azure, C#, Web API, Project Management</p>
         </div>
-        <div class="job-item" onclick="showJobDetails(3)">
-          <h4>.NET Technical Architect</h4>
-          <p>Location: Remote / Hybrid</p>
-          <p>
-            Skills: ASP.NET MVC, Microservices, SQL Server, Architecture Design
-          </p>
-        </div>
       </div>
-      <div class="job-details" id="jobDetails">
+      <!-- Right Section: Job details List -->
+      <div class="job-details">
+        <iframe
+          id="jobFrame"
+          src="job-details/senior-software-engineer.html"
+          frameborder="0"
+          title="job-details"
+        ></iframe>
+      </div>
+    </div>
+    <!-- Right Section: Job details List -->
+    <!--
+<div class="job-details" id="jobDetails">
         <h2 class="job-title">Senior Software Engineer / Technical Lead</h2>
         <p class="job-location">
           Location: Remote / B1 Travel Visa for International Exposure
@@ -203,8 +177,9 @@
         <div class="apply-now">
           <button class="applyBtn">Apply Now</button>
         </div>
-      </div>
-    </div>
+      </div>    
+-->
+
     <!-- Modal -->
     <div id="applyModal" class="modal">
       <div class="modal-content">
@@ -376,6 +351,22 @@
           }
         });
 
+        function showJobDetails(index) {
+          const jobFrame = document.getElementById("jobFrame");
+
+          // Define job details pages
+          const jobPages = [
+            "job-details/senior-software-engineer.html",
+            "job-details/technical-architect.html",
+            "job-details/dotnet-project-manager.html",
+          ];
+
+          // Change the iframe source dynamically
+          jobFrame.src = jobPages[index];
+        }
+
+        /*
+
         // Function to display job details when a job is clicked
         function showJobDetails(index) {
           const job = jobs[index];
@@ -414,7 +405,7 @@
           const newApplyBtn = jobDetails.querySelector(".applyBtn");
           newApplyBtn.addEventListener("click", openModal);
         }
-
+*/
         // Attach click event to each job item
         document.querySelectorAll(".job-item").forEach((item, index) => {
           item.addEventListener("click", () => showJobDetails(index));

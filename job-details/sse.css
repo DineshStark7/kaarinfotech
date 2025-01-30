@@ -1,0 +1,19 @@
+/* Style for job details container */
+.job-details {
+  width: 100%;
+  height: 600px; /* Adjust as needed */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: white;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Ensure iframe takes up full space */
+#jobFrame {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
