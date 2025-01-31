@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>KaarInfotech</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicons -->
+    <link href="../assets/img/company-logo.jpg" rel="icon" />
+    <link href="../assets/img/company-logo.jpg" rel="apple-touch-icon" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        overflow-x: hidden;
+      }
+      .life-hero {
+        background-color: #2d72ba;
+        color: white;
+        text-align: center;
+        padding: 50px 20px;
+        font-size: 2rem;
+        font-weight: bold;
+        width: 100%;
+        margin-top: 90px;
+      }
+      .life-header {
+        background-color: white;
+      }
+      .hero-section {
+        position: relative;
+        width: 100%;
+        height: 500px;
+        background: url("./assets/img/life-at-kaar/hero-image.jpg") no-repeat
+          center center/cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+      }
+      .hero-content {
+        background: rgba(0, 0, 0, 0.5);
+        padding: 20px;
+        border-radius: 8px;
+      }
+      .life-title {
+        font-size: 40px;
+        font-family: "Segoe UI", sans-serif;
+        font-weight: bold;
+      }
+      .life-description {
+        font-size: 18px;
+      }
+      .life-navbar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      .life-navbar::scrolled {
+        background-color: white !important;
+      }
+      .section-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        max-width: 1200px;
+        margin: auto;
+        padding: 40px 20px;
+      }
+      .section-container h1 {
+        font-size: 40px;
+        font-family: "Segoe UI";
+      }
+      .text-content {
+        flex: 1;
+        padding: 20px;
+      }
+      .image-content {
+        flex: 1;
+      }
+      .image-content img {
+        width: 100%;
+        height: auto;
+        border-radius: 0px;
+      }
+
+      .testimonials {
+        text-align: center;
+        padding: 50px 20px;
+        background: white;
+      }
+      .testimonials h2 {
+        font-size: 32px;
+        color: #2d72ba;
+      }
+      .swiper-container {
+        overflow: hidden;
+        max-width: 600px;
+        margin: auto;
+        padding: 20px;
+        position: relative;
+      }
+      .testimonial-slide {
+        background: #ffffff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out;
+        text-align: center;
+        display: none;
+        height: 180px;
+      }
+      .testimonial-slide.active {
+        display: block;
+      }
+      .testimonial-slide p {
+        font-size: 18px;
+        color: #333;
+        font-style: italic;
+      }
+      .testimonial-slide h3 {
+        color: #2d72ba;
+        font-size: 20px;
+        margin-top: 10px;
+      }
+      .testimonial-controls {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+      }
+      .testimonial-controls button {
+        background: #2d72ba;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        margin: 5px;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+      .testimonial-controls button:hover {
+        background: #1b4e8e;
+      }
+      @media (max-width: 768px) {
+        .section-container {
+          flex-direction: column;
+          text-align: center;
+        }
+        .image-content {
+          order: -1;
+        }
+      }
+      .sitename-footer {
+        font-size: 18px;
+      }
+      .footer-text {
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body class="index-page">
+    <header
+      id="header"
+      class="header life-header d-flex align-items-center fixed-top"
+    >
+      <div
+        class="container-fluid container-xl position-relative d-flex align-items-center life-navbar"
+      >
+        <a href="index.html" class="logo d-flex align-items-center me-auto">
+          <img src="../assets/img/Kaar-Infotech-Logo.png" alt="logo" />
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li>
+              <a href="./index.html#hero">Home<br /></a>
+            </li>
+            <li><a href="./index.html#about">About</a></li>
+            <li class="dropdown">
+              <a href="./index.html#services" class="dropbtn">Services</a>
+              <div class="dropdown-content">
+                <a href="./services-pages/azure/index.html">Azure</a>
+                <a href="#service2">Data Analytics</a>
+                <a href="#service3">Indoor Maps</a>
+                <a href="#service4">Security & Complaince</a>
+                <a href="#service5">Power Platform</a>
+                <a href="#service6">Development Platform</a>
+              </div>
+            </li>
+            <li><a href="./index.html#portfolio">Portfolio</a></li>
+            <li><a href="./index.html#team">Team</a></li>
+            <li><a href="./index.html#contact">Contact</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropbtn active">Oppurtunities</a>
+              <div class="dropdown-content">
+                <a href="./life-at-kaar.html">Life at Kaar</a>
+                <a href="./careers-page-v2.html">Careers</a>
+              </div>
+            </li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+      </div>
+    </header>
+    <section class="hero-section"></section>
+
+    <!-- Sections -->
+    <div class="section-container" id="culture">
+      <div class="image-content">
+        <img
+          src="../assets/img/life-at-kaar/close-up-woman-working-laptop.jpg"
+          alt="Life at KAAR"
+        />
+      </div>
+      <div class="text-content">
+        <h2 class="life-title">The Culture</h2>
+        <p class="life-description">
+          At KAAR, we foster a workplace built on mutual respect, teamwork, and
+          continuous learning. Our inclusive environment ensures every voice is
+          heard, driving innovation and professional excellence.
+        </p>
+      </div>
+    </div>
+
+    <div class="section-container" id="benefits">
+      <div class="text-content">
+        <h2 class="life-title">Your Benefits</h2>
+        <p class="life-description">
+          We prioritize our employees with Celebration Leave, home office
+          reimbursements, and professional training programs. Our policies focus
+          on work-life balance, career development, and personal well-being.
+        </p>
+      </div>
+      <div class="image-content">
+        <img
+          src="../assets/img/life-at-kaar/group-business-executives-discussing-laptop-their-des.jpg"
+          alt="Benefits"
+        />
+      </div>
+    </div>
+
+    <div class="section-container" id="diversity">
+      <div class="image-content">
+        <img
+          src="../assets/img/life-at-kaar/group-young-people-working-together.jpg"
+          alt="Diversity and Inclusion"
+        />
+      </div>
+      <div class="text-content">
+        <h2 class="life-title">Diversity and Inclusion</h2>
+        <p class="life-description">
+          KAAR proudly maintains a 50% diversity and inclusion rate, fostering
+          an environment where diverse perspectives thrive. We ensure equal
+          opportunities, representation, and an inclusive workplace for all.
+        </p>
+      </div>
+    </div>
+
+    <div class="section-container" id="flexible-word">
+      <div class="text-content">
+        <h2 class="life-title">Flexible Work</h2>
+        <p class="life-description">
+          We offer remote, hybrid, and flexible work arrangements to help
+          employees balance personal and professional commitments while boosting
+          productivity and creativity.
+        </p>
+      </div>
+      <div class="image-content">
+        <img
+          src="../assets/img/life-at-kaar/medium-shot-two-coworkers-sitting-desk-chatting.jpg"
+          alt="Flexible Work"
+        />
+      </div>
+    </div>
+
+    <footer id="footer" class="footer">
+      <div class="container footer-top">
+        <div class="row gy-4">
+          <div class="col-lg-4 col-md-6 footer-about">
+            <a href="index.html" class="d-flex align-items-center">
+              <span class="sitename">Kaar Infotech</span>
+            </a>
+            <div class="footer-contact pt-3">
+              <p>
+                Kaar Infotech Private Limited, 15/1, 4th Cross Street, Erode
+                Road, Perundurai, Erode, Tamilnadu - 638052, India
+              </p>
+
+              <p class="mt-3">
+                <strong>Phone:</strong> <span>+91 79045 90680</span>
+              </p>
+              <p><strong>Email:</strong> <span>info@kaarinfotech.com</span></p>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><a href="./index.html#hero">Home</a></li>
+              <li>
+                <a href="./index.html#about">About us</a>
+              </li>
+              <li>
+                <a href="./index.html#services">Services</a>
+              </li>
+              <li>
+                <a href="#">Terms of service</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li>
+                <a href="#">Azure</a>
+              </li>
+              <li>
+                <a href="#">Data Analytics</a>
+              </li>
+              <li>
+                <a href="#">Indoor Maps</a>
+              </li>
+              <li>
+                <a href="#">Security and Complaince</a>
+              </li>
+              <li>
+                <a href="#">Power Platform</a>
+              </li>
+              <li>
+                <a href="#">Development Services</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-12">
+            <h4>Follow Us</h4>
+            <p>Let's make Success Together.</p>
+            <div class="social-links d-flex">
+              <a href="https://twitter.com"><i class="bi bi-twitter-x"></i></a>
+              <a href=""><i class="bi bi-facebook"></i></a>
+              <a href=""><i class="bi bi-instagram"></i></a>
+              <a
+                href="https://www.linkedin.com/company/kaar-infotech-private-limited/"
+                target="_blank"
+                ><i class="bi bi-linkedin"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container copyright text-center mt-4">
+        <p>
+          © <span>Copyright</span>
+          <strong class="px-1 sitename">Kaar Infotech 2025</strong>
+          <span>All Rights Reserved</span>
+        </p>
+      </div>
+    </footer>
+  </body>
+  <script>
+    let currentTestimonial = 0;
+    function showTestimonial(n) {
+      let slides = document.querySelectorAll(".testimonial-slide");
+      slides.forEach((slide) => slide.classList.remove("active"));
+      currentTestimonial = (n + slides.length) % slides.length;
+      slides[currentTestimonial].classList.add("active");
+    }
+    function nextTestimonial() {
+      showTestimonial(currentTestimonial + 1);
+    }
+    function prevTestimonial() {
+      showTestimonial(currentTestimonial - 1);
+    }
+  </script>
+</html>

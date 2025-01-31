@@ -55,14 +55,30 @@
         <nav id="navmenu" class="navmenu">
           <ul>
             <li>
-              <a href="/kaarinfotech/#hero" class="active">Home<br /></a>
+              <a href="./index.html#hero">Home<br /></a>
             </li>
-            <li><a href="/kaarinfotech/#about">About</a></li>
-            <li><a href="/kaarinfotech/#services">Services</a></li>
-            <li><a href="/kaarinfotech/#portfolio">Portfolio</a></li>
-            <li><a href="/kaarinfotech/#team">Team</a></li>
-            <li><a href="careers-page-v2.html" target="_blank">Careers</a></li>
-            <li><a href="/kaarinfotech/#contact">Contact</a></li>
+            <li><a href="./index.html#about">About</a></li>
+            <li class="dropdown">
+              <a href="./index.html#services" class="dropbtn">Services</a>
+              <div class="dropdown-content">
+                <a href="./services-pages/azure/index.html">Azure</a>
+                <a href="#service2">Data Analytics</a>
+                <a href="#service3">Indoor Maps</a>
+                <a href="#service4">Security & Complaince</a>
+                <a href="#service5">Power Platform</a>
+                <a href="#service6">Development Platform</a>
+              </div>
+            </li>
+            <li><a href="./index.html#portfolio">Portfolio</a></li>
+            <li><a href="./index.html#team">Team</a></li>
+            <li><a href="./index.html#contact">Contact</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropbtn active">Oppurtunities</a>
+              <div class="dropdown-content">
+                <a href="./life-at-kaar.html">Life at Kaar</a>
+                <a href="./careers-page-v2.html">Careers</a>
+              </div>
+            </li>
           </ul>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
@@ -195,7 +211,8 @@
         </div>
       </div>
     </div>
-    <footer>
+    <footer class="new-footer">
+      <hr />
       <div class="footer-container">
         <p>
           © <span>Copyright</span>
