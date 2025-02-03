@@ -224,3 +224,70 @@
   window.addEventListener("load", navmenuScrollspy);
   document.addEventListener("scroll", navmenuScrollspy);
 })();
+
+// Function to set a cookie
+function setCookie(name, value, days) {
+  let expires = "";
+  if (days) {
+    let date = new Date();
+    date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+    expires = "; expires=" + date.toUTCString();
+  }
+  document.cookie = name + "=" + value + expires + "; path=/";
+}
+
+// Function to get a cookie
+function getCookie(name) {
+  let nameEQ = name + "=";
+  let ca = document.cookie.split(";");
+  for (let i = 0; i < ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == " ") c = c.substring(1, c.length);
+    if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+  }
+  return null;
+}
+
+// Function to delete a cookie
+function deleteCookie(name) {
+  document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+}
+
+function trackVisits() {
+  let visits = getCookie("visitCount");
+  if (visits) {
+    visits = parseInt(visits) + 1;
+  } else {
+    visits = 1;
+  }
+  setCookie("visitCount", visits, 365); // Store visit count for 1 year
+
+  // Display visit count in console (or show it on the page)
+  console.log("You have visited this site " + visits + " times.");
+}
+trackVisits();
+document.getElementById("visit-message").innerText =
+  "You have visited this site " + getCookie("visitCount") + " times.";
+// Function to check if user accepted cookies
+function checkCookieConsent() {
+  let consent = getCookie("cookieConsent");
+  if (!consent) {
+    document.getElementById("cookie-banner").style.display = "block";
+  }
+}
+
+// Function to accept cookies
+function acceptCookies() {
+  setCookie("cookieConsent", "accepted", 365); // Store consent for 1 year
+  document.getElementById("cookie-banner").style.display = "none";
+}
+
+// Function to reject cookies
+function rejectCookies() {
+  deleteCookie("visitCount"); // Clear tracking cookies
+  setCookie("cookieConsent", "rejected", 365); // Store rejection for 1 year
+  document.getElementById("cookie-banner").style.display = "none";
+}
+
+// Run function when page loads
+checkCookieConsent();
