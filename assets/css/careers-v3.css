@@ -86,14 +86,18 @@ body {
 }
 
 /* Right Section - Job Details */
+
+/* Job Details Container - Keeps Border */
 .job-details {
   flex: 2;
   width: 70%;
-  border: 1px solid #ccc;
+  border: 1px solid #ccc; /* Keeps the outer border */
   border-radius: 5px;
   background: white;
-  overflow-y: hidden;
-  height: 500px;
+  height: 500px !important; /* Fixed height */
+  overflow: hidden; /* Ensures no extra scrollbar outside */
+  display: flex;
+  flex-direction: column;
 }
 
 /* Titles and Headings */
@@ -321,13 +325,6 @@ h4 {
 }
 
 /* Ensure job details container retains its styles */
-.job-details {
-  padding: 0px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background: white;
-  overflow-y: auto;
-}
 .new-footer {
   height: 60px;
   margin: -30px;
