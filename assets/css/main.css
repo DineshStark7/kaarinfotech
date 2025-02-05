@@ -2951,3 +2951,84 @@ h6 {
 a {
   text-decoration: none !important;
 }
+
+/*-----------------------------
+        Cookies
+------------------------------*/
+
+/* Cookie Banner Styling */
+#cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%; /* Full width */
+  background: rgba(255, 255, 255, 0.95); /* Soft white shade */
+  color: #333;
+  padding: 15px;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  display: none;
+  text-align: center;
+  font-size: 14px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Cookie Banner Text */
+#cookie-banner p {
+  margin: 0;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Cookie Policy Link */
+.cookie-policy {
+  color: #2d72ba;
+  text-decoration: underline;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.cookie-policy:hover {
+  color: #0056b3;
+}
+
+/* Button Container - Centering */
+.cookie-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+/* Common Button Styles */
+.cookie-buttons button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+/* Accept Button */
+.accept-btn {
+  background: #4caf50;
+  color: white;
+}
+
+.accept-btn:hover {
+  background: #45a049;
+}
+
+/* Reject Button */
+.reject-btn {
+  background: #f44336;
+  color: white;
+}
+
+.reject-btn:hover {
+  background: #d32f2f;
+}

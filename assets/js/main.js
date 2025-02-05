@@ -276,18 +276,5 @@ function checkCookieConsent() {
   }
 }
 
-// Function to accept cookies
-function acceptCookies() {
-  setCookie("cookieConsent", "accepted", 365); // Store consent for 1 year
-  document.getElementById("cookie-banner").style.display = "none";
-}
-
-// Function to reject cookies
-function rejectCookies() {
-  deleteCookie("visitCount"); // Clear tracking cookies
-  setCookie("cookieConsent", "rejected", 365); // Store rejection for 1 year
-  document.getElementById("cookie-banner").style.display = "none";
-}
-
 // Run function when page loads
 checkCookieConsent();
