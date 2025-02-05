@@ -211,7 +211,7 @@
       class="header life-header d-flex align-items-center fixed-top"
     >
       <div
-        class="container-fluid container-xl position-relative d-flex align-items-center life-navbar"
+        class="container-fluid container-xl position-relative d-flex align-items-center"
       >
         <a href="index.html" class="logo d-flex align-items-center me-auto">
           <img src="assets/img/Kaar-Infotech-Logo.png" alt="logo" />
@@ -224,27 +224,47 @@
             </li>
             <li><a href="./index.html#about">About</a></li>
             <li class="dropdown">
-              <a href="./index.html#services" class="dropbtn">Services</a>
+              <a href="#services" class="dropbtn"
+                >Services<i class="bi bi-chevron-down"></i
+              ></a>
               <div class="dropdown-content">
-                <a href="./services-pages/azure/index.html">Azure</a>
-                <a href="#service2">Data Analytics</a>
-                <a href="#service3">Indoor Maps</a>
-                <a href="#service4">Security & Complaince</a>
-                <a href="#service5">Power Platform</a>
-                <a href="#service6">Development Platform</a>
+                <a href="#service1"><i class="bi bi-cloud"></i> Azure</a>
+                <a href="#service2"
+                  ><i class="bi bi-bar-chart"></i> Data Analytics</a
+                >
+                <a href="./services/indoormaps/indoormaps.html"
+                  ><i class="bi bi-map"></i> Indoor Maps</a
+                >
+                <a href="#service4"
+                  ><i class="bi bi-shield-lock"></i> Security & Compliance</a
+                >
+                <a href="#service5"
+                  ><i class="bi bi-lightning"></i> Power Platform</a
+                >
+                <a href="#service6"
+                  ><i class="bi bi-code-slash"></i> Development Platform</a
+                >
               </div>
             </li>
             <li><a href="./index.html#portfolio">Portfolio</a></li>
             <li><a href="./index.html#team">Team</a></li>
             <li><a href="./index.html#contact">Contact</a></li>
             <li class="dropdown">
-              <a href="#" class="dropbtn active">Oppurtunities</a>
+              <a href="#" class="dropbtn active"
+                >Oppurtunities<i class="bi bi-chevron-down"></i
+              ></a>
               <div class="dropdown-content">
                 <a href="./life-at-kaar.html">Life at Kaar</a>
                 <a href="./careers-page-v2.html">Careers</a>
               </div>
             </li>
-          </ul>
+            <!--
+            <li>
+              <button type="button" id="theme-toggle" class="theme-toggle">
+                <i id="theme-icon" class="bi bi-moon"></i>
+              </button>
+            </li>
+          --></ul>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
       </div>
