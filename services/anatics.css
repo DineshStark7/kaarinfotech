@@ -87,7 +87,7 @@ body {
     padding: 6px 20px;
     font-size: 1rem;
   }
-  .header {
+  .navmenu-mobile {
     display: none;
   }
 }
@@ -110,7 +110,7 @@ body {
     padding: 6px 16px;
     font-size: 0.9rem;
   }
-  .header {
+  .navmenu-mobile {
     display: none;
   }
   .navmenu ul {
@@ -139,7 +139,7 @@ body {
     padding: 5px 12px;
     font-size: 0.8rem;
   }
-  .header {
+  .navmenu-mobile {
     display: none;
   }
 }
