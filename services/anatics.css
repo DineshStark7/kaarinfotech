@@ -1,0 +1,504 @@
+/* General Styles */
+body {
+  font-family: "Segoe UI", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hero Section */
+.hero {
+  background: url("./data-analytics.jpg") no-repeat center center/cover;
+  height: 90vh; /* Adjusts for visibility below navbar */
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  color: white;
+  position: relative;
+  padding: 0 200px; /* Left padding for desktop */
+  text-align: left;
+}
+/* Hero Text */
+.hero h1 {
+  font-size: 6rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+.hero h4 {
+  margin-bottom: 20px;
+  color: #ffffff;
+  padding-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #ffffff;
+  font-weight: 350;
+  padding-bottom: 20px;
+}
+
+.hero .btn {
+  background: #ffffff;
+  color: #000000;
+  padding: 8px 30px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.hero .btn:hover {
+  background: #2d72ba;
+}
+
+/* Navbar */
+.header {
+  background: white;
+  padding: 15px 0;
+}
+
+.navmenu ul li a {
+  color: #000000 !important;
+  font-weight: 500;
+}
+
+.navmenu ul li a:hover {
+  color: #2d72ba !important;
+}
+
+/* Responsive Styles */
+
+/* Tablets (768px and above) */
+@media (max-width: 1024px) {
+  .hero {
+    height: 80vh;
+    padding: 0 50px; /* Reduce padding for tablets */
+  }
+  .hero h1 {
+    font-size: 4rem; /* Smaller font size */
+  }
+  .hero p {
+    font-size: 1.2rem;
+  }
+  .hero .btn {
+    padding: 6px 20px;
+    font-size: 1rem;
+  }
+}
+
+/* Mobile Devices (480px and below) */
+@media (max-width: 768px) {
+  .hero {
+    height: 70vh;
+    padding: 20px; /* Adjust padding for mobile */
+    text-align: center; /* Center text on mobile */
+    justify-content: center; /* Center content */
+  }
+  .hero h1 {
+    font-size: 2.5rem; /* Smaller font for mobile */
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+  .hero .btn {
+    padding: 6px 16px;
+    font-size: 0.9rem;
+  }
+  .header {
+    padding: 10px 0;
+  }
+  .navmenu ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .navmenu ul li {
+    margin: 5px 0;
+  }
+}
+
+/* Small Mobile Devices (320px and below) */
+@media (max-width: 480px) {
+  .hero {
+    height: 60vh;
+    padding: 15px;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 0.9rem;
+  }
+  .hero .btn {
+    padding: 5px 12px;
+    font-size: 0.8rem;
+  }
+}
+
+/* About Section */
+.about {
+  padding: 80px 0;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.about p {
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Contact Section */
+.contact-cta {
+  position: relative;
+  overflow: hidden;
+  padding: 80px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #2d72ba, #00d4ff);
+  color: #fff;
+}
+
+.contact-cta::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: url(./data-analytics.jpg);
+  transform: rotate(25deg);
+}
+
+.contact-cta .container {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+.contact-cta h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.contact-cta p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.btn-contact {
+  display: inline-block;
+  background: #fff;
+  color: #2d72ba;
+  padding: 15px 40px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-contact:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Timeline Section */
+.timeline-section {
+  background: #f8f9fa;
+  padding: 60px 0;
+  text-align: left;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2d72ba;
+  margin-bottom: 10px;
+  text-align: center;
+  padding-left: 50px;
+  padding-bottom: 5px;
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 40px;
+  text-align: center;
+  padding-left: 50px;
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 0 100px;
+  padding-left: 50px; /* Moves timeline closer to left */
+}
+
+/* Vertical Line */
+.timeline::before {
+  content: "";
+  position: absolute;
+  width: 3px;
+  background: #2d72ba;
+  top: 0;
+  bottom: 0;
+  left: 30px; /* Line closer to left */
+}
+
+/* Timeline Item */
+.timeline-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+/* Circular Tick Marker */
+.timeline-marker {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background: #2d72ba;
+  border-radius: 50%;
+  left: 24px; /* Aligns with line */
+}
+
+/* Content Box */
+.timeline-content {
+  padding: 8px 10px;
+  border-radius: 8px;
+  margin-left: 60px; /* Spacing from line */
+  /* Content stays left-aligned */
+}
+
+.timeline-content h3 {
+  font-size: 1.4rem;
+  color: #2d72ba;
+  margin-bottom: 8px;
+}
+
+.timeline-content p {
+  font-size: 1rem;
+  color: #333;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .timeline {
+    margin: 0 10px;
+  }
+
+  .timeline::before {
+    left: 10px;
+  }
+
+  .timeline-marker {
+    left: 4px;
+  }
+
+  .timeline-content {
+    width: 90%;
+    margin-left: 30px;
+  }
+}
+@media (max-width: 1199px) {
+  .timeline {
+    margin: 0 10px;
+  }
+  .timeline::before {
+    left: 10px;
+  }
+
+  .timeline-marker {
+    left: 4px;
+  }
+
+  .timeline-content {
+    width: 90%;
+    margin-left: 30px;
+  }
+}
+
+/* General Styles */
+.analytics-services {
+  position: relative;
+  padding: 6rem 2rem;
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  overflow: hidden;
+  color: #fff;
+}
+
+.c-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.analytics-services h2 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  color: #fff;
+}
+.analytics-services h3 {
+  color: #ffffff;
+}
+
+/* Background Shapes */
+.background-shapes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.shape {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  animation: float 6s infinite ease-in-out;
+}
+
+.shape-1 {
+  width: 200px;
+  height: 200px;
+  top: 10%;
+  left: 5%;
+  animation-duration: 8s;
+}
+
+.shape-2 {
+  width: 150px;
+  height: 150px;
+  top: 60%;
+  left: 70%;
+  animation-duration: 10s;
+}
+
+.shape-3 {
+  width: 100px;
+  height: 100px;
+  top: 30%;
+  left: 50%;
+  animation-duration: 12s;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Cards */
+.cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 2rem;
+  width: 300px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.card .icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+/* Tools & Technology */
+.tools-tech {
+  padding: 40px;
+  background: white;
+  text-align: center;
+}
+
+.tech-slider {
+  padding-top: 30px;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+
+.tech-items {
+  display: inline-block;
+  animation: scroll 10s linear infinite;
+}
+
+.tech-items img {
+  width: auto;
+  height: 100px;
+  margin: 0 20px;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(60%);
+  }
+  to {
+    transform: translateX(-80%);
+  }
+}
