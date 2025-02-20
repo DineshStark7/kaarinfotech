@@ -87,6 +87,9 @@ body {
     padding: 6px 20px;
     font-size: 1rem;
   }
+  .header {
+    display: none;
+  }
 }
 
 /* Mobile Devices (480px and below) */
@@ -108,7 +111,7 @@ body {
     font-size: 0.9rem;
   }
   .header {
-    padding: 10px 0;
+    display: none;
   }
   .navmenu ul {
     display: flex;
@@ -135,6 +138,9 @@ body {
   .hero .btn {
     padding: 5px 12px;
     font-size: 0.8rem;
+  }
+  .header {
+    display: none;
   }
 }
 
