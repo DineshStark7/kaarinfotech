@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hero Section with Expanding Cards</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+      }
+
+      .hero-section {
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .hero-section h1 {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+      }
+
+      .hero-section p {
+        font-size: 1.2rem;
+        color: #666;
+        margin-bottom: 20px;
+      }
+
+      .card-container {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+        position: relative;
+      }
+
+      .card {
+        width: 100px;
+        height: 100px;
+        background-color: #007bff;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: all 0.5s ease;
+        flex-shrink: 0;
+      }
+
+      .card.active {
+        width: 300px;
+        height: 200px;
+        z-index: 10;
+      }
+
+      /* Adjust the position of cards when one is expanded */
+      .card-container:has(.card.active) .card:not(.active) {
+        transform: translateX(0);
+      }
+
+      .card.active ~ .card {
+        transform: translateX(150px);
+      }
+
+      .card.active + .card {
+        transform: translateX(-150px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hero-section">
+      <h1>Welcome to My Website</h1>
+      <p>This is a simple hero section with expanding cards.</p>
+      <div class="card-container">
+        <div class="card" onclick="expandCard(this)">Card 1</div>
+        <div class="card" onclick="expandCard(this)">Card 2</div>
+        <div class="card" onclick="expandCard(this)">Card 3</div>
+        <div class="card" onclick="expandCard(this)">Card 4</div>
+        <div class="card" onclick="expandCard(this)">Card 5</div>
+        <div class="card" onclick="expandCard(this)">Card 6</div>
+      </div>
+    </div>
+
+    <script>
+      function expandCard(card) {
+        const cards = document.querySelectorAll(".card");
+        cards.forEach((c) => {
+          if (c !== card) {
+            c.classList.remove("active");
+          }
+        });
+        card.classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>
