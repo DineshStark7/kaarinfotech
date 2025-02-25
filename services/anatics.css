@@ -483,21 +483,33 @@ body {
 }
 
 .tech-slider {
-  padding-top: 30px;
   overflow: hidden;
   white-space: nowrap;
   position: relative;
+  width: 100%;
 }
 
 .tech-items {
-  display: inline-block;
-  animation: scroll 10s linear infinite;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  gap: 0px;
+  width: max-content;
+  animation: scroll-tech 40s linear infinite;
 }
 
 .tech-items img {
-  width: auto;
-  height: 100px;
-  margin: 0 20px;
+  height: 120px;
+  padding: 0 10px;
+}
+
+@keyframes scroll-tech {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 @keyframes scroll {

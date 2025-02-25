@@ -1046,7 +1046,7 @@ h6 {
 
 .stats .stats-item span {
   color: var(--heading-color);
-  font-size: 36px;
+  font-size: 18px;
   display: block;
   font-weight: 600;
 }
@@ -1872,6 +1872,7 @@ h6 {
 }
 
 .team .team-member .member-info h4 {
+  margin-top: 20px;
   font-weight: 700;
   margin-bottom: 5px;
   font-size: 20px;
@@ -1914,7 +1915,7 @@ h6 {
   width: 100%;
 }
 .client-logo-new {
-  width: 200px;
+  width: 300px;
   height: auto;
   margin: 20px;
 }

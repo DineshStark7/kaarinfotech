@@ -121,7 +121,6 @@
           We design and develop robust, scalable solutions tailored to meet your
           unique needs.
         </p>
-        <a href="../../index.html#contact" class="btn">Let's Talk</a>
       </div>
     </section>
     <!-- About -->
@@ -221,13 +220,84 @@
       <h2>Tools & Technology</h2>
       <div class="tech-slider">
         <div class="tech-items">
-          <img src="./technologies/tech.png" alt="Tech 1" />
-          <!-- <img src="tech2.png" alt="Tech 2">
-            <img src="tech3.png" alt="Tech 3"> -->
-          <img src="./technologies/tech4.png" alt="Tech 4" />
-          <img src="./technologies/tech5.png" alt="Tech 5" />
-          <img src="./technologies/tech6.png" alt="Tech 6" />
-          <img src="./technologies/tech7.png" alt="Tech 7" />
+          <img
+            src="https://www.kaarinfotech.com/assets/img/language/ASP-DNET.jpg"
+            alt="ASP-DNET"
+          />
+          <img
+            src="https://www.kaarinfotech.com/assets/img/language/Azure-BOT.jpg"
+            alt="Azure-BOT"
+          />
+          <img
+            src="https://www.kaarinfotech.com/assets/img/language/Azure-Media.jpg"
+            alt="Azure-Media"
+          />
+          <img
+            src="https://www.kaarinfotech.com/assets/img/language/Azure.jpg"
+            alt="Azure"
+          />
+          <img
+            src="https://www.kaarinfotech.com/assets/img/language/Azure_ai.jpg"
+            alt="Azure_ai"
+          />
+          <img src="./technologies/tech1.png" alt="HTML" />
+          <img src="./technologies/tech2.png" alt="CSS" />
+          <img src="./technologies/tech3.png" alt="JavaScript" />
+          <img src="./technologies/tech4.png" alt="JQuery" />
+          <img
+            src="https://www.kaarinfotech.com/assets/img/language/MVC.jpg"
+            alt="MVC"
+          />
+          <img
+            src="https://www.kaarinfotech.com/assets/img/language/PowerBI-Logo.jpg"
+            alt="Power BI"
+          />
+
+          <img
+            src="https://www.kaarinfotech.com/assets/img/language/SQL.jpg"
+            alt="SQL"
+          />
+          <img
+            src="https://www.kaarinfotech.com/assets/img/language/WPF.jpg"
+            alt="WPF"
+          />
+          <img
+            src="https://www.kaarinfotech.com/assets/img/language/azure-analytics.jpg"
+            alt="Azure Analytics"
+          />
+          <img
+            src="https://www.kaarinfotech.com/assets/img/language/sharepoint.jpg"
+            alt="Share Point"
+          />
+          <!-- Duplicate set of images for a seamless loop -->
+          <img src="./technologies/tech1.png" alt="HTML" />
+          <img src="./technologies/tech2.png" alt="CSS" />
+          <img src="./technologies/tech3.png" alt="JavaScript" />
+          <img src="./technologies/tech4.png" alt="JQuery" />
+          <img
+            src="https://www.kaarinfotech.com/assets/img/language/MVC.jpg"
+            alt="MVC"
+          />
+          <img
+            src="https://www.kaarinfotech.com/assets/img/language/PowerBI-Logo.jpg"
+            alt="Power BI"
+          />
+          <img
+            src="https://www.kaarinfotech.com/assets/img/language/SQL.jpg"
+            alt="SQL"
+          />
+          <img
+            src="https://www.kaarinfotech.com/assets/img/language/WPF.jpg"
+            alt="WPF"
+          />
+          <img
+            src="https://www.kaarinfotech.com/assets/img/language/azure-analytics.jpg"
+            alt="Azure Analytics"
+          />
+          <img
+            src="https://www.kaarinfotech.com/assets/img/language/sharepoint.jpg"
+            alt="Share Point"
+          />
         </div>
       </div>
     </section>
@@ -372,21 +442,7 @@
       </div>
     </footer>
   </body>
-  <script>
-    let currentTestimonial = 0;
-    function showTestimonial(n) {
-      let slides = document.querySelectorAll(".testimonial-slide");
-      slides.forEach((slide) => slide.classList.remove("active"));
-      currentTestimonial = (n + slides.length) % slides.length;
-      slides[currentTestimonial].classList.add("active");
-    }
-    function nextTestimonial() {
-      showTestimonial(currentTestimonial + 1);
-    }
-    function prevTestimonial() {
-      showTestimonial(currentTestimonial - 1);
-    }
-  </script>
+
   <!-- Vendor JS -->
   <script src="../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="../../assets/vendor/aos/aos.js"></script>
@@ -397,6 +453,12 @@
     AOS.init({
       duration: 800, // Animation speed
       once: true, // Animate only once
+    });
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const techSlider = document.querySelector(".tech-items");
+      techSlider.innerHTML += techSlider.innerHTML; // Duplicate for seamless loop
     });
   </script>
 </html>
