@@ -207,9 +207,37 @@
         font-size: 16px;
       }
       .life-at-kaar-description {
-        font-size: 28px;
+        font-size: 1.75rem; /* Base font size */
         font-weight: 400;
         font-family: "Segoe UI";
+        text-align: center;
+        line-height: 1.5;
+        max-width: 90%;
+        margin: auto;
+      }
+
+      /* Adjust for Tablets */
+      @media (max-width: 1024px) {
+        .life-at-kaar-description {
+          font-size: 1.5rem;
+          max-width: 85%;
+        }
+      }
+
+      /* Adjust for Mobile Devices */
+      @media (max-width: 768px) {
+        .life-at-kaar-description {
+          font-size: 1.25rem;
+          max-width: 80%;
+        }
+      }
+
+      /* Adjust for Smallest Screens */
+      @media (max-width: 480px) {
+        .life-at-kaar-description {
+          font-size: 1.1rem;
+          max-width: 90%;
+        }
       }
     </style>
   </head>
@@ -251,6 +279,9 @@
                 <a href="./services/Development.html"
                   ><i class="bi bi-code-slash"></i> Development Platform</a
                 >
+                <a href="./services/sharepoint.html"
+                  ><i class="bi bi-share"></i> SharePoint</a
+                >
               </div>
             </li>
             <li class="dropdown">
@@ -259,7 +290,7 @@
               ></a>
               <div class="dropdown-content">
                 <a href="./products/indoor-maps.html"
-                  ><i class="bi bi-cloud"></i>Indoor Maps Event WayFinder</a
+                  ><i class="bi bi-geo-alt"></i>Indoor Maps</a
                 >
               </div>
             </li>
@@ -405,9 +436,6 @@
                 <a href="./services/data-analytics.html">Data Analytics</a>
               </li>
               <li>
-                <a href="./services/indoormaps.html">Indoor Maps</a>
-              </li>
-              <li>
                 <a href="./services/security-complaince.html"
                   >Security and Complaince</a
                 >
@@ -417,6 +445,9 @@
               </li>
               <li>
                 <a href="./services/Development.html">Development Services</a>
+              </li>
+              <li>
+                <a href="./services/sharepoint.html">Share Point</a>
               </li>
             </ul>
           </div>

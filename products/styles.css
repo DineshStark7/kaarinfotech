@@ -1,9 +1,9 @@
 /* General Styles */
 body {
-  font-family: "Arial", sans-serif;
+  font-family: "Segoe UI";
   margin: 0;
   padding: 0;
-  background-color: #f4faff;
+  background-color: #f8f9fa;
   color: #333;
 }
 
@@ -160,6 +160,18 @@ body {
   border-radius: 10px;
   text-align: center;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.section h2 {
+  color: #2d72ba;
+  transition: color 0.3s ease-in-out;
+}
+
+.section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  background: #f3f5f8;
 }
 
 /* Card Grid */
@@ -171,7 +183,7 @@ body {
 }
 
 .card {
-  background: rgba(45, 114, 186, 0.1);
+  background:white;
   padding: 20px;
   border-radius: 10px;
   transition: 0.3s;
@@ -187,6 +199,9 @@ body {
   background: #2d72ba;
   color: white;
   padding: 40px;
+}
+.cta-section h2{
+  color: #ffffff;
 }
 
 .cta-button {

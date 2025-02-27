@@ -1,4 +1,6 @@
 document.getElementById("applyButton").addEventListener("click", function () {
+  const jobTitle = document.getElementById("job-title");
+  console.log(jobTitle.innerText);
   const email = "hr@kaarinfotech.com";
   const subject = "Job Application - [Mention your Role]"; // Optional, can be changed
   const body =

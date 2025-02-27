@@ -58,7 +58,7 @@ body {
 
 /* Headings & Text */
 .hero h1 {
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: 700;
   color: #ffffff;
   margin-bottom: 20px;
@@ -67,7 +67,7 @@ body {
 }
 
 .hero h4 {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   margin-bottom: 20px;
   color: #ffffff;
   position: relative;
@@ -270,6 +270,7 @@ body {
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 20px;
+  color: white;
 }
 
 .contact-cta p {
@@ -519,8 +520,12 @@ body {
   gap: 2rem;
   flex-wrap: wrap;
 }
-
+/*
 .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 20px;
   padding: 2rem;
@@ -528,7 +533,8 @@ body {
   text-align: center;
   border: 1px solid rgba(255, 255, 255, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+  border: 1px solid red;
+}*/
 
 .card:hover {
   transform: translateY(-10px);
@@ -539,17 +545,73 @@ body {
   font-size: 3rem;
   margin-bottom: 1rem;
 }
-
+/*
 .card h3 {
   font-size: 1.5rem;
-  margin-bottom: 1rem;
+  margin: 0;
   font-weight: 600;
+  border: 1px solid red;
 }
 
 .card p {
   font-size: 1rem;
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.8);
+  border: 1px solid red;
+}
+
+.card-text-container {
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  text-align: center; 
+  height: 100%; 
+  width: 100%; 
+}
+*/
+
+/* Ensure card takes full height */
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* ✅ Centers content vertically */
+  align-items: center; /* ✅ Centers content horizontally */
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 2rem;
+  width: 300px;
+  height: 100%; /* ✅ Ensures the card fills its container */
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Ensure .card-text-container fills parent height */
+.card-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* ✅ Ensures text is vertically centered */
+  align-items: center; /* ✅ Ensures text is horizontally centered */
+  text-align: center;
+  flex-grow: 1; /* ✅ Makes it take up all available space */
+  width: 100%; /* ✅ Ensures full width */
+}
+
+/* Headings and Text */
+.card h3 {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  font-weight: 600;
+  text-align: center; /* ✅ Ensures text alignment */
+}
+
+.card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center; /* ✅ Ensures text alignment */
 }
 
 /* Responsive Design */
