@@ -6,53 +6,171 @@ body {
 }
 
 /* Hero Section */
+/*
 .hero {
-  background: url("https://www.aditiconsulting.com/hubfs/10162024_Data%20Analytics_Hero%20Banner%20Image%201.png")
-    no-repeat center center/cover;
-  height: 90vh; /* Adjusts for visibility below navbar */
+  background: url("https://www.aditiconsulting.com/hubfs/10162024_Data%20Analytics_Hero%20Banner%20Image%201.png");
+  background-size: cover;
+  height: 90vh; 
   display: flex;
   align-items: center;
   justify-content: left;
   color: white;
   position: relative;
-  padding: 0 200px; /* Left padding for desktop */
+  padding: 0 200px; 
+  text-align: left;
+  flex-shrink: 1;
+}*/
+
+/* Hero Section */
+.hero {
+  background-image: url("https://www.aditiconsulting.com/hubfs/10162024_Data%20Analytics_Hero%20Banner%20Image%201.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 80vh; /* Ensures visibility */
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  color: white;
+  position: relative;
+  padding: 0 12%; /* Ensures left spacing */
   text-align: left;
 }
-/* Hero Text */
+
+/* Adding Blur Effect for Small Screens */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit; /* Inherit the background image */
+  filter: blur(0px); /* No blur by default */
+  z-index: -1;
+}
+
+/* Hero Content */
+.overlay {
+  max-width: 700px; /* Prevents text from stretching too wide */
+  position: relative; /* Ensures text stays above the blur */
+}
+
+/* Headings & Text */
 .hero h1 {
-  font-size: 6rem;
+  font-size: 5rem;
   font-weight: 700;
   color: #ffffff;
   margin-bottom: 20px;
-  padding-bottom: 20px;
+  position: relative;
+  z-index: 1;
 }
 
 .hero h4 {
+  font-size: 1.8rem;
   margin-bottom: 20px;
   color: #ffffff;
-  padding-bottom: 20px;
+  position: relative;
+  z-index: 1;
 }
 
 .hero p {
-  font-size: 1.5rem;
-  margin-bottom: 20px;
+  font-size: 1.3rem;
   color: #ffffff;
   font-weight: 350;
-  padding-bottom: 20px;
+  line-height: 1.6;
+  position: relative;
+  z-index: 1;
 }
 
-.hero .btn {
-  background: #ffffff;
-  color: #000000;
-  padding: 8px 30px;
-  text-decoration: none;
-  font-size: 1.2rem;
-  border-radius: 8px;
-  transition: 0.3s;
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .hero {
+    padding: 0 8%;
+    min-height: 70vh;
+  }
+
+  .hero h1 {
+    font-size: 4rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
 }
 
-.hero .btn:hover {
-  background: #2d72ba;
+@media (max-width: 992px) {
+  .hero {
+    padding: 0 6%;
+    min-height: 65vh;
+  }
+
+  .hero h1 {
+    font-size: 3.5rem;
+  }
+
+  .hero h4 {
+    font-size: 1.5rem;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+  }
+
+  .overlay {
+    max-width: 90%;
+  }
+}
+
+/* Apply Blur Effect on Smaller Screens */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 55vh;
+    padding: 0 5%;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .hero::before {
+    filter: blur(5px); /* Apply blur effect */
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .hero h4 {
+    font-size: 1.4rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    min-height: 50vh;
+    padding: 0 4%;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .hero::before {
+    filter: blur(2px); /* Increase blur on smaller screens */
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero h4 {
+    font-size: 1.3rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
 }
 
 /* Navbar */
@@ -74,20 +192,6 @@ body {
 
 /* Tablets (768px and above) */
 @media (max-width: 1024px) {
-  .hero {
-    height: 80vh;
-    padding: 0 50px; /* Reduce padding for tablets */
-  }
-  .hero h1 {
-    font-size: 4rem; /* Smaller font size */
-  }
-  .hero p {
-    font-size: 1.2rem;
-  }
-  .hero .btn {
-    padding: 6px 20px;
-    font-size: 1rem;
-  }
   .navmenu-mobile {
     display: none;
   }
@@ -95,22 +199,6 @@ body {
 
 /* Mobile Devices (480px and below) */
 @media (max-width: 768px) {
-  .hero {
-    height: 70vh;
-    padding: 20px; /* Adjust padding for mobile */
-    text-align: center; /* Center text on mobile */
-    justify-content: center; /* Center content */
-  }
-  .hero h1 {
-    font-size: 2.5rem; /* Smaller font for mobile */
-  }
-  .hero p {
-    font-size: 1rem;
-  }
-  .hero .btn {
-    padding: 6px 16px;
-    font-size: 0.9rem;
-  }
   .navmenu-mobile {
     display: none;
   }
@@ -126,20 +214,6 @@ body {
 
 /* Small Mobile Devices (320px and below) */
 @media (max-width: 480px) {
-  .hero {
-    height: 60vh;
-    padding: 15px;
-  }
-  .hero h1 {
-    font-size: 2rem;
-  }
-  .hero p {
-    font-size: 0.9rem;
-  }
-  .hero .btn {
-    padding: 5px 12px;
-    font-size: 0.8rem;
-  }
   .navmenu-mobile {
     display: none;
   }
@@ -306,8 +380,27 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2d72ba;
+    margin-bottom: 10px;
+    text-align: center;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    padding-right: 10px;
+  }
+  .section-subtitle {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 40px;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
   .timeline {
-    margin: 0 10px;
+    margin: 0 1px;
+    padding-left: 20px;
   }
 
   .timeline::before {
@@ -325,7 +418,7 @@ body {
 }
 @media (max-width: 1199px) {
   .timeline {
-    margin: 0 10px;
+    margin: 0 1px;
   }
   .timeline::before {
     left: 10px;

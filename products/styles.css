@@ -1,0 +1,214 @@
+/* General Styles */
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4faff;
+  color: #333;
+}
+
+.header {
+  background-color: white;
+}
+
+/* Hero Section */
+.hero {
+  background: url("banner.png") no-repeat center center;
+  background-size: cover;
+  min-height: 80vh; /* Ensures proper visibility */
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  color: white;
+  position: relative;
+  padding: 0 12%; /* Ensures left spacing */
+  text-align: left;
+}
+
+/* Hero Content */
+.overlay {
+  max-width: 700px; /* Keeps text from stretching too wide */
+}
+
+/* Heading & Text */
+.hero h1 {
+  font-size: 5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.hero h4 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.hero p {
+  font-size: 1.3rem;
+  color: #ffffff;
+  font-weight: 350;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .hero {
+    padding: 0 8%;
+    min-height: 70vh;
+  }
+
+  .hero h1 {
+    font-size: 4rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .hero {
+    padding: 0 6%;
+    min-height: 65vh;
+  }
+
+  .hero h1 {
+    font-size: 3.5rem;
+  }
+
+  .hero h4 {
+    font-size: 1.5rem;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+  }
+
+  .overlay {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 55vh;
+    padding: 0 5%;
+    text-align: left; /* Always keep text left */
+    justify-content: left; /* Ensures text stays on the left */
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .hero h4 {
+    font-size: 1.4rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    min-height: 50vh;
+    padding: 0 4%;
+    text-align: left; /* Force text left */
+    justify-content: left; /* Ensures proper alignment */
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero h4 {
+    font-size: 1.3rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}
+
+/* Sections */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 50px 0;
+}
+
+/* Image Styling */
+.image-container {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.image-container img {
+  width: 90%;
+  max-width: 800px;
+  border-radius: 10px;
+}
+
+/* Section Styling */
+.section {
+  background: white;
+  padding: 40px;
+  margin: 20px 0;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Card Grid */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.card {
+  background: rgba(45, 114, 186, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  background: rgba(45, 114, 186, 0.3);
+}
+
+/* CTA Section */
+.cta-section {
+  text-align: center;
+  background: #2d72ba;
+  color: white;
+  padding: 40px;
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 25px;
+  background: white;
+  color: #2d72ba;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.cta-button:hover {
+  background: #f4faff;
+}
+
+/* Footer */
+.footer {
+  background: #2d72ba;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}

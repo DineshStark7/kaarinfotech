@@ -1524,6 +1524,13 @@ h6 {
   background: #fff;
 }
 
+.services-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 /*--------------------------------------------------------------
 # Faq Section
 --------------------------------------------------------------*/
