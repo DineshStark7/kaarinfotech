@@ -1032,6 +1032,10 @@ h6 {
   background-color: var(--surface-color);
   box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
   padding: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .stats .stats-item:hover {
@@ -1069,7 +1073,22 @@ h6 {
   .stats .stats-item {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
+  }
+  .stats .stats-item i {
+    margin-left: 20%;
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 566px) {
+  .stats .stats-item {
+    display: flex;
+    flex-direction: row;
+  }
+  .stats .stats-item i {
+    margin-left: 10px;
+    margin-right: 20px;
   }
 }
 
@@ -1924,14 +1943,49 @@ h6 {
   width: 100%;
 }
 .client-logo-new {
-  width: 300px;
-  height: auto;
-  margin: 20px;
+  max-width: 100%; /* ✅ Ensures it never overflows the container */
+  height: auto; /* ✅ Maintains aspect ratio */
+  width: 300px; /* ✅ Default width for larger screens */
+  margin: 20px auto; /* ✅ Centers the logo */
+  display: block; /* ✅ Prevents inline spacing issues */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .client-logo-new {
+    width: 80%; /* ✅ Adjust width to 80% for tablets */
+    height: auto; /* ✅ Maintain aspect ratio */
+  }
+}
+
+@media (max-width: 480px) {
+  .client-logo-new {
+    width: 70%; /* ✅ Reduce width further for smaller screens */
+    height: auto; /* ✅ Maintain aspect ratio */
+  }
 }
 
 .microsoft-logo {
-  height: 100px;
-  width: 380px;
+  max-width: 100%; /* ✅ Ensures it doesn't overflow the container */
+  height: auto; /* ✅ Maintains aspect ratio */
+  width: 380px; /* ✅ Default width for larger screens */
+  display: block; /* ✅ Prevents inline spacing issues */
+  margin: auto; /* ✅ Centers the logo */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .microsoft-logo {
+    width: 80%; /* ✅ Reduce width to 80% of the container */
+    height: auto; /* ✅ Maintain aspect ratio */
+  }
+}
+
+@media (max-width: 480px) {
+  .microsoft-logo {
+    width: 70%; /* ✅ Further reduce width for smaller screens */
+    height: auto; /* ✅ Maintain aspect ratio */
+  }
 }
 
 .clients .swiper-slide img {
@@ -1971,6 +2025,7 @@ h6 {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  align-items: center;
   flex-wrap: wrap;
 }
 
