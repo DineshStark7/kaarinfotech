@@ -882,6 +882,20 @@ h6 {
   color: color-mix(in srgb, var(--accent-color), transparent 15%);
 }
 
+.hero-microsoft {
+  height: 500px;
+  width: 500px;
+  align-self: center;
+  justify-self: center;
+}
+
+.microsoft-logo-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
 @media (max-width: 640px) {
   .hero h1 {
     font-size: 28px;
