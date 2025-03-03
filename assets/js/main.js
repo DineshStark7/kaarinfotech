@@ -222,3 +222,32 @@
   window.addEventListener("load", navmenuScrollspy);
   document.addEventListener("scroll", navmenuScrollspy);
 })();
+
+let currentIndex = 0;
+
+function showSlide(index) {
+  const slides = document.querySelectorAll(".slide");
+  if (index >= slides.length) {
+    currentIndex = 0;
+  } else if (index < 0) {
+    currentIndex = slides.length - 1;
+  } else {
+    currentIndex = index;
+  }
+
+  const offset = -currentIndex * 100 + "%";
+  document.querySelector(".carousel").style.transform = `translateX(${offset})`;
+}
+
+function prevSlide() {
+  showSlide(currentIndex - 1);
+}
+
+function nextSlide() {
+  showSlide(currentIndex + 1);
+}
+
+// Auto slide every 3 seconds
+setInterval(() => {
+  nextSlide();
+}, 3000);

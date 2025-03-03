@@ -121,7 +121,7 @@
     </header>
 
     <main class="main">
-      <!-- Hero Section -->
+      <!-- Hero Section-->
       <section id="hero" class="hero section">
         <div class="container">
           <div class="row gy-4">
@@ -157,9 +157,62 @@
           </div>
         </div>
       </section>
-      <!-- /Hero Section -->
+      <!-- /Hero Section-->
 
       <section id="about" class="about section">
+        <div class="carousel-container">
+          <div class="carousel">
+            <div class="slide active">
+              <img
+                src="./assets/img/Carousel/slider-image-1.jpg"
+                class="carousel-img"
+                alt="Slide 1"
+              />
+              <p>
+                As a preferred supplier for Microsoft, we provide top-tier event
+                services, including application development to enhance event
+                experiences. Our team creates custom solutions that integrate
+                seamlessly with event management, ensuring innovation and
+                efficiency.
+              </p>
+            </div>
+            <div class="slide">
+              <img
+                src="./assets/img/Carousel/slider-image-2.jpg"
+                alt="Slide 2"
+                class="carousel-img"
+              />
+              <p>
+                We also specialize in streaming and captioning services, making
+                events accessible to a global audience. With high-quality
+                streaming and real-time captioning, we enhance inclusivity and
+                ensure smooth, professional event execution.
+              </p>
+            </div>
+            <div class="slide">
+              <img
+                src="./assets/img/Carousel/slider-image-2.jpeg"
+                alt="Slide 3"
+                class="carousel-img"
+              />
+              <p>
+                Our data analytics capabilities help businesses gain valuable
+                insights from their events. By leveraging advanced analytics, we
+                enable clients to track engagement, measure impact, and optimize
+                future strategies for success.
+              </p>
+            </div>
+          </div>
+          <button type="button" class="prev" onclick="prevSlide()">
+            &#10094;
+          </button>
+          <button type="button" class="next" onclick="nextSlide()">
+            &#10095;
+          </button>
+        </div>
+      </section>
+
+      <section id="" class="about section d-none">
         <div class="container" data-aos="fade-up">
           <div class="row gx-0">
             <div
@@ -200,7 +253,6 @@
           </div>
         </div>
       </section>
-
       <!-- About Section -->
       <section id="about" class="about section">
         <div class="container" data-aos="fade-up">
