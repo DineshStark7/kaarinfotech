@@ -3116,14 +3116,21 @@ a {
   background: #d32f2f;
 }
 
+.carousel-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .carousel-container {
   position: relative;
-  width: 100%;
+  width: 90%;
   overflow: hidden;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   background-color: white;
-  height: 80vh;
+  height: 60vh;
 }
 
 .carousel {
@@ -3163,10 +3170,9 @@ a {
   background: rgba(0, 0, 0, 0.5);
   color: white;
   border: none;
-  padding: 10px;
   cursor: pointer;
   border-radius: 50%;
-  font-size: 20px;
+  font-size: 30px;
 }
 
 .prev {
