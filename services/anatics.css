@@ -23,7 +23,7 @@ body {
 
 /* Hero Section */
 .hero {
-  background-image: url("https://www.aditiconsulting.com/hubfs/10162024_Data%20Analytics_Hero%20Banner%20Image%201.png");
+  background-image: url("./data-analytics.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -54,12 +54,13 @@ body {
 .overlay {
   max-width: 700px;
   position: relative;
+  margin-top: 60px;
 }
 
 /* Headings & Text */
 .hero h1 {
   font-size: 4rem;
-  font-weight: 700;
+  font-weight: 600;
   color: #ffffff;
   margin-bottom: 20px;
   position: relative;
@@ -270,7 +271,7 @@ body {
   left: -50%;
   width: 200%;
   height: 200%;
-  background: url(./data-analytics.jpg);
+  background: url(./services-contact.jpg);
   transform: rotate(25deg);
 }
 
@@ -283,7 +284,7 @@ body {
 
 .contact-cta h2 {
   font-size: 2.5rem;
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 20px;
   color: white;
 }
@@ -300,7 +301,7 @@ body {
   color: #2d72ba;
   padding: 15px 40px;
   font-size: 1.1rem;
-  font-weight: bold;
+  font-weight: 600;
   text-decoration: none;
   border-radius: 30px;
   transition: all 0.3s ease;
@@ -321,7 +322,7 @@ body {
 
 .section-title {
   font-size: 2.5rem;
-  font-weight: 700;
+  font-weight: 600;
   color: #2d72ba;
   margin-bottom: 10px;
   text-align: center;
@@ -398,7 +399,7 @@ body {
 @media (max-width: 768px) {
   .section-title {
     font-size: 2.5rem;
-    font-weight: 700;
+    font-weight: 600;
     color: #2d72ba;
     margin-bottom: 10px;
     text-align: center;
@@ -535,12 +536,8 @@ body {
   gap: 2rem;
   flex-wrap: wrap;
 }
-/*
+
 .card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 20px;
   padding: 2rem;
@@ -548,8 +545,7 @@ body {
   text-align: center;
   border: 1px solid rgba(255, 255, 255, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 1px solid red;
-}*/
+}
 
 .card:hover {
   transform: translateY(-10px);
@@ -560,73 +556,17 @@ body {
   font-size: 3rem;
   margin-bottom: 1rem;
 }
-/*
+
 .card h3 {
   font-size: 1.5rem;
-  margin: 0;
+  margin-bottom: 1rem;
   font-weight: 600;
-  border: 1px solid red;
 }
 
 .card p {
   font-size: 1rem;
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.8);
-  border: 1px solid red;
-}
-
-.card-text-container {
-  border: 1px solid red;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; 
-  text-align: center; 
-  height: 100%; 
-  width: 100%; 
-}
-*/
-
-/* Ensure card takes full height */
-.card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* ✅ Centers content vertically */
-  align-items: center; /* ✅ Centers content horizontally */
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 20px;
-  padding: 2rem;
-  width: 300px;
-  height: 100%; /* ✅ Ensures the card fills its container */
-  text-align: center;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Ensure .card-text-container fills parent height */
-.card-text-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* ✅ Ensures text is vertically centered */
-  align-items: center; /* ✅ Ensures text is horizontally centered */
-  text-align: center;
-  flex-grow: 1; /* ✅ Makes it take up all available space */
-  width: 100%; /* ✅ Ensures full width */
-}
-
-/* Headings and Text */
-.card h3 {
-  font-size: 1.5rem;
-  margin-top: 1rem;
-  font-weight: 600;
-  text-align: center; /* ✅ Ensures text alignment */
-}
-
-.card p {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: rgba(255, 255, 255, 0.8);
-  text-align: center; /* ✅ Ensures text alignment */
 }
 
 /* Responsive Design */
