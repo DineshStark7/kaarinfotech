@@ -596,6 +596,10 @@ h6 {
   padding-bottom: 12px;
 }
 
+.footer h4 {
+  color: var(--heading-color);
+}
+
 .footer .footer-links {
   margin-bottom: 30px;
 }
