@@ -3201,3 +3201,9 @@ a {
 .next:hover {
   background: rgba(0, 0, 0, 0.8);
 }
+
+.teams-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
