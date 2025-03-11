@@ -1,4 +1,18 @@
-/* Style for job details container */
+/* Global styles */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: "Segoe UI" !important;
+  font-size: 16px; /* Increased base font size */
+  line-height: 1.6;
+}
+
+/* Job details container */
 .job-details {
   width: 100%;
   height: 600px; /* Adjust as needed */
@@ -9,6 +23,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 20px;
 }
 
 /* Ensure iframe takes up full space */
@@ -16,4 +31,192 @@
   width: 100%;
   height: 100%;
   border: none;
+}
+
+/* Header */
+.header {
+  font-weight: 700;
+  font-size: 14px; /* Increased font size */
+  color: #605e5c;
+  display: inline-block;
+  font-family: "Segoe UI" !important;
+}
+
+/* Headings */
+h3 {
+  font-family: "Segoe UI" !important;
+  font-size: 40px; /* Increased heading size */
+  color: #2d73ba;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* Paragraphs */
+p {
+  font-size: 16px;
+  color: #333;
+}
+
+/* Value */
+.value {
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "Segoe UI", sans-serif !important;
+}
+
+/* Buttons */
+.btn_styling {
+  font-weight: 600;
+  font-size: 16px;
+  background-color: #2d73ba !important;
+  width: 100px;
+  padding: 10px;
+  border: 0 !important;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+.btn_styling:hover {
+  background-color: #1a5a94 !important;
+}
+
+/* Colors */
+.color-2d73ba {
+  color: #2d73ba;
+}
+
+.color-FF0000 {
+  color: #ff0000;
+}
+
+.col-232323 {
+  color: rgb(23, 23, 23);
+}
+
+.col-323130 {
+  color: #323130;
+}
+
+/* Responsive font sizes */
+.font-size-14px {
+  font-size: 16px;
+}
+
+.font-weight-600 {
+  font-weight: 600 !important;
+}
+
+/* Lists */
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  font-size: 16px;
+}
+
+/* Input fields */
+.input_dec,
+.choose_fileinp {
+  font-size: 16px !important;
+  height: 40px !important;
+  border-radius: 4px !important;
+  border: 1px solid #d1d1d1 !important;
+  background-color: #fff !important;
+  box-shadow: 1px 1px 2px 0px #0000000d !important;
+  padding: 5px;
+}
+
+.lab_width {
+  width: 200px;
+}
+
+.marg-14 {
+  margin-right: 14px !important;
+}
+
+.labdiv1 label,
+.labdiv2 label {
+  font-size: 16px !important;
+  font-weight: 500;
+}
+
+/* Borders */
+.bord-d1d1d1 {
+  border-bottom: 1px solid #d1d1d1 !important;
+}
+
+.borda-d1d1d1 {
+  background-color: #fff !important;
+  box-shadow: 1px 1px 2px 0px #0000000d !important;
+  border: 1px solid #d1d1d1 !important;
+  font-size: 16px !important;
+}
+
+.bordt-d1d1d1 {
+  border-top: 1px solid #d1d1d1;
+}
+
+/* Make design responsive */
+@media screen and (max-width: 1200px) {
+  body {
+    font-size: 15px;
+  }
+  h3 {
+    font-size: 18px;
+  }
+  h4 {
+    font-size: 16px;
+  }
+  .btn_styling {
+    font-size: 14px;
+    width: 90px;
+    padding: 8px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+  .job-details {
+    height: 500px;
+    padding: 10px;
+  }
+  h3 {
+    font-size: 16px;
+  }
+  h4 {
+    font-size: 15px;
+  }
+  .btn_styling {
+    font-size: 14px;
+    width: 85px;
+    padding: 7px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 13px;
+  }
+  .job-details {
+    height: 400px;
+    padding: 5px;
+  }
+  h3 {
+    font-size: 14px;
+  }
+  h4 {
+    font-size: 14px;
+  }
+  .btn_styling {
+    font-size: 12px;
+    width: 80px;
+    padding: 6px;
+  }
 }
