@@ -100,12 +100,8 @@
                 >Opportunities<i class="bi bi-chevron-down"></i
               ></a>
               <div class="dropdown-content">
-                <a href="./life-at-kaar.html"
-                  ><i class="bi bi-people"></i>Life at Kaar</a
-                >
-                <a href="./careers-page-v2.html"
-                  ><i class="bi bi-briefcase"></i>Careers</a
-                >
+                <a href="./life-at-kaar.html">Life at Kaar</a>
+                <a href="./careers-page-v2.html">Careers</a>
               </div>
             </li>
             <!--
@@ -134,19 +130,19 @@
     <div class="container">
       <!-- Left Section: Job List -->
       <div class="job-list" id="jobList">
-        <div class="job-item" onclick="showJobDetails(0)">
+        <div class="job-item" id="job-1" onclick="showJobDetails(0)">
           <h4>Senior Software Engineer / Technical Lead</h4>
           <p>Location: Remote / Hybrid</p>
           <p>Skills: .NET Core, C#, Web API, Azure DevOps, OOP Principles</p>
         </div>
-        <div class="job-item" onclick="showJobDetails(1)">
+        <div class="job-item" id="job-2" onclick="showJobDetails(1)">
           <h4>Technical Architect</h4>
           <p>Location: Remote / Hybrid</p>
           <p>
             Skills: ASP .NET MVC, SQL Server, Microservices, JavaScript, jQuery
           </p>
         </div>
-        <div class="job-item" onclick="showJobDetails(2)">
+        <div class="job-item" id="job-3" onclick="showJobDetails(2)">
           <h4>.NET Technical Project Manager</h4>
           <p>Location: Remote / Hybrid</p>
           <p>Skills: .NET, Azure, C#, Web API, Project Management</p>
@@ -162,10 +158,101 @@
         ></iframe>
       </div>
     </div>
+    <!-- Right Section: Job details List -->
+    <!--
+<div class="job-details" id="jobDetails">
+        <h2 class="job-title">Senior Software Engineer / Technical Lead</h2>
+        <p class="job-location">
+          Location: Remote / B1 Travel Visa for International Exposure
+        </p>
 
-    <!-- Footer -->
-    <footer id="footer" class="footer">
-      <div class="container footer-top career-footer">
+        <h3>What We Offer:</h3>
+        <ul>
+          <li>
+            Engage in cutting-edge projects, including Microsoft Events and
+            Product Development.
+          </li>
+          <li>Gain international exposure with a B1 Travel Visa.</li>
+          <li>
+            Explore new skills and technologies in a culture that values
+            learning.
+          </li>
+        </ul>
+
+        <h3>Responsibilities:</h3>
+        <ul>
+          <li>
+            Design and develop robust back-end systems and features that enhance
+            product functionality and user experience.
+          </li>
+          <li>
+            Collaborate closely with a small team of experienced developers in a
+            supportive environment.
+          </li>
+          <li>
+            Take full ownership of tasks and projects, from ideation to
+            deployment, in an agile environment.
+          </li>
+          <li>
+            Ensure high-quality, maintainable code that is efficient and
+            scalable.
+          </li>
+        </ul>
+
+        <h3>Must-Have Technical Skills:</h3>
+        <ul>
+          <li>
+            3 to 5 years of web development experience using ASP.NET, .NET Core,
+            C#, Web API, MVC, LINQ, Entity Framework, HTML, CSS, JavaScript, and
+            jQuery.
+          </li>
+          <li>Hands-on experience with Azure DevOps CI/CD pipeline.</li>
+          <li>Strong understanding of OOP and SOLID principles.</li>
+          <li>
+            Excellent interpersonal and communication skills, both written and
+            verbal.
+          </li>
+        </ul>
+
+        <h3>Required Qualifications:</h3>
+        <ul>
+          <li>
+            Bachelor’s degree in Computer Science or a related technical field.
+          </li>
+        </ul>
+
+        <div class="apply-now">
+          <button class="applyBtn">Apply Now</button>
+        </div>
+      </div>    
+-->
+
+    <!-- Modal -->
+    <div id="applyModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span>Job Application Form</span>
+          <span class="close" id="closeModal">&times;</span>
+        </div>
+        <div class="modal-body">
+          <iframe
+            src="https://forms.gle/F5rJMzmj5BwzCmG48"
+            title="Google Form"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+    <footer class="footer new-footer d-none">
+      <div class="container copyright text-center mt-4">
+        <p>
+          © <span>Copyright</span>
+          <strong class="px-1 sitename">Kaar Infotech 2025</strong>
+          <span>All Rights Reserved</span>
+        </p>
+      </div>
+    </footer>
+    <footer id="footer" class="footer career-footer">
+      <div class="container footer-top">
         <div class="row gy-4">
           <div class="col-lg-4 col-md-6 footer-about">
             <a href="index.html" class="d-flex align-items-center">
@@ -453,6 +540,7 @@
         });
 
         // Function to filter jobs based on search input
+        /*
         function filterJobs() {
           const searchValue = document
             .getElementById("search")
@@ -461,6 +549,18 @@
 
           jobItems.forEach((item, index) => {
             const title = jobs[index].title.toLowerCase();
+            item.style.display = title.includes(searchValue) ? "" : "none";
+          });
+        }
+*/
+        function filterJobs() {
+          const searchValue = document
+            .getElementById("search")
+            .value.toLowerCase();
+          const jobItems = document.querySelectorAll(".job-item");
+
+          jobItems.forEach((item) => {
+            const title = item.querySelector("h4").innerText.toLowerCase();
             item.style.display = title.includes(searchValue) ? "" : "none";
           });
         }

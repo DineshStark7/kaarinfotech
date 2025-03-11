@@ -18,6 +18,11 @@ body {
 h2 {
   font-weight: 600;
   font-size: 2.2rem;
+  color: #2d72ba;
+}
+
+h3 {
+  font-size: 2.2rem;
 }
 
 p {

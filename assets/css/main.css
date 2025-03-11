@@ -945,11 +945,11 @@ h6 {
 --------------------------------------------------------------*/
 .about .content {
   background-color: color-mix(in srgb, var(--accent-color), transparent 95%);
-  padding: 40px;
+  padding: 30px;
 }
 
 .about .content h3 {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 700;
   color: var(--accent-color);
   text-transform: uppercase;
@@ -3206,4 +3206,8 @@ a {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+}
+.email-text {
+  word-break: break-word; /* Allows long words (like emails) to break and wrap */
+  overflow-wrap: break-word;
 }
