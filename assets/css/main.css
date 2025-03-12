@@ -888,16 +888,16 @@ h6 {
 }
 
 .hero-microsoft {
-  height: 500px;
-  width: 500px;
+  height: 300px;
+  width: 300px;
   align-self: center;
   justify-self: center;
 }
 
 @media (max-width: 1199px) {
   .hero-microsoft {
-    height: 400px;
-    width: 400px;
+    height: 300px;
+    width: 300px;
   }
 }
 
