@@ -13,7 +13,7 @@ body {
 
 /* Hero Section */
 .hero {
-  background: url("banner.png") no-repeat center center;
+  background: url("Event-Way-Finder.jpg") no-repeat center center;
   background-size: cover;
   min-height: 80vh; /* Ensures proper visibility */
   display: flex;
@@ -256,4 +256,45 @@ body {
   color: white;
   text-align: center;
   padding: 20px;
+}
+
+.hero {
+  background: url("Event-Way-Finder.jpg") no-repeat center center;
+  background-size: cover;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  color: white;
+  position: relative;
+  padding: 0 12%;
+  text-align: left;
+  width: 100%;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .hero {
+    padding: 0 8%;
+    min-height: 70vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 0 5%;
+    min-height: 60vh;
+    text-align: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 0 3%;
+    min-height: 50vh;
+    align-items: center;
+    justify-content: center;
+  }
 }
