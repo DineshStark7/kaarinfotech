@@ -215,35 +215,38 @@
       </div>
     </section>
 
-    <!-- Services Section
-    <section class="services">
-        <div class="container">
-            <h2 data-aos="fade-up">Our Services</h2>
-            <div class="row">
-                <div class="col-md-4" data-aos="flip-left">
-                    <div class="service-card">
-                        <i class="bi bi-bar-chart"></i>
-                        <h3>Business Intelligence</h3>
-                        <p>Advanced BI solutions for data-driven strategies.</p>
-                    </div>
-                </div>
-                <div class="col-md-4" data-aos="flip-left" data-aos-delay="200">
-                    <div class="service-card">
-                        <i class="bi bi-database"></i>
-                        <h3>Data Integration</h3>
-                        <p>Seamless integration across various data sources.</p>
-                    </div>
-                </div>
-                <div class="col-md-4" data-aos="flip-left" data-aos-delay="400">
-                    <div class="service-card">
-                        <i class="bi bi-pie-chart"></i>
-                        <h3>Custom Dashboards</h3>
-                        <p>Interactive dashboards tailored to your needs.</p>
-                    </div>
-                </div>
-            </div>
+    <!-- Tools & Technology Section -->
+    <section class="tools-tech" data-aos="fade-in">
+      <h2>Tools & Technology</h2>
+      <div class="tech-slider">
+        <div class="tech-items">
+          <img src="./technologies/NLP.jpg" alt="NLP" />
+          <img src="./technologies/tech5.png" alt="C#" />
+          <img src="./technologies/azure-ai-studio-logo.png" alt="Azure AI" />
+          <img
+            src="./technologies/AI-powered-search.png"
+            alt="AI Powered Search"
+          />
+          <img
+            src="./technologies/Logo-Power-Automate.png"
+            alt="Power Automate"
+          />
+
+          <!-- Duplicate set of images for a seamless loop -->
+          <img src="./technologies/NLP.jpg" alt="NLP" />
+          <img src="./technologies/tech5.png" alt="C#" />
+          <img src="./technologies/azure-ai-studio-logo.png" alt="Azure AI" />
+          <img
+            src="./technologies/AI-powered-search.png"
+            alt="AI Powered Search"
+          />
+          <img
+            src="./technologies/Logo-Power-Automate.png"
+            alt="Power Automate"
+          />
         </div>
-    </section> -->
+      </div>
+    </section>
 
     <!--why choose ours-->
     <section class="analytics-services">
@@ -418,6 +421,12 @@
     AOS.init({
       duration: 800, // Animation speed
       once: true, // Animate only once
+    });
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const techSlider = document.querySelector(".tech-items");
+      techSlider.innerHTML += techSlider.innerHTML; // Duplicate for seamless loop
     });
   </script>
 </html>
