@@ -18,7 +18,7 @@ body {
   margin: 0 auto;
 }
 
-/* 🔹 Header Styling with Logo */
+/* Header Styling with Logo */
 header {
   background: #ffffff;
   padding: 20px;
@@ -58,7 +58,7 @@ header {
   max-width: 600px;
 }
 
-/* 🔹 Success Story Card */
+/* Success Story Card */
 .success-story {
   background: #ffffff;
   border-radius: 12px;
@@ -87,7 +87,7 @@ header {
   margin-bottom: 30px;
 }
 
-/* 🔹 Challenges, Solutions, Results Sections */
+/* Challenges, Solutions, Results Sections */
 .success-story .challenges,
 .success-story .solutions,
 .success-story .results {
@@ -111,7 +111,7 @@ header {
   color: #2d72ba;
 }
 
-/* 🔹 Client Testimonial */
+/* Client Testimonial */
 .testimonial {
   background: linear-gradient(135deg, #ecf0f1, #ffffff);
   border-radius: 12px;
@@ -142,7 +142,7 @@ header {
   color: #2d72ba;
 }
 
-/* 🔹 Footer */
+/* Footer */
 footer {
   text-align: center;
   margin-top: 50px;
@@ -162,7 +162,7 @@ footer a:hover {
   color: #1a5276;
 }
 
-/* 🔹 Responsive Design */
+/* Responsive Design */
 @media screen and (max-width: 768px) {
   .header-container {
     flex-direction: column;
