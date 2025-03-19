@@ -492,8 +492,42 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-# Global Footer
+# Global Parallax Section
 --------------------------------------------------------------*/
+/* Parallax Section */
+
+.parallax-container {
+  position: relative;
+  width: 100%;
+  height: 50vh; /* Full viewport height */
+  background-image: url("https://media.istockphoto.com/id/1450344643/photo/business-closeup-concept-image-with-white-glyph-icons.jpg?s=1024x1024&w=is&k=20&c=Ad7t-BeVsXN0XpPE8xAl_Ci6opoIxZkh8jJAUximlpg="); /* Replace with your actual image */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Keeps the background fixed */
+}
+
+.parallax-overlay-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+  backdrop-filter: blur(20px); /* Optional for a transparent glass effect */
+  padding: 20px;
+  height: 100%;
+  font-family: "FF Kievit", sans-serif;
+}
+
+/*--------------------------------------------------------------
+# Global Footer
+
 .footer {
   color: var(--default-color);
   background-color: var(--background-color);
@@ -663,7 +697,168 @@ h6 {
   margin-top: 6px;
   font-size: 13px;
 }
+--------------------------------------------------------------*/
 
+.footer {
+  color: white;
+  background: linear-gradient(45deg, #2d72ba, #1a4b7a);
+  font-size: 14px;
+  position: relative;
+}
+
+.footer .footer-newsletter {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 50px 0;
+}
+
+.footer .footer-newsletter h4 {
+  font-size: 24px;
+  color: white;
+}
+
+.footer .footer-newsletter .newsletter-form {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  padding: 6px 8px;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0px 2px 25px rgba(0, 0, 0, 0.1);
+  display: flex;
+  transition: 0.3s;
+  border-radius: 4px;
+}
+
+.footer .footer-newsletter .newsletter-form:focus-within {
+  border-color: white;
+}
+
+.footer .footer-newsletter .newsletter-form input[type="email"] {
+  border: 0;
+  padding: 4px;
+  width: 100%;
+  background-color: transparent;
+  color: white;
+}
+
+.footer .footer-newsletter .newsletter-form input[type="email"]:focus-visible {
+  outline: none;
+}
+
+.footer .footer-newsletter .newsletter-form input[type="submit"] {
+  border: 0;
+  font-size: 16px;
+  padding: 0 20px;
+  margin: -7px -8px -7px 0;
+  background: white;
+  color: #2d72ba;
+  transition: 0.3s;
+  border-radius: 0 4px 4px 0;
+}
+
+.footer .footer-newsletter .newsletter-form input[type="submit"]:hover {
+  background: #d9e6f2;
+}
+
+.footer .footer-top {
+  padding-top: 50px;
+}
+
+.footer .social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 16px;
+  color: white;
+  margin-right: 10px;
+  transition: 0.3s;
+}
+
+.footer .social-links a:hover {
+  color: #2d72ba;
+  background-color: white;
+}
+
+.footer h4 {
+  font-size: 16px;
+  font-weight: bold;
+  position: relative;
+  padding-bottom: 12px;
+  color: white;
+}
+
+.footer .footer-links {
+  margin-bottom: 30px;
+}
+
+.footer .footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer .footer-links ul i {
+  margin-right: 3px;
+  font-size: 12px;
+  line-height: 0;
+  color: white;
+}
+
+.footer .footer-links ul li {
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+.footer .footer-links ul li:first-child {
+  padding-top: 0;
+}
+
+.footer .footer-links ul a {
+  display: inline-block;
+  color: white;
+  line-height: 1;
+}
+
+.footer .footer-links ul a:hover {
+  color: #d9e6f2;
+}
+
+.footer .footer-about a {
+  color: white;
+  font-size: 24px;
+  font-weight: 600;
+  font-family: var(--heading-font);
+}
+
+.footer .footer-contact p {
+  margin-bottom: 5px;
+  color: white;
+}
+
+.footer .copyright {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer .copyright p {
+  margin-bottom: 0;
+  color: white;
+}
+
+.footer .credits {
+  margin-top: 6px;
+  font-size: 13px;
+  color: white;
+}
 /*--------------------------------------------------------------
 # Scroll Top Button
 --------------------------------------------------------------*/
