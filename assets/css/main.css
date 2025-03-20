@@ -1198,6 +1198,25 @@ h6 {
   transform: translateX(5px);
 }
 
+.about-img {
+  max-width: 100%; /* Ensures the image scales down on smaller screens */
+  height: auto; /* Maintains aspect ratio */
+  width: 500px; /* Default width, but can shrink on smaller screens */
+}
+
+/* Adjust size for smaller screens */
+@media (max-width: 768px) {
+  .about-img {
+    width: 100%; /* Adjust width dynamically for tablets and smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .about-img {
+    width: 100%; /* Full width on very small screens (mobile) */
+  }
+}
+
 /*--------------------------------------------------------------
 # Values Section
 
@@ -1537,6 +1556,7 @@ h6 {
   box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
   transition: 0.3s;
   height: 100%;
+  border-radius: 15px;
 }
 
 .features .feature-box h3 {
