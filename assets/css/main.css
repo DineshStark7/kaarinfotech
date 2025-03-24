@@ -848,8 +848,7 @@ h6 {
 --------------------------------------------------------------*/
 .hero {
   width: 100%;
-  min-height: 100vh;
-  height: auto;
+  max-height: 70vh;
   position: relative;
   padding: 80px 0 60px 0;
   display: flex;
@@ -865,7 +864,7 @@ h6 {
 }
 .hero {
   width: 100%;
-  min-height: 100vh;
+  min-height: 90vh;
   height: auto;
   position: relative;
   padding: 80px 0 60px 0;
@@ -3559,7 +3558,7 @@ a {
 .faq .faq-container .faq-item .faq-content p {
   margin-bottom: 0;
   overflow: hidden;
-  padding-left: 35px;
+  padding-left: 10px;
   /* Move the paragraph content to the right */
 }
 
