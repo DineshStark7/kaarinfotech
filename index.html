@@ -50,6 +50,10 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
   </head>
 
   <body class="index-page">
@@ -101,8 +105,11 @@
                 >Products<i class="bi bi-chevron-down"></i
               ></a>
               <div class="dropdown-content">
-                <a href="./products/indoor-maps.html"
+                <a href="./products/ind.html"
                   ><i class="bi bi-geo-alt"></i>Indoor Maps</a
+                >
+                <a href="./products/Badge-scanner.html"
+                  ><i class="bi bi-upc-scan"></i>Badge Scanner</a
                 >
               </div>
             </li>
@@ -142,7 +149,7 @@
               class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center"
             >
               <h1 data-aos="fade-up">
-                Empowering Your Business with Cutting-Edge Solutions
+                Empowering Your Business with <br />Cutting-Edge Solutions
               </h1>
               <p data-aos="fade-up" data-aos-delay="100">
                 We are a team of skilled and innovative Software Engineers
@@ -158,12 +165,12 @@
               </div>
             </div>
             <div
-              class="col-lg-6 order-1 order-lg-2 hero-img-container"
+              class="col-lg-6 order-1 order-lg-2 hero-img-container d-none"
               data-aos="zoom-out"
             >
               <img
                 src="assets/img/Kaar-Infotech-Logo.png"
-                class="img-fluid animated"
+                class="img-fluid animated hero-section-logo"
                 alt="Company Logo"
               />
             </div>
@@ -172,7 +179,7 @@
       </section>
       <!-- /Hero Section-->
 
-      <section id="about" class="about section">
+      <section class="about section d-none">
         <div class="container" data-aos="fade-up">
           <div class="row gx-0">
             <div
@@ -181,7 +188,7 @@
               data-aos-delay="200"
             >
               <img
-                src="assets/img/Carousel/slider-image-1.jpg"
+                src="assets/img/Microsoft-logo-home.png"
                 class="img-fluid hero-microsoft"
                 alt=""
               />
@@ -193,9 +200,11 @@
             >
               <div class="">
                 <p class="microsoft-description">
-                  As a preferred Microsoft supplier, we deliver top-tier event
-                  services, from custom app development to seamless event
-                  management, ensuring a smooth experience for attendees.<br /><br />
+                  As a preferred
+                  <span class="hero-microsoft-text">Microsoft supplier</span>,
+                  we deliver top-tier event services, from custom app
+                  development to seamless event management, ensuring a smooth
+                  experience for attendees.<br /><br />
 
                   Our high-quality streaming and real-time captioning enhance
                   accessibility for all participants. Plus, our advanced
@@ -208,6 +217,30 @@
         </div>
       </section>
 
+      <div id="about" class="about-microsoft">
+        <div>
+          <img
+            src="assets/img/Microsoft-logo-home.png"
+            class="img-fluid hero-microsoft"
+            alt=""
+          />
+        </div>
+        <div class="">
+          <p class="microsoft-description">
+            As a preferred
+            <span class="hero-microsoft-text">Microsoft supplier</span>, we
+            deliver top-tier event services, from custom app development to
+            seamless event management, ensuring a smooth experience for
+            attendees.<br /><br />
+
+            Our high-quality streaming and real-time captioning enhance
+            accessibility for all participants. Plus, our advanced analytics
+            provide deep insights to measure engagement, optimize interactions,
+            and drive event success.
+          </p>
+        </div>
+      </div>
+
       <div class="parallax-container">
         <div class="parallax-overlay-content">
           "Unleash your business’s true potential <br />while we cater to your
@@ -216,11 +249,11 @@
       </div>
 
       <!-- About Section -->
-      <section id="" class="about section">
+      <section id="" class="about section blue-background">
         <div class="container" data-aos="fade-up">
           <div class="row gx-0">
             <div
-              class="col-lg-6 d-flex flex-column justify-content-center"
+              class="col-lg-7 d-flex flex-column justify-content-center"
               data-aos="fade-up"
               data-aos-delay="100"
             >
@@ -248,7 +281,7 @@
             </div>
 
             <div
-              class="col-lg-6 d-flex align-items-center"
+              class="col-lg-5 d-flex align-items-center"
               data-aos="zoom-out"
               data-aos-delay="200"
             >
@@ -325,7 +358,11 @@
         <div class="container section-title" data-aos="fade-up">
           <h2>Key Metrics</h2>
         </div>
-        <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div
+          class="container key-metrics-container"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
           <div class="row gy-4 stats-container">
             <!-- End Stats Item -->
             <div class="col-lg-3 col-md-6">
@@ -416,14 +453,15 @@
           </div>
 
           <!-- Success Story Card -->
-          <div class="success-story-card">
+          <div class="success-story-card success-stories-gradient">
             <div class="success-story-image-wrapper">
               <img
-                src="./assets/img/Success-Story.png"
+                src="./assets/img/success-story.jpg"
                 alt="Client Success"
                 class="success-story-image"
               />
             </div>
+
             <div class="success-story-content">
               <h3 class="success-story-title">
                 Security & Compliance Success Story
@@ -648,10 +686,9 @@
                     <h4>Quick Turnaround for Development</h4>
                     <p>
                       We excel in delivering rapid and efficient development
-                      solutions, ensuring your projects are completed swiftly
-                      without compromising quality. Our agile approach allows us
-                      to meet tight deadlines and adapt to changing requirements
-                      seamlessly.
+                      solutions, ensuring your projects are completed swiftly.
+                      Our agile approach allows us to meet tight deadlines and
+                      adapt to changing requirements seamlessly.
                     </p>
                   </div>
                 </div>
@@ -689,7 +726,7 @@
       <!-- /Alt Features Section -->
 
       <!-- Services Section -->
-      <section id="services" class="services section">
+      <section id="services" class="services section blue-background">
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
           <h2>Services</h2>
@@ -1094,7 +1131,7 @@
                     class="img-fluid"
                     alt=""
                   />
-                  <div class="social">
+                  <div class="social d-none">
                     <a
                       href="https://www.linkedin.com/in/nithya-subramaniam-2b08691b/"
                       target="_blank"
@@ -1127,7 +1164,7 @@
                     class="img-fluid"
                     alt=""
                   />
-                  <div class="social">
+                  <div class="social d-none">
                     <a href=""><i class="bi bi-linkedin"></i></a>
                   </div>
                 </div>
@@ -1156,7 +1193,7 @@
                     class="img-fluid"
                     alt=""
                   />
-                  <div class="social">
+                  <div class="social d-none">
                     <a href=""><i class="bi bi-linkedin"></i></a>
                   </div>
                 </div>
@@ -1184,8 +1221,9 @@
         >
           <h2>Prominent Clients</h2>
         </div>
-        <!-- Left Image -->
-        <div class="client-images-container">
+
+        <div class="client-images-container d-none">
+          <!-- Left Image -->
           <div>
             <img
               src="assets/img/clients/Microsoft.png"
@@ -1193,13 +1231,34 @@
               alt="Centered Logo"
             />
           </div>
+
           <!-- Right Image -->
-          <div class="">
+
+          <div>
             <img
               src="assets/img/clients/sound-planning.png"
               class="client-logo-new"
               alt="Sound Planning Logo"
             />
+          </div>
+        </div>
+        <!-- Carousel -->
+        <div class="swiper client-carousel client-images-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img
+                src="assets/img/clients/Microsoft.png"
+                alt="Microsoft Logo"
+                class="client-logo-new microsoft-logo"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="assets/img/clients/sound-planning.png"
+                alt="Sound Planning Logo"
+                class="client-logo-new"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -1325,13 +1384,43 @@
                 <div class="info-item" data-aos="fade" data-aos-delay="200">
                   <i class="bi bi-geo-alt"></i>
                   <h3>Address</h3>
+                  <!--
                   <p>
                     Kaar Infotech Private Limited, 15/1, 4th Cross Street,
                     Erode, Tamilnadu - 638052, India
                   </p>
                   <p>
                     Kaar INC, 312 17th Street Unit 2229, Denver CO 80202, USA
-                  </p>
+                  </p>-->
+                  <div class="address-toggle mb-2">
+                    <button
+                      onclick="toggleAddress('us', event)"
+                      class="custom-map-btn"
+                      type="button"
+                    >
+                      USA
+                    </button>
+                    <button
+                      onclick="toggleAddress('india', event)"
+                      class="custom-map-btn active"
+                      type="button"
+                    >
+                      India
+                    </button>
+                  </div>
+
+                  <div id="address-india">
+                    <p>
+                      Kaar Infotech Private Limited, 15/1, 4th Cross Street,
+                      Erode, Tamilnadu - 638052, India
+                    </p>
+                  </div>
+
+                  <div id="address-us" style="display: none">
+                    <p>
+                      Kaar INC, 312 17th Street Unit 2229, Denver CO 80202, USA
+                    </p>
+                  </div>
                 </div>
               </div>
               <div class="row gy-4">
@@ -1383,6 +1472,7 @@
             <div class="col-lg-6 map-container">
               <div class="map-wrapper">
                 <iframe
+                  id="map-frame"
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3912.838462329452!2d77.60450167521915!3d11.273282288907325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba96d780fa4d489%3A0xaacc61619830a3c1!2sKaar%20Infotech%20Private%20Limited!5e0!3m2!1sen!2sin!4v1737355512527!5m2!1sen!2sin"
                   allowfullscreen
                   loading="lazy"
@@ -1390,8 +1480,6 @@
                 ></iframe>
               </div>
             </div>
-
-            <!-- End Contact Form -->
           </div>
         </div>
       </section>
@@ -1508,5 +1596,45 @@
     <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
     <script src="assets/js/theme.js"></script>
+    <script>
+      function toggleAddress(region, event) {
+        const indiaAddr = document.getElementById("address-india");
+        const usAddr = document.getElementById("address-us");
+        const map = document.getElementById("map-frame");
+
+        if (region === "india") {
+          indiaAddr.style.display = "block";
+          usAddr.style.display = "none";
+          map.src =
+            "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3912.838462329452!2d77.60450167521915!3d11.273282288907325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba96d780fa4d489%3A0xaacc61619830a3c1!2sKaar%20Infotech%20Private%20Limited!5e0!3m2!1sen!2sin!4v1737355512527!5m2!1sen!2sin";
+        } else {
+          indiaAddr.style.display = "none";
+          usAddr.style.display = "block";
+          map.src =
+            "https://www.google.com/maps?q=312+17th+Street+Unit+2229,+Denver+CO+80202&output=embed";
+        }
+
+        // Active button styling
+        document
+          .querySelectorAll(".custom-map-btn")
+          .forEach((btn) => btn.classList.remove("active"));
+        event.target.classList.add("active");
+      }
+    </script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Init Swiper -->
+    <script>
+      const swiper = new Swiper(".client-carousel", {
+        loop: true,
+        autoplay: {
+          delay: 1500,
+          disableOnInteraction: false,
+        },
+        slidesPerView: 1,
+        spaceBetween: 20,
+      });
+    </script>
   </body>
 </html>
