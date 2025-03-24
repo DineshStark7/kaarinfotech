@@ -1521,7 +1521,7 @@ h6 {
 
 /*--------------------------------------------------------------
 # Features Section
---------------------------------------------------------------*/
+
 .skills-container {
   background-color: #234d85;
   border-radius: 20px;
@@ -1553,7 +1553,7 @@ h6 {
 }
 
 .features .feature-box:hover {
-  box-shadow: 0 0 30px 2px #2d72ba, 0 0 3px 3px #2d72ba; /* Neon glow effect */
+  box-shadow: 0 0 30px 2px #2d72ba, 0 0 3px 3px #2d72ba; 
 }
 
 .features .feature-box i {
@@ -1573,6 +1573,86 @@ h6 {
   color: var(--contrast-color);
 }
 
+.skill {
+  display: flex;
+  align-items: center;
+}
+--------------------------------------------------------------*/
+/* New Skills container background */
+.skills-container {
+  background-color: #234d85;
+  border-radius: 20px;
+  padding: 1.5rem;
+}
+
+/* Feature box styles */
+.features .feature-box {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .features .feature-box {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .features .feature-box i {
+    margin: 0 10px 0 0;
+  }
+
+  .skill {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .features .feature-box h3 {
+    margin-top: 8px;
+  }
+}
+
+/* Feature box icon */
+.features .feature-box i {
+  background: color-mix(in srgb, var(--accent-color), transparent 92%);
+  color: white;
+  line-height: 0;
+  padding: 8px;
+  margin-right: 10px;
+  font-size: 24px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+/* Icon on hover */
+.features .feature-box:hover i {
+  background: var(--accent-color);
+  color: var(--contrast-color);
+}
+
+/* Text styling */
+.features .feature-box h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+  color: white;
+}
+
+/* Box hover effect */
+.features .feature-box:hover {
+  box-shadow: 0 0 30px 2px #2d72ba, 0 0 3px 3px #2d72ba;
+}
+
+/* Skill wrapper */
 .skill {
   display: flex;
   align-items: center;
@@ -1671,6 +1751,7 @@ h6 {
   margin-left: 5px;
   font-size: 18px;
 }
+/*
 
 .services .service-item.item-cyan {
   border-bottom: 3px solid #007fff;
@@ -1688,6 +1769,56 @@ h6 {
 .services .service-item.item-cyan:hover {
   background: #007fff;
 }
+  */
+
+/* Default state — cyan accent */
+.services .service-item.item-cyan {
+  background: #007fff; /* cyan blue */
+  border-bottom: 3px solid #007fff;
+  transition: background 0.3s ease, color 0.3s ease;
+  color: white;
+}
+
+/* Icon in default state */
+.services .service-item.item-cyan .icon {
+  color: white;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* "Read More" link in default state */
+.services .service-item.item-cyan .read-more {
+  color: white;
+}
+
+/* Hover state — reverse to white background */
+.services .service-item.item-cyan:hover {
+  background: white;
+  border-bottom: 3px solid #007fff;
+  color: #000;
+}
+
+/* Icon on hover */
+.services .service-item.item-cyan:hover .icon {
+  color: #007fff;
+  background: rgba(13, 202, 240, 0.1);
+}
+
+/* "Read More" on hover */
+.services .service-item.item-cyan:hover .read-more {
+  color: #007fff;
+}
+
+/* Heading on hover */
+.services .service-item.item-cyan:hover h3 {
+  color: #000;
+}
+
+/* Paragraph on hover */
+.services .service-item.item-cyan:hover p {
+  color: #000;
+}
+
+/*
 
 .services .service-item.item-orange {
   border-bottom: 3px solid #f2c811;
@@ -1704,8 +1835,55 @@ h6 {
 
 .services .service-item.item-orange:hover {
   background: #f2c811;
+}*/
+
+/* Default state — orange-yellow accent */
+.services .service-item.item-orange {
+  background: #f2c811; /* bright yellow-orange */
+  border-bottom: 3px solid #f2c811;
+  transition: background 0.3s ease, color 0.3s ease;
+  color: white;
 }
 
+/* Icon in default state */
+.services .service-item.item-orange .icon {
+  color: white;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* "Read More" link in default state */
+.services .service-item.item-orange .read-more {
+  color: white;
+}
+
+/* Hover state — reverse to white background */
+.services .service-item.item-orange:hover {
+  background: white;
+  border-bottom: 3px solid #f2c811; /* Keep accent border */
+  color: #000000;
+}
+
+/* Icon on hover */
+.services .service-item.item-orange:hover .icon {
+  color: #f2c811;
+  background: rgba(253, 126, 20, 0.1);
+}
+
+/* "Read More" on hover */
+.services .service-item.item-orange:hover .read-more {
+  color: #f2c811;
+}
+
+/* On hover, make paragraph text black */
+.services .service-item.item-orange:hover h3 {
+  color: #000;
+}
+
+/* On hover, make paragraph text black */
+.services .service-item.item-orange:hover p {
+  color: #000;
+}
+/*
 .services .service-item.item-teal {
   border-bottom: 3px solid #407855;
 }
@@ -1722,7 +1900,55 @@ h6 {
 .services .service-item.item-teal:hover {
   background: #407855;
 }
+*/
 
+/* Default state — teal accent */
+.services .service-item.item-teal {
+  background: #407855; /* deep teal */
+  border-bottom: 3px solid #407855;
+  transition: background 0.3s ease, color 0.3s ease;
+  color: white;
+}
+
+/* Icon in default state */
+.services .service-item.item-teal .icon {
+  color: white;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* "Read More" link in default state */
+.services .service-item.item-teal .read-more {
+  color: white;
+}
+
+/* Hover state — reverse to white background */
+.services .service-item.item-teal:hover {
+  background: white;
+  border-bottom: 3px solid #407855;
+  color: #000;
+}
+
+/* Icon on hover */
+.services .service-item.item-teal:hover .icon {
+  color: #407855;
+  background: rgba(32, 201, 151, 0.1);
+}
+
+/* "Read More" on hover */
+.services .service-item.item-teal:hover .read-more {
+  color: #407855;
+}
+
+/* Heading on hover */
+.services .service-item.item-teal:hover h3 {
+  color: #000;
+}
+
+/* Paragraph on hover */
+.services .service-item.item-teal:hover p {
+  color: #000;
+}
+/*
 .services .service-item.item-red {
   border-bottom: 3px solid #df1529;
 }
@@ -1739,7 +1965,55 @@ h6 {
 .services .service-item.item-red:hover {
   background: #df1529;
 }
+*/
 
+/* Default state — red accent */
+.services .service-item.item-red {
+  background: #df1529; /* bold red */
+  border-bottom: 3px solid #df1529;
+  transition: background 0.3s ease, color 0.3s ease;
+  color: white;
+}
+
+/* Icon in default state */
+.services .service-item.item-red .icon {
+  color: white;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* "Read More" link in default state */
+.services .service-item.item-red .read-more {
+  color: white;
+}
+
+/* Hover state — reverse to white background */
+.services .service-item.item-red:hover {
+  background: white;
+  border-bottom: 3px solid #df1529;
+  color: #000;
+}
+
+/* Icon on hover */
+.services .service-item.item-red:hover .icon {
+  color: #df1529;
+  background: rgba(223, 21, 4, 0.1);
+}
+
+/* "Read More" on hover */
+.services .service-item.item-red:hover .read-more {
+  color: #df1529;
+}
+
+/* Heading on hover */
+.services .service-item.item-red:hover h3 {
+  color: #000;
+}
+
+/* Paragraph on hover */
+.services .service-item.item-red:hover p {
+  color: #000;
+}
+/*
 .services .service-item.item-indigo {
   border-bottom: 3px solid #742774;
 }
@@ -1756,6 +2030,56 @@ h6 {
 .services .service-item.item-indigo:hover {
   background: #742774;
 }
+  */
+
+/* Default state — indigo accent */
+.services .service-item.item-indigo {
+  background: #742774; /* rich indigo */
+  border-bottom: 3px solid #742774;
+  transition: background 0.3s ease, color 0.3s ease;
+  color: white;
+}
+
+/* Icon in default state */
+.services .service-item.item-indigo .icon {
+  color: white;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* "Read More" link in default state */
+.services .service-item.item-indigo .read-more {
+  color: white;
+}
+
+/* Hover state — reverse to white background */
+.services .service-item.item-indigo:hover {
+  background: white;
+  border-bottom: 3px solid #742774;
+  color: #000;
+}
+
+/* Icon on hover */
+.services .service-item.item-indigo:hover .icon {
+  color: #742774;
+  background: rgba(102, 16, 242, 0.1);
+}
+
+/* "Read More" on hover */
+.services .service-item.item-indigo:hover .read-more {
+  color: #742774;
+}
+
+/* Heading on hover */
+.services .service-item.item-indigo:hover h3 {
+  color: #000;
+}
+
+/* Paragraph on hover */
+.services .service-item.item-indigo:hover p {
+  color: #000;
+}
+
+/*
 
 .services .service-item.item-pink {
   border-bottom: 3px solid #00bcd4;
@@ -1772,6 +2096,54 @@ h6 {
 
 .services .service-item.item-pink:hover {
   background: #00bcd4;
+}
+  */
+
+/* Default state — pink/cyan accent */
+.services .service-item.item-pink {
+  background: #00bcd4; /* cyan accent */
+  border-bottom: 3px solid #00bcd4;
+  transition: background 0.3s ease, color 0.3s ease;
+  color: white;
+}
+
+/* Icon in default state */
+.services .service-item.item-pink .icon {
+  color: white;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* "Read More" link in default state */
+.services .service-item.item-pink .read-more {
+  color: white;
+}
+
+/* Hover state — reverse to white background */
+.services .service-item.item-pink:hover {
+  background: white;
+  border-bottom: 3px solid #00bcd4;
+  color: #000;
+}
+
+/* Icon on hover */
+.services .service-item.item-pink:hover .icon {
+  color: #00bcd4;
+  background: rgba(243, 38, 140, 0.1);
+}
+
+/* "Read More" on hover */
+.services .service-item.item-pink:hover .read-more {
+  color: #00bcd4;
+}
+
+/* Heading on hover */
+.services .service-item.item-pink:hover h3 {
+  color: #000;
+}
+
+/* Paragraph on hover */
+.services .service-item.item-pink:hover p {
+  color: #000;
 }
 
 .services .service-item:hover h3,
