@@ -112,6 +112,14 @@
     .querySelectorAll(".faq-item h3, .faq-item .faq-toggle")
     .forEach((faqItem) => {
       faqItem.addEventListener("click", () => {
+        // First, collapse all other FAQ items
+        document.querySelectorAll(".faq-item").forEach((item) => {
+          if (item !== faqItem.parentNode) {
+            item.classList.remove("faq-active");
+          }
+        });
+
+        // Then, toggle the clicked FAQ item
         faqItem.parentNode.classList.toggle("faq-active");
       });
     });

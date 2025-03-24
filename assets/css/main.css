@@ -78,7 +78,7 @@ h6 {
 
 .header {
   color: var(--default-color);
-  background: transparent;
+  background: white;
   padding: 20px 0;
   z-index: 997;
   height: 70px;
@@ -854,9 +854,44 @@ h6 {
   padding: 80px 0 60px 0;
   display: flex;
   align-items: center;
-  background: url(../img/Banner-1.png) no-repeat;
+  background: url(../img/New-Home-Banner.png) no-repeat;
   background-size: cover;
   text-align: center;
+}
+
+.hero-content-container {
+  position: relative;
+  z-index: 999;
+}
+.hero {
+  width: 100%;
+  min-height: 100vh;
+  height: auto;
+  position: relative;
+  padding: 80px 0 60px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../img/New-Home-Banner.png) no-repeat center center;
+  background-size: cover;
+  filter: blur(10px);
+  z-index: 0;
+}
+
+.hero-content-container {
+  position: relative;
+  z-index: 1;
 }
 
 .hero h1 {
@@ -864,6 +899,8 @@ h6 {
   font-size: 50px;
   font-weight: 700;
   line-height: 56px;
+  color: white;
+  z-index: 999;
 }
 
 .hero p {
@@ -871,6 +908,7 @@ h6 {
   margin: 5px 0 30px 0;
   font-size: 18px;
   font-weight: 400;
+  color: white;
 }
 
 .hero-section-logo {
@@ -882,9 +920,11 @@ h6 {
 .hero .btn-get-started {
   color: var(--contrast-color);
   background: var(--accent-color);
+  background-color: white;
+  color: #2d72ba;
   font-family: var(--heading-font);
-  font-weight: 500;
-  font-size: 16px;
+  font-weight: 600;
+  font-size: 18px;
   letter-spacing: 1px;
   display: flex;
   align-items: center;
@@ -904,6 +944,7 @@ h6 {
 .hero .btn-get-started:hover {
   color: var(--contrast-color);
   background: color-mix(in srgb, var(--accent-color), transparent 15%);
+  background-color: #234d85;
   box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
 }
 
@@ -1148,6 +1189,7 @@ h6 {
   --------------------------------------------------------------*/
 .values .card {
   background: rgba(255, 255, 255, 0.1);
+  background-color: white;
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   color: var(--default-color);
@@ -3469,7 +3511,7 @@ a {
   cursor: pointer;
   display: flex;
   align-items: center;
-  color: black;
+  color: #2d72ba;
   gap: 10px; /* Adds space between the icon and the text */
   padding: 10px;
 }
