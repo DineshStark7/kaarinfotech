@@ -135,23 +135,26 @@
           />
         </div>
         <div class="job-list" id="jobList">
-          <div class="job-item" data-index="0">
+          <div class="job-item" data-index="0" id="job-1">
             <h4>Senior Software Engineer / Technical Lead</h4>
             <p>Location: Remote / Hybrid</p>
             <p>Skills: .NET Core, C#, Web API, Azure DevOps, OOP Principles</p>
+            <button class="share-btn">🔗 Share</button>
           </div>
-          <div class="job-item" data-index="1">
+          <div class="job-item" data-index="1" id="job-2">
             <h4>Technical Architect</h4>
             <p>Location: Remote / Hybrid</p>
             <p>
               Skills: ASP .NET MVC, SQL Server, Microservices, JavaScript,
               jQuery
             </p>
+            <button class="share-btn">🔗 Share</button>
           </div>
-          <div class="job-item" data-index="2">
+          <div class="job-item" data-index="2" id="job-3">
             <h4>.NET Technical Project Manager</h4>
             <p>Location: Remote / Hybrid</p>
             <p>Skills: .NET, Azure, C#, Web API, Project Management</p>
+            <button class="share-btn">🔗 Share</button>
           </div>
         </div>
       </div>
@@ -395,6 +398,17 @@
           jobFrame.src = jobPages[index];
         }
 
+        const hash = window.location.hash;
+        if (hash.startsWith("#job-")) {
+          const index = parseInt(hash.replace("#job-", "")) - 1;
+          if (!isNaN(index)) {
+            showJobDetails(index);
+            setTimeout(() => {
+              window.scrollTo(0, 0); // Scroll to top after rendering
+            }, 0);
+          }
+        }
+
         function bindJobItemClicks() {
           document.querySelectorAll(".job-item").forEach((item) => {
             item.addEventListener("click", () => {
@@ -456,6 +470,41 @@
         adjustIframeHeight();
         window.dispatchEvent(new Event("resize"));
       };
+    </script>
+    <script>
+      function bindShareButtons() {
+        document.querySelectorAll(".share-btn").forEach((btn) => {
+          btn.addEventListener("click", () => {
+            const jobItem = btn.closest(".job-item");
+            const jobId = jobItem.getAttribute("id");
+            const shareUrl = `${window.location.origin}${window.location.pathname}#${jobId}`;
+
+            navigator.clipboard.writeText(shareUrl).then(() => {
+              // Create "Link copied" popup
+              const popup = document.createElement("div");
+              popup.innerText = "Link copied!";
+              popup.classList.add("share-popup"); // 👈 Add the animation class here
+              popup.style.position = "absolute";
+              popup.style.backgroundColor = "#28a745";
+              popup.style.color = "white";
+              popup.style.padding = "5px 10px";
+              popup.style.borderRadius = "5px";
+              popup.style.fontSize = "12px";
+              popup.style.top = `${btn.offsetTop - 30}px`;
+              popup.style.left = `${btn.offsetLeft}px`;
+              popup.style.zIndex = "999";
+
+              btn.parentElement.appendChild(popup);
+
+              setTimeout(() => popup.remove(), 2000);
+            });
+          });
+        });
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        bindShareButtons();
+      });
     </script>
   </body>
 </html>

@@ -259,3 +259,11 @@ function nextSlide() {
 setInterval(() => {
   nextSlide();
 }, 5000);
+
+window.addEventListener("DOMContentLoaded", () => {
+  const hash = window.location.hash;
+  if (hash && hash.startsWith("#job-")) {
+    const index = parseInt(hash.replace("#job-", "")) - 1;
+    if (!isNaN(index)) showJobDetails(index);
+  }
+});
