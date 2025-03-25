@@ -121,37 +121,38 @@
         </nav>
       </div>
     </header>
-    <section>
-      <!-- Search Bar -->
-      <div class="search-bar">
-        <input
-          type="text"
-          id="search"
-          placeholder="Search by role/title..."
-          oninput="filterJobs()"
-        />
-      </div>
-    </section>
+
     <!-- Main Container -->
     <div class="container">
       <!-- Left Section: Job List -->
-      <div class="job-list" id="jobList">
-        <div class="job-item" id="job-1" onclick="showJobDetails(0)">
-          <h4>Senior Software Engineer / Technical Lead</h4>
-          <p>Location: Remote / Hybrid</p>
-          <p>Skills: .NET Core, C#, Web API, Azure DevOps, OOP Principles</p>
+      <div class="left-container">
+        <div class="search-bar">
+          <input
+            type="text"
+            id="search"
+            placeholder="Search by role/title..."
+            oninput="filterJobs()"
+          />
         </div>
-        <div class="job-item" id="job-2" onclick="showJobDetails(1)">
-          <h4>Technical Architect</h4>
-          <p>Location: Remote / Hybrid</p>
-          <p>
-            Skills: ASP .NET MVC, SQL Server, Microservices, JavaScript, jQuery
-          </p>
-        </div>
-        <div class="job-item" id="job-3" onclick="showJobDetails(2)">
-          <h4>.NET Technical Project Manager</h4>
-          <p>Location: Remote / Hybrid</p>
-          <p>Skills: .NET, Azure, C#, Web API, Project Management</p>
+        <div class="job-list" id="jobList">
+          <div class="job-item" data-index="0">
+            <h4>Senior Software Engineer / Technical Lead</h4>
+            <p>Location: Remote / Hybrid</p>
+            <p>Skills: .NET Core, C#, Web API, Azure DevOps, OOP Principles</p>
+          </div>
+          <div class="job-item" data-index="1">
+            <h4>Technical Architect</h4>
+            <p>Location: Remote / Hybrid</p>
+            <p>
+              Skills: ASP .NET MVC, SQL Server, Microservices, JavaScript,
+              jQuery
+            </p>
+          </div>
+          <div class="job-item" data-index="2">
+            <h4>.NET Technical Project Manager</h4>
+            <p>Location: Remote / Hybrid</p>
+            <p>Skills: .NET, Azure, C#, Web API, Project Management</p>
+          </div>
         </div>
       </div>
       <!-- Right Section: Job details List -->
@@ -164,99 +165,6 @@
         ></iframe>
       </div>
     </div>
-    <!-- Right Section: Job details List -->
-    <!--
-<div class="job-details" id="jobDetails">
-        <h2 class="job-title">Senior Software Engineer / Technical Lead</h2>
-        <p class="job-location">
-          Location: Remote / B1 Travel Visa for International Exposure
-        </p>
-
-        <h3>What We Offer:</h3>
-        <ul>
-          <li>
-            Engage in cutting-edge projects, including Microsoft Events and
-            Product Development.
-          </li>
-          <li>Gain international exposure with a B1 Travel Visa.</li>
-          <li>
-            Explore new skills and technologies in a culture that values
-            learning.
-          </li>
-        </ul>
-
-        <h3>Responsibilities:</h3>
-        <ul>
-          <li>
-            Design and develop robust back-end systems and features that enhance
-            product functionality and user experience.
-          </li>
-          <li>
-            Collaborate closely with a small team of experienced developers in a
-            supportive environment.
-          </li>
-          <li>
-            Take full ownership of tasks and projects, from ideation to
-            deployment, in an agile environment.
-          </li>
-          <li>
-            Ensure high-quality, maintainable code that is efficient and
-            scalable.
-          </li>
-        </ul>
-
-        <h3>Must-Have Technical Skills:</h3>
-        <ul>
-          <li>
-            3 to 5 years of web development experience using ASP.NET, .NET Core,
-            C#, Web API, MVC, LINQ, Entity Framework, HTML, CSS, JavaScript, and
-            jQuery.
-          </li>
-          <li>Hands-on experience with Azure DevOps CI/CD pipeline.</li>
-          <li>Strong understanding of OOP and SOLID principles.</li>
-          <li>
-            Excellent interpersonal and communication skills, both written and
-            verbal.
-          </li>
-        </ul>
-
-        <h3>Required Qualifications:</h3>
-        <ul>
-          <li>
-            Bachelor’s degree in Computer Science or a related technical field.
-          </li>
-        </ul>
-
-        <div class="apply-now">
-          <button class="applyBtn">Apply Now</button>
-        </div>
-      </div>    
--->
-
-    <!-- Modal -->
-    <div id="applyModal" class="modal">
-      <div class="modal-content">
-        <div class="modal-header">
-          <span>Job Application Form</span>
-          <span class="close" id="closeModal">&times;</span>
-        </div>
-        <div class="modal-body">
-          <iframe
-            src="https://forms.gle/F5rJMzmj5BwzCmG48"
-            title="Google Form"
-          ></iframe>
-        </div>
-      </div>
-    </div>
-    <footer class="footer new-footer d-none">
-      <div class="container copyright text-center mt-4">
-        <p>
-          © <span>Copyright</span>
-          <strong class="px-1 sitename">Kaar Infotech 2025</strong>
-          <span>All Rights Reserved</span>
-        </p>
-      </div>
-    </footer>
     <footer id="footer" class="footer career-footer">
       <div class="container footer-top">
         <div class="row gy-4">
@@ -461,118 +369,42 @@
           ],
         },
       ];
+
+      function filterJobs() {
+        const searchValue = document
+          .getElementById("search")
+          .value.toLowerCase();
+        const jobItems = document.querySelectorAll(".job-item");
+
+        jobItems.forEach((item) => {
+          const title = item.querySelector("h4").innerText.toLowerCase();
+          item.style.display = title.includes(searchValue) ? "" : "none";
+        });
+      }
+
       document.addEventListener("DOMContentLoaded", function () {
         const modal = document.getElementById("applyModal");
-        const applyBtns = document.querySelectorAll(".applyBtn");
-        const closeModal = document.getElementById("closeModal");
-        const jobDetails = document.getElementById("jobDetails");
-        const jobList = document.getElementById("jobList");
-
-        // Open modal when "Apply Now" button is clicked
-        function openModal() {
-          modal.style.display = "flex";
-        }
-
-        // Close modal when "X" button is clicked
-        closeModal.addEventListener("click", () => {
-          modal.style.display = "none";
-        });
-
-        // Close modal when clicking outside the modal content
-        window.addEventListener("click", (event) => {
-          if (event.target === modal) {
-            modal.style.display = "none";
-          }
-        });
+        const jobFrame = document.getElementById("jobFrame");
 
         function showJobDetails(index) {
-          const jobFrame = document.getElementById("jobFrame");
-
-          // Define job details pages
           const jobPages = [
             "job-details/senior-software-engineer.html",
             "job-details/technical-architect.html",
             "job-details/dotnet-project-manager.html",
           ];
-
-          // Change the iframe source dynamically
           jobFrame.src = jobPages[index];
         }
 
-        /*
-
-        // Function to display job details when a job is clicked
-        function showJobDetails(index) {
-          const job = jobs[index];
-
-          // Update active class for job items
-          document.querySelectorAll(".job-item").forEach((item, i) => {
-            item.classList.toggle("active", i === index);
-          });
-
-          // Update job details content
-          jobDetails.innerHTML = `
-            <h2 class="job-title">${job.title}</h2>
-            <p class="job-location">Location: ${job.location}</p>
-            <h3>What We Offer:</h3>
-            <ul>${job.what_we_offer
-              .map((offer) => `<li>${offer}</li>`)
-              .join("")}</ul>
-            <h3>Responsibilities:</h3>
-            <ul>${job.responsibilities
-              .map((r) => `<li>${r}</li>`)
-              .join("")}</ul>
-            <h3>Must-Have Technical Skills:</h3>
-            <ul>${job.must_have_technical_skills
-              .map((skill) => `<li>${skill}</li>`)
-              .join("")}</ul>
-            <h3>Required Qualifications:</h3>
-            <ul>${job.required_qualifications
-              .map((q) => `<li>${q}</li>`)
-              .join("")}</ul>
-            <div class="apply-now">
-                <button class="applyBtn">Apply Now</button>
-            </div>
-        `;
-
-          // Reattach event listener for the "Apply Now" button
-          const newApplyBtn = jobDetails.querySelector(".applyBtn");
-          newApplyBtn.addEventListener("click", openModal);
-        }
-*/
-        // Attach click event to each job item
-        document.querySelectorAll(".job-item").forEach((item, index) => {
-          item.addEventListener("click", () => showJobDetails(index));
-        });
-
-        // Function to filter jobs based on search input
-        /*
-        function filterJobs() {
-          const searchValue = document
-            .getElementById("search")
-            .value.toLowerCase();
-          const jobItems = jobList.querySelectorAll(".job-item");
-
-          jobItems.forEach((item, index) => {
-            const title = jobs[index].title.toLowerCase();
-            item.style.display = title.includes(searchValue) ? "" : "none";
-          });
-        }
-*/
-        function filterJobs() {
-          const searchValue = document
-            .getElementById("search")
-            .value.toLowerCase();
-          const jobItems = document.querySelectorAll(".job-item");
-
-          jobItems.forEach((item) => {
-            const title = item.querySelector("h4").innerText.toLowerCase();
-            item.style.display = title.includes(searchValue) ? "" : "none";
+        function bindJobItemClicks() {
+          document.querySelectorAll(".job-item").forEach((item) => {
+            item.addEventListener("click", () => {
+              const index = parseInt(item.dataset.index);
+              showJobDetails(index);
+            });
           });
         }
 
-        // Attach search event listener
-        document.getElementById("search").addEventListener("input", filterJobs);
+        bindJobItemClicks();
       });
     </script>
     <script>
@@ -600,5 +432,30 @@
 
     <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
+
+    <script>
+      function adjustIframeHeight() {
+        const iframe = document.getElementById("jobFrame");
+        if (
+          iframe &&
+          iframe.contentWindow &&
+          iframe.contentWindow.document.body
+        ) {
+          iframe.style.height =
+            iframe.contentWindow.document.body.scrollHeight + 35 + "px";
+        }
+      }
+
+      // Adjust iframe height on window resize
+      window.addEventListener("resize", function () {
+        adjustIframeHeight();
+      });
+
+      // Adjust iframe height and re-trigger layout on iframe load
+      document.getElementById("jobFrame").onload = function () {
+        adjustIframeHeight();
+        window.dispatchEvent(new Event("resize"));
+      };
+    </script>
   </body>
 </html>

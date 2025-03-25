@@ -15,12 +15,23 @@ body {
   left: 0;
   z-index: 1000;
 }
-
+/* Main Container */
+.container {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  max-width: 90%;
+  gap: 20px;
+  margin-top: 70px;
+  flex-wrap: wrap;
+  transform: translateY(-70px);
+  height: 100%;
+}
 /* Search Bar */
 .search-bar {
   padding: 10px;
   text-align: right;
-  width: 95%;
+  width: 100%;
   display: flex;
   justify-content: center;
 }
@@ -30,7 +41,7 @@ body {
   font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  width: 30%;
+  width: 90%;
 }
 
 @media (max-width: 1025px) {
@@ -44,29 +55,25 @@ body {
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    width: 100%;
+    width: 70%;
   }
-}
-/* Main Container */
-.container {
-  display: flex;
-  justify-content: center;
-  padding: 10px;
-  max-width: 90%;
-  gap: 20px;
-  margin-top: 70px;
-  flex-wrap: wrap;
-  transform: translateY(-70px);
 }
 
 /* Left Section - Job List */
+.left-container {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
 .job-list {
   flex: 1;
-  width: 20%;
+  width: 100%;
   overflow-y: auto;
   border: 1px solid #ccc;
   border-radius: 5px;
-  height: 500px;
+  height: 100%;
   padding: 10px;
   background: #f9f9f9;
 }
@@ -99,8 +106,9 @@ body {
   width: 70%;
   border: 1px solid #ccc; /* Keeps the outer border */
   border-radius: 5px;
-  background: white;
-  height: 500px !important; /* Fixed height */
+  background: white; /* 
+  height: 500px !important;Fixed height */
+  height: 100%;
   overflow: hidden; /* Ensures no extra scrollbar outside */
   display: flex;
   flex-direction: column;
@@ -219,17 +227,17 @@ h4 {
 /* RESPONSIVE DESIGN */
 
 /* Tablets & Small Screens */
-@media (max-width: 1024px) {
+@media (max-width: 1220px) {
   .container {
     flex-direction: column;
-    align-items: center;
+
     transform: translateY(0);
   }
 
   .job-list,
   .job-details {
     max-width: 100%;
-    width: 90%;
+    width: 100%;
     height: auto;
   }
 
@@ -243,6 +251,11 @@ h4 {
 
   .company-intro p {
     font-size: 1rem;
+  }
+  .left-container {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
   }
 }
 
@@ -262,7 +275,7 @@ h4 {
   }
 
   .search-bar input {
-    width: 90%;
+    width: 70%;
   }
 
   .company-intro {
@@ -301,7 +314,7 @@ h4 {
   }
 
   .search-bar input {
-    width: 95%;
+    width: 80%;
     padding: 8px;
   }
 
@@ -318,10 +331,11 @@ h4 {
   }
 }
 .job-details iframe {
-  width: 100%;
-  height: 600px; /* Adjust as needed */
+  width: 100%; /* 
+  height: 600px; Adjust as needed */
+  height: 100%;
   border: none;
-  overflow: hidden;
+  overflow: none;
 }
 
 /* Reset styles for embedded job content */
@@ -338,4 +352,25 @@ h4 {
 
 .career-footer {
   border: 1px solid transparent;
+}
+
+.share-menu {
+  position: absolute;
+  background: white;
+  border: 1px solid #ccc;
+  padding: 8px;
+  border-radius: 8px;
+  z-index: 10;
+  margin-top: 5px;
+}
+.share-menu a,
+.share-menu button {
+  font-size: 14px;
+  display: block;
+  margin: 5px 0;
+  text-decoration: none;
+  color: #333;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
