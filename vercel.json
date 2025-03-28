@@ -1,9 +1,0 @@
-{
-  "redirects": [
-    {
-      "source": "/",
-      "destination": "/life-at-kaar.html",
-      "permanent": true
-    }
-  ]
-}
