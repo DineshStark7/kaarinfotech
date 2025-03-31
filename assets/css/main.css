@@ -3821,6 +3821,13 @@ a {
   font-size: 2px;
 }
 
+@media (max-width: 1400px) {
+  .email-text {
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+}
+
 @media (max-width: 1220px) {
   .email-text {
     word-break: break-word;

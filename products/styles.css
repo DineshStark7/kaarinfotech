@@ -12,7 +12,7 @@ body {
 }
 
 /* Hero Section */
-.hero {
+.heros {
   background: url("Event-Way-Finder.jpg") no-repeat center center;
   background-size: cover;
   min-height: 80vh; /* Ensures proper visibility */
@@ -187,14 +187,13 @@ body {
   background: white;
   padding: 40px;
   margin: 20px 0;
-  
+
   border-radius: 10px;
   text-align: center;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease-in-out;
 }
-* Background Shapes */
-.background-shapes {
+* Background Shapes */ .background-shapes {
   position: absolute;
   top: 0;
   left: 0;
@@ -296,7 +295,6 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
   margin-top: 20px;
-  
 }
 
 .cards {
@@ -312,11 +310,11 @@ body {
 .cards:hover {
   background: rgba(45, 114, 186, 0.3);
 }
-.cards h3{
-  color:#fff;
+.cards h3 {
+  color: #fff;
   padding-bottom: 10px;
 }
-.cards p{
+.cards p {
   color: #d9e6f2;
 }
 /* CTA Section */

@@ -2,7 +2,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  padding-top: 100px;
+
   background: #ffffff;
 }
 
@@ -22,11 +22,13 @@ body {
   padding: 10px;
   max-width: 90%;
   gap: 20px;
+  padding-top: 100px;
   margin-top: 70px;
   flex-wrap: wrap;
   transform: translateY(-70px);
   height: 100%;
 }
+
 /* Search Bar */
 .search-bar {
   text-align: right;
@@ -187,7 +189,7 @@ h4 {
 @media (max-width: 1220px) {
   .container {
     flex-direction: column;
-
+    padding-top: 10px;
     transform: translateY(0);
   }
 
