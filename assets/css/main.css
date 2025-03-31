@@ -1268,6 +1268,7 @@ h6 {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   justify-content: center;
+  min-height: 100px;
 }
 
 .stats .stats-item:hover {
