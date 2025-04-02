@@ -608,3 +608,9 @@ cite {
     box-shadow: none;
   }
 }
+.success-logo {
+  width: 120px; /* adjust as needed */
+  height: auto;
+  display: block;
+  justify-self: center;
+}
