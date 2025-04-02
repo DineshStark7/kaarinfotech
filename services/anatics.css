@@ -260,8 +260,9 @@ body {
   overflow: hidden;
   padding: 80px 20px;
   text-align: center;
-  background: linear-gradient(135deg, #2d72ba, #00d4ff);
+  /*background: linear-gradient(135deg, #2d72ba, #00d4ff);*/
   color: #fff;
+  color: #000000;
 }
 
 .contact-cta::before {
@@ -271,7 +272,7 @@ body {
   left: -50%;
   width: 200%;
   height: 200%;
-  background: url(./services-contact.jpg);
+  background: url(./services-contac.jpg);
   transform: rotate(25deg);
 }
 
@@ -287,6 +288,7 @@ body {
   font-weight: 600;
   margin-bottom: 20px;
   color: white;
+  color: #000000;
 }
 
 .contact-cta p {
@@ -306,11 +308,15 @@ body {
   border-radius: 30px;
   transition: all 0.3s ease;
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  background-color: #2d72ba;
+  color: white;
 }
 
 .btn-contact:hover {
   transform: translateY(-3px);
   box-shadow: 0 15px 20px rgba(0, 0, 0, 0.15);
+  background-color: #2d72ba;
+  color: white;
 }
 
 /* Timeline Section */

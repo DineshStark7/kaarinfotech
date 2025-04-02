@@ -895,7 +895,7 @@ h6 {
 
 .hero h1 {
   margin: 0;
-  font-size: 50px;
+  font-size: 40px;
   font-weight: 700;
   line-height: 56px;
   color: white;
@@ -2731,6 +2731,7 @@ h6 {
   padding: 30px;
   min-height: 250px;
   background-color: white;
+  box-shadow: 0 2px 8px rgba(33, 37, 41, 0.2);
 }
 
 .contact .info-item i {
@@ -2772,6 +2773,7 @@ h6 {
   min-height: 520px;
   border-radius: 10px;
   overflow: hidden;
+  box-shadow: 0 2px 8px rgba(33, 37, 41, 0.2);
 }
 
 /* Make iframe responsive */
