@@ -1404,12 +1404,6 @@ h6 {
   font-family: "Segoe UI";
 }
 
-.success-story-btn:hover {
-  background: #0056b3;
-  color: #ffffff;
-  transform: translateY(-3px);
-}
-
 @keyframes fadeInUp {
   0% {
     opacity: 0;
@@ -1499,7 +1493,6 @@ h6 {
 }
 
 .success-story-btn:hover {
-  background: #0056b3;
   color: #ffffff;
   transform: translateY(-3px);
 }
