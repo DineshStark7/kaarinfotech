@@ -1063,10 +1063,9 @@ h6 {
 }
 
 .about .content h3 {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 700;
   color: var(--accent-color);
-  text-transform: uppercase;
 }
 
 .about .content h2 {
