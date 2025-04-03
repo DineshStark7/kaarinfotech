@@ -141,7 +141,7 @@ header {
   color: #2d72ba;
 }
 
-/* Footer */
+/* Footer 
 footer {
   text-align: center;
   margin-top: 50px;
@@ -160,7 +160,7 @@ footer a:hover {
   text-decoration: underline;
   color: #1a5276;
 }
-
+*/
 /* Responsive Design */
 @media screen and (max-width: 768px) {
   .header-container {

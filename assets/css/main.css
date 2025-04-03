@@ -823,14 +823,12 @@ h6 {
   font-weight: 700;
   padding: 8px 20px;
   margin: 0;
-  background: color-mix(in srgb, var(--accent-color), transparent 90%);
-  color: var(--accent-color);
+  background-color: rgba(45, 114, 186, 1); /* transparent background */
+  color: white; /* text is fully opaque */
   display: inline-block;
-  text-transform: uppercase;
   border-radius: 50px;
   font-family: var(--default-font);
 }
-
 .section-title p {
   color: var(--heading-color);
   margin: 10px 0 0 0;
@@ -853,7 +851,7 @@ h6 {
   padding: 80px 0 60px 0;
   display: flex;
   align-items: center;
-  background: url(../img/New-Home-Banner.png) no-repeat;
+  background: url(../img/Hero-image.png) no-repeat;
   background-size: cover;
   text-align: center;
 }
@@ -882,9 +880,9 @@ h6 {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url(../img/New-Home-Banner.png) no-repeat center center;
+  background: url(../img/Hero-image.png) no-repeat center center;
   background-size: cover;
-  filter: blur(10px);
+  filter: blur(1px);
   z-index: 0;
 }
 
@@ -4087,5 +4085,151 @@ a {
   .life-at-kaar-description {
     font-size: 1.1rem;
     max-width: 90%;
+  }
+}
+
+/* Wrapper Styles for Each Row */
+.wrapper {
+  margin-top: 2rem;
+  width: 90%;
+  max-width: 1536px;
+  margin-inline: auto;
+  height: 150px;
+  position: relative;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 0)
+  );
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 0)
+  );
+}
+
+/* Keyframe Animations */
+@keyframes scrollLeft {
+  to {
+    left: -200px;
+  }
+}
+
+@keyframes scrollRight {
+  to {
+    right: -200px;
+  }
+}
+
+/* Common Styles for All Items */
+[class*="itemLeftRow"],
+[class*="itemRightRow"] {
+  width: 150px;
+  height: 150px;
+  border-radius: 6px;
+  position: absolute;
+  animation-timing-function: linear;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Animation Direction */
+[class*="itemLeftRow"] {
+  left: max(calc(200px * 8), 100%);
+  animation-name: scrollLeft;
+}
+
+[class*="itemRightRow"] {
+  right: max(calc(200px * 8), calc(100% + 200px));
+  animation-name: scrollRight;
+}
+.technology-logo-image {
+  height: 120px;
+  width: 140px;
+}
+/* Animation Delays */
+.item1 {
+  animation-delay: calc(30s / 8 * (8 - 1) * -1);
+}
+.item2 {
+  animation-delay: calc(30s / 8 * (8 - 2) * -1);
+}
+.item3 {
+  animation-delay: calc(30s / 8 * (8 - 3) * -1);
+}
+.item4 {
+  animation-delay: calc(30s / 8 * (8 - 4) * -1);
+}
+.item5 {
+  animation-delay: calc(30s / 8 * (8 - 5) * -1);
+}
+.item6 {
+  animation-delay: calc(30s / 8 * (8 - 6) * -1);
+}
+.item7 {
+  animation-delay: calc(30s / 8 * (8 - 7) * -1);
+}
+.item8 {
+  animation-delay: calc(30s / 8 * (8 - 8) * -1);
+}
+@media (max-width: 1024px) {
+  .wrapper {
+    height: 120px;
+  }
+
+  [class*="itemLeftRow"],
+  [class*="itemRightRow"] {
+    width: 120px;
+    height: 120px;
+  }
+
+  .technology-logo-image {
+    max-width: 100px;
+    max-height: 100px;
+  }
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .wrapper {
+    height: 100px;
+  }
+
+  [class*="itemLeftRow"],
+  [class*="itemRightRow"] {
+    width: 100px;
+    height: 100px;
+  }
+
+  .technology-logo-image {
+    max-width: 100px;
+    max-height: 100px;
+  }
+}
+
+/* Extra Small Devices */
+@media (max-width: 480px) {
+  .wrapper {
+    height: 100px;
+  }
+
+  [class*="itemLeftRow"],
+  [class*="itemRightRow"] {
+    width: 100px;
+    height: 100px;
+  }
+
+  .technology-logo-image {
+    max-width: 100px;
+    max-height: 100px;
   }
 }
