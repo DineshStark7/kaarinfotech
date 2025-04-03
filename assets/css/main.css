@@ -3945,3 +3945,147 @@ a {
 .faq .faq-container .faq-item .faq-toggle:hover {
   color: var(--accent-color);
 }
+
+.life-at-kaar-body {
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  overflow-x: hidden;
+}
+.life-hero {
+  background-color: #2d72ba;
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+  font-size: 2rem;
+  font-weight: bold;
+  width: 100%;
+  margin-top: 90px;
+}
+.life-header {
+  background-color: white;
+}
+.life-hero-section {
+  position: relative;
+  width: 100vw; /* Ensures full screen width */
+  height: 500px; /* Default height */
+  background: url("../../assets/img/life-at-kaar/hero-image.jpg") no-repeat
+    center center;
+  background-size: cover; /* Ensures the image covers the section */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  margin: 0; /* Removes unwanted margins */
+  padding: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .life-hero-section {
+    height: 300px; /* Reduce height on tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .life-hero-section {
+    height: 250px; /* Reduce height on smaller screens */
+  }
+}
+
+.hero-content {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 8px;
+}
+.life-title {
+  font-size: 40px;
+  font-family: "Segoe UI", sans-serif;
+  font-weight: 600;
+}
+.life-description {
+  font-size: 18px;
+}
+.life-navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.life-navbar::scrolled {
+  background-color: white !important;
+}
+.section-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px 10px;
+}
+.section-container h1 {
+  font-size: 40px;
+  font-family: "Segoe UI";
+}
+.text-content {
+  flex: 1;
+  padding: 20px;
+}
+.image-content {
+  flex: 1;
+}
+.image-content img {
+  width: 100%;
+  height: auto;
+  border-radius: 0px;
+}
+
+@media (max-width: 768px) {
+  .section-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .image-content {
+    order: -1;
+  }
+}
+.sitename-footer {
+  font-size: 18px;
+}
+.footer-text {
+  font-size: 16px;
+}
+.life-at-kaar-description {
+  font-size: 1.75rem; /* Base font size */
+  font-weight: 400;
+  font-family: "Segoe UI";
+  text-align: center;
+  line-height: 1.5;
+  max-width: 90%;
+  margin: auto;
+}
+
+/* Adjust for Tablets */
+@media (max-width: 1024px) {
+  .life-at-kaar-description {
+    font-size: 1.5rem;
+    max-width: 85%;
+  }
+}
+
+/* Adjust for Mobile Devices */
+@media (max-width: 768px) {
+  .life-at-kaar-description {
+    font-size: 1.25rem;
+    max-width: 80%;
+  }
+}
+
+/* Adjust for Smallest Screens */
+@media (max-width: 480px) {
+  .life-at-kaar-description {
+    font-size: 1.1rem;
+    max-width: 90%;
+  }
+}

@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: "Segoe UI", sans-serif;
 }
 
 body {
@@ -22,7 +22,6 @@ body {
 header {
   background: #ffffff;
   padding: 20px;
-  border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   margin-bottom: 40px;
 }
@@ -175,5 +174,132 @@ footer a:hover {
 
   .header-text {
     text-align: center;
+  }
+}
+
+/* General Page Styles */
+.tos-body,
+.privacy-policy-body {
+  font-family: "Segoe UI", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Header Section */
+.tos-header {
+  background-color: #2d72ba;
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+  font-size: 2rem;
+  font-weight: bold;
+  width: 100%;
+  margin-top: 50px;
+}
+
+/* Main Container */
+.tos-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.terms-of-service-header {
+  background-color: #f4f4f4;
+}
+/* Headings */
+h1,
+h2,
+h3 {
+  color: #2d72ba !important;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+h3 {
+  font-size: 1.4rem;
+  margin-top: 20px;
+}
+
+/* Footer */
+.tos-footer {
+  background-color: #2d72ba;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
+  margin-top: 40px;
+}
+/* Privacy Policy Styles */
+.privacy-header {
+  background-color: #2d72ba;
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+  font-size: 2rem;
+  font-weight: bold;
+  width: 100%;
+  margin-top: 50px;
+}
+/* Main Container */
+.privacy-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+.privacy-footer {
+  background-color: #2d72ba;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
+  margin-top: 40px;
+}
+
+.privacy-policy-header {
+  background-color: #f4f4f4;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .tos-container {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .tos-header {
+    font-size: 1.6rem;
+    padding: 40px 15px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+
+  .privacy-container {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .privacy-header {
+    font-size: 1.6rem;
+    padding: 40px 15px;
   }
 }
