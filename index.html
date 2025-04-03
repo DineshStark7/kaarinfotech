@@ -72,6 +72,19 @@
             </li>
             <li><a href="#about">About</a></li>
             <li class="dropdown">
+              <a href="./products/ind.html" class="dropbtn"
+                >Products<i class="bi bi-chevron-down"></i
+              ></a>
+              <div class="dropdown-content">
+                <a href="./products/ind.html"
+                  ><i class="bi bi-geo-alt"></i>Indoor Maps</a
+                >
+                <a href="./products/Badge-scanner.html"
+                  ><i class="bi bi-upc-scan"></i>Badge Scanner</a
+                >
+              </div>
+            </li>
+            <li class="dropdown">
               <a href="#services" class="dropbtn"
                 >Services<i class="bi bi-chevron-down"></i
               ></a>
@@ -100,19 +113,7 @@
                 >
               </div>
             </li>
-            <li class="dropdown">
-              <a href="./products/ind.html" class="dropbtn"
-                >Products<i class="bi bi-chevron-down"></i
-              ></a>
-              <div class="dropdown-content">
-                <a href="./products/ind.html"
-                  ><i class="bi bi-geo-alt"></i>Indoor Maps</a
-                >
-                <a href="./products/Badge-scanner.html"
-                  ><i class="bi bi-upc-scan"></i>Badge Scanner</a
-                >
-              </div>
-            </li>
+
             <li><a href="#team">Team</a></li>
             <li><a href="#contact">Contact</a></li>
             <li class="dropdown">
@@ -432,7 +433,7 @@
                     ></span
                     ><span>+</span>
                   </div>
-                  <p>Projects</p>
+                  <p>Projects Delivered</p>
                 </div>
               </div>
             </div>
@@ -1562,14 +1563,7 @@
                 <div class="info-item" data-aos="fade" data-aos-delay="200">
                   <i class="bi bi-geo-alt"></i>
                   <h3>Address</h3>
-                  <!--
-                  <p>
-                    Kaar Infotech Private Limited, 15/1, 4th Cross Street,
-                    Erode, Tamilnadu - 638052, India
-                  </p>
-                  <p>
-                    Kaar INC, 312 17th Street Unit 2229, Denver CO 80202, USA
-                  </p>-->
+
                   <div class="address-toggle mb-2">
                     <button
                       onclick="toggleAddress('us', event)"
@@ -1586,35 +1580,21 @@
                       India
                     </button>
                   </div>
+                  <div id="address-us" style="display: block">
+                    <p>
+                      KAAR INC, 312 17th Street Unit 2229, Denver CO 80202, USA
+                    </p>
+                  </div>
 
-                  <div id="address-india">
+                  <div id="address-india" style="display: none">
                     <p>
                       KAAR Infotech Private Limited, 15/1, 4th Cross Street,
                       Erode, Tamilnadu - 638052, India
                     </p>
                   </div>
-
-                  <div id="address-us" style="display: none">
-                    <p>
-                      KAAR INC, 312 17th Street Unit 2229, Denver CO 80202, USA
-                    </p>
-                  </div>
                 </div>
               </div>
               <div class="row gy-4">
-                <!--
-                <div class="col-md-6">
-                  <div class="info-item" data-aos="fade" data-aos-delay="200">
-                    <i class="bi bi-geo-alt"></i>
-                    <h3>Address</h3>
-                    <p>
-                      Kaar Infotech Private Limited, 15/1, 4th Cross Street,
-                      Erode, Tamilnadu - 638052
-                    </p>
-                  </div>
-                </div> -->
-                <!-- End Info Item -->
-
                 <div class="col-lg-4 col-md-6">
                   <div class="info-item" data-aos="fade" data-aos-delay="300">
                     <i class="bi bi-telephone"></i>
@@ -1774,6 +1754,7 @@
     <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
     <script src="assets/js/theme.js"></script>
+
     <script>
       function toggleAddress(region, event) {
         const indiaAddr = document.getElementById("address-india");
@@ -1799,6 +1780,7 @@
         event.target.classList.add("active");
       }
     </script>
+
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 

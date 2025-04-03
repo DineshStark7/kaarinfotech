@@ -1961,8 +1961,8 @@ h6 {
 
 /* Default state — red accent */
 .services .service-item.item-red {
-  background: #df1529; /* bold red */
-  border-bottom: 3px solid #df1529;
+  background: #f25022; /* bold red */
+  border-bottom: 3px solid #f25022;
   transition: background 0.3s ease, color 0.3s ease;
   color: white;
 }
@@ -1970,7 +1970,7 @@ h6 {
 /* Icon in default state */
 .services .service-item.item-red .icon {
   color: white;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgb(242, 80, 34);
 }
 
 /* "Read More" link in default state */
@@ -1981,19 +1981,19 @@ h6 {
 /* Hover state — reverse to white background */
 .services .service-item.item-red:hover {
   background: white;
-  border-bottom: 3px solid #df1529;
+  border-bottom: 3px solid #f25022;
   color: #000;
 }
 
 /* Icon on hover */
 .services .service-item.item-red:hover .icon {
-  color: #df1529;
+  color: #f25022;
   background: rgba(223, 21, 4, 0.1);
 }
 
 /* "Read More" on hover */
 .services .service-item.item-red:hover .read-more {
-  color: #df1529;
+  color: #f25022;
 }
 
 /* Heading on hover */
