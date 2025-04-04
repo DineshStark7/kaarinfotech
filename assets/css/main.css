@@ -2539,6 +2539,77 @@ h6 {
 }
 
 /*--------------------------------------------------------------
+# Team Memebers Section
+--------------------------------------------------------------*/
+.new-team-section {
+  padding: 60px 0;
+  background-color: #f9fafc;
+}
+
+.new-team-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.new-team-col {
+  flex: 1 1 calc(25% - 20px); /* 4 per row */
+  max-width: calc(25% - 20px);
+  box-sizing: border-box;
+}
+
+.new-team-card {
+  background: #fff;
+  border-radius: 10px;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+}
+
+.new-team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
+.new-team-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  border: 3px solid #f25022;
+}
+
+.new-team-name {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #222;
+}
+
+.new-team-role {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 992px) {
+  .new-team-col {
+    flex: 1 1 calc(50% - 20px); /* 2 per row */
+    max-width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 576px) {
+  .new-team-col {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
+/*--------------------------------------------------------------
 # Clients Section
 --------------------------------------------------------------*/
 
