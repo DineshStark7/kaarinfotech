@@ -2000,7 +2000,7 @@ h6 {
 /* Icon in default state */
 .services .service-item.item-red .icon {
   color: white;
-  background: rgb(242, 80, 34);
+  background: rgba(255, 255, 255, 0.2);
 }
 
 /* "Read More" link in default state */
@@ -2483,11 +2483,18 @@ h6 {
   border-radius: 5px;
   transition: 0.3s;
   background-color: white;
+  height: 100%;
 }
 
 .team .team-member .member-img {
   position: relative;
   overflow: hidden;
+}
+
+.team .team-member .member-img img {
+  height: 400px;
+  width: 100%;
+  object-fit: cover;
 }
 
 .team .team-member .member-img:after {
@@ -2572,29 +2579,55 @@ h6 {
 /*--------------------------------------------------------------
 # Team Memebers Section
 --------------------------------------------------------------*/
-.new-team-section {
-  padding: 60px 0;
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
   background-color: #f9fafc;
 }
 
-.new-team-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-.new-team-col {
-  flex: 1 1 calc(25% - 20px); /* 4 per row */
-  max-width: calc(25% - 20px);
-  box-sizing: border-box;
+.section-title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.new-team-section {
+  padding: 60px 0;
+}
+
+.team-scroll-wrapper {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.team-scroll-track {
+  display: flex;
+  gap: 20px;
+  animation: scroll-left 20s linear infinite;
+  width: max-content;
 }
 
 .new-team-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background: #fff;
   border-radius: 10px;
   text-align: center;
   padding: 20px;
+  width: 240px;
+  min-height: 320px;
+  flex: 0 0 auto;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
   transition: all 0.3s ease;
 }
@@ -2605,12 +2638,11 @@ h6 {
 }
 
 .new-team-img {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   object-fit: cover;
   border-radius: 50%;
   margin-bottom: 15px;
-  border: 3px solid #f25022;
 }
 
 .new-team-name {
@@ -2625,18 +2657,13 @@ h6 {
   color: #666;
 }
 
-/* Responsive Breakpoints */
-@media (max-width: 992px) {
-  .new-team-col {
-    flex: 1 1 calc(50% - 20px); /* 2 per row */
-    max-width: calc(50% - 20px);
+/* Animation for seamless scroll */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
   }
-}
-
-@media (max-width: 576px) {
-  .new-team-col {
-    flex: 1 1 100%;
-    max-width: 100%;
+  100% {
+    transform: translateX(-50%);
   }
 }
 
