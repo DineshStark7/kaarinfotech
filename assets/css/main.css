@@ -490,6 +490,7 @@ h6 {
   width: 100%;
   height: 50vh;
   background-image: url("https://media.istockphoto.com/id/1450344643/photo/business-closeup-concept-image-with-white-glyph-icons.jpg?s=1024x1024&w=is&k=20&c=Ad7t-BeVsXN0XpPE8xAl_Ci6opoIxZkh8jJAUximlpg=");
+  background-image: url("../img/unleash.jpeg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -508,7 +509,7 @@ h6 {
   color: white;
   font-size: 3rem;
   font-weight: bold;
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(50px);
   padding: 20px;
   height: 100%;
   font-family: "FF Kievit", sans-serif;
@@ -810,7 +811,7 @@ h6 {
 
 /*--------------------------------------------------------------
 # Global Section Titles
---------------------------------------------------------------*/
+
 .section-title {
   text-align: center;
   padding-bottom: 60px;
@@ -823,12 +824,14 @@ h6 {
   font-weight: 700;
   padding: 8px 20px;
   margin: 0;
-  background-color: rgba(45, 114, 186, 1); /* transparent background */
-  color: white; /* text is fully opaque */
+  background-color: rgba(45, 114, 186, 1); 
+  color: white;
   display: inline-block;
   border-radius: 50px;
   font-family: var(--default-font);
 }
+
+--------------------------------------------------------------*/
 .section-title p {
   color: var(--heading-color);
   margin: 10px 0 0 0;
@@ -839,6 +842,34 @@ h6 {
 
 .section-title p .description-title {
   color: var(--accent-color);
+}
+
+.section-title {
+  text-align: center;
+  padding-bottom: 60px;
+  position: relative;
+}
+
+.section-title h2 {
+  font-size: 28px;
+  font-weight: 700;
+  font-family: var(--default-font);
+  color: #2d72ba;
+  display: inline-block;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.section-title h2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  height: 4px;
+  width: 80px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #2d72ba, #6bb3ff);
 }
 
 /*--------------------------------------------------------------

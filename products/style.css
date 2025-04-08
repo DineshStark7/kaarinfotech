@@ -867,10 +867,13 @@ body {
   overflow: hidden;
   padding: 40px 20px;
   text-align: center;
-  background: linear-gradient(135deg, #2d72ba, #00d4ff);
-  color: #fff;
+  /*
+  background: linear-gradient(135deg, #2d72ba, #00d4ff);*/
+  background-color: white;
+  color: black;
 }
 
+/*
 .contact-cta::before {
   content: "";
   position: absolute;
@@ -880,7 +883,7 @@ body {
   height: 200%;
   background: url(./services-contact.jpg);
   transform: rotate(25deg);
-}
+}*/
 
 .contact-cta .container {
   position: relative;
@@ -893,7 +896,7 @@ body {
   font-size: 2.5rem;
   font-weight: 600;
   margin-bottom: 20px;
-  color: white;
+  color: black;
 }
 
 .contact-cta p {
@@ -904,8 +907,8 @@ body {
 
 .btn-contact {
   display: inline-block;
-  background: #fff;
-  color: #2d72ba;
+  color: #fff;
+  background: #2d72ba;
   padding: 15px 40px;
   font-size: 1.1rem;
   font-weight: 600;
@@ -918,6 +921,8 @@ body {
 .btn-contact:hover {
   transform: translateY(-3px);
   box-shadow: 0 15px 20px rgba(0, 0, 0, 0.15);
+  color: #fff;
+  background: #2d72ba;
 }
 .features-section {
   padding: 4rem 0;
