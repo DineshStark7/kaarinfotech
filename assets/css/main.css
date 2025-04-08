@@ -4334,3 +4334,47 @@ a {
     max-height: 100px;
   }
 }
+
+.white-bg {
+  background-color: white;
+  height: 100%;
+}
+.wrapper {
+  overflow: hidden;
+  position: relative;
+  height: 150px;
+  margin: 2rem auto;
+  width: 90%;
+  max-width: 1536px;
+}
+
+.scroll-track {
+  display: flex;
+  width: fit-content;
+  animation: scroll-left 40s linear infinite;
+}
+
+.logo-set {
+  display: flex;
+  gap: 2rem;
+}
+
+.technology-logo-image {
+  height: 120px;
+  width: 140px;
+  object-fit: contain;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Optional: pause on hover */
+.scroll-track:hover {
+  animation-play-state: paused;
+}
