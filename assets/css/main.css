@@ -1027,7 +1027,7 @@ h6 {
 
 .hero-microsoft {
   height: 300px;
-  width: 300px;
+  width: auto;
   align-self: center;
   justify-self: center;
   transition: transform 0.6s ease;
@@ -1205,7 +1205,7 @@ h6 {
 }
 
 .hero-microsoft {
-  width: 70%;
+  width: auto;
   height: 300p;
 }
 
