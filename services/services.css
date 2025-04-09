@@ -23,7 +23,7 @@ body {
 
 /* Hero Section */
 .hero {
-  background-image: url("./data-analytics.png");
+  background-image: url("../assets/img/services/data-analytics.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
