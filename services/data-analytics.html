@@ -64,7 +64,7 @@
                 >Products<i class="bi bi-chevron-down"></i
               ></a>
               <div class="dropdown-content">
-                <a href="../products/ind.html"
+                <a href="../products/indoor-maps.html"
                   ><i class="bi bi-geo-alt"></i>Indoor Maps</a
                 >
                 <a href="../products/Badge-scanner.html"
@@ -380,21 +380,7 @@
       </div>
     </footer>
   </body>
-  <script>
-    let currentTestimonial = 0;
-    function showTestimonial(n) {
-      let slides = document.querySelectorAll(".testimonial-slide");
-      slides.forEach((slide) => slide.classList.remove("active"));
-      currentTestimonial = (n + slides.length) % slides.length;
-      slides[currentTestimonial].classList.add("active");
-    }
-    function nextTestimonial() {
-      showTestimonial(currentTestimonial + 1);
-    }
-    function prevTestimonial() {
-      showTestimonial(currentTestimonial - 1);
-    }
-  </script>
+
   <!-- Vendor JS -->
   <script src="../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="../../assets/vendor/aos/aos.js"></script>
