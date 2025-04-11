@@ -1977,6 +1977,19 @@
         event.target.classList.add("active");
       }
     </script>
+    <script>
+      // Disable smooth scroll temporarily if there's a hash in the URL
+      if (window.location.hash) {
+        document.documentElement.style.scrollBehavior = "auto";
+
+        // Optional: Re-enable it after initial jump
+        window.addEventListener("load", () => {
+          setTimeout(() => {
+            document.documentElement.style.scrollBehavior = "smooth";
+          }, 50); // small delay to let the browser jump
+        });
+      }
+    </script>
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
