@@ -2668,6 +2668,7 @@ body {
   object-fit: cover;
   border-radius: 50%;
   margin-bottom: 15px;
+  border: 1px solid #ddd;
 }
 
 .new-team-name {
