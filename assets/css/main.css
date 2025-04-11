@@ -4426,7 +4426,7 @@ a {
   }
 }
 
-/* Optional: pause on hover */
+/*
 .scroll-track:hover {
   animation-play-state: paused;
 }
@@ -4448,7 +4448,7 @@ a {
   display: flex;
   width: 100%;
   height: 100%;
-  min-height: 200px; /* adjust as needed */
+  min-height: 200px; 
 }
 
 .culture-text {
@@ -4482,7 +4482,6 @@ a {
   object-fit: cover;
 }
 
-/* ✅ Responsive styles */
 @media (max-width: 768px) {
   .culture-container {
     flex-direction: column;
@@ -4504,25 +4503,7 @@ a {
     object-fit: contain;
   }
 }
-/* Medium screens (tablets in landscape) */
-@media (max-width: 1024px) {
-  .culture-text {
-    margin: 0 40px;
-    font-size: 20px;
-  }
 
-  .culture-text h2 {
-    font-size: 32px;
-    padding-top: 15px;
-  }
-
-  .culture-image img {
-    height: auto;
-    object-fit: contain;
-  }
-}
-
-/* Small tablets and large phones */
 @media (max-width: 600px) {
   .culture-text {
     margin: 0 20px;
@@ -4539,7 +4520,6 @@ a {
   }
 }
 
-/* Extra small devices (phones in portrait) */
 @media (max-width: 400px) {
   .culture-text {
     font-size: 16px;
@@ -4555,5 +4535,139 @@ a {
   .culture-image img {
     width: 100%;
     height: auto;
+  }
+}
+
+@media (max-width: 1024px) {
+  .culture-container {
+    border: 1px solid red;
+  }
+
+  .culture-text {
+    font-size: 20px;
+    border: 1px solid red;
+  }
+
+  .culture-text h2 {
+    font-size: 32px;
+    padding-top: 15px;
+  }
+
+  .culture-image {
+    border: 1px solid red;
+    height: 100%;
+  }
+
+  .culture-image img {
+    height: 100px;
+    object-fit: contain;
+    border: 1px solid red;
+  }
+}
+*/
+.culture-ribbon {
+  width: 100%;
+  background: linear-gradient(90deg, #2d72ba, #6bb3ff);
+  box-sizing: border-box;
+  margin-bottom: 60px;
+  margin-top: -60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.culture-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  min-height: 100px;
+}
+
+.culture-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem 80px;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  align-self: center;
+  margin-top: auto;
+}
+
+.culture-text h2 {
+  font-size: 40px;
+  font-weight: 700;
+  text-align: left;
+  margin: 0;
+}
+
+.culture-image {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 40px;
+  overflow: hidden;
+}
+
+.culture-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* 👈 ensures no cropping */
+}
+
+/* Tablets and below */
+@media (max-width: 1024px) {
+  .culture-container {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .culture-text {
+    padding: 1.5rem 40px;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .culture-text h2 {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .culture-image {
+    padding-top: 20px;
+    height: auto;
+  }
+
+  .culture-image img {
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+/* Small tablets and large phones */
+@media (max-width: 600px) {
+  .culture-text {
+    padding: 1rem 20px;
+    font-size: 18px;
+  }
+
+  .culture-text h2 {
+    font-size: 28px;
+  }
+}
+
+/* Extra small phones */
+@media (max-width: 400px) {
+  .culture-text {
+    padding: 0.8rem 10px;
+    font-size: 16px;
+  }
+
+  .culture-text h2 {
+    font-size: 24px;
   }
 }
