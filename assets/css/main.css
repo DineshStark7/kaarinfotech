@@ -899,7 +899,7 @@ h6 {
 --------------------------------------------------------------*/
 .hero {
   width: 100%;
-  max-height: 70vh;
+  max-height: 100vh;
   position: relative;
   padding: 80px 0 60px 0;
   display: flex;
@@ -4518,7 +4518,6 @@ a {
   .culture-image img {
     height: auto;
     object-fit: contain;
-    border: 1px solid red;
   }
 }
 
