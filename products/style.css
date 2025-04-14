@@ -907,7 +907,7 @@ body {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1rem;
+  /* padding: 0 1rem; */
 }
 
 .section-heading {
@@ -1145,7 +1145,7 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
-  padding: 0 1rem;
+  /* padding: 0 1rem; */
 }
 
 .highlight-card {
@@ -1199,12 +1199,27 @@ body {
 }
 
 @media (max-width: 480px) {
+  .features-highlight .sec-p {
+    text-align: center;
+    font-size: 1rem;
+    color: #555;
+    max-width: 900px;
+    margin: 0 auto 2rem;
+  }
+  .features-highlight .section-heading {
+    font-size: 2rem;
+    color: #2d72ba;
+    text-align: center;
+    margin-bottom: 1rem;
+    
+  }
   
 .highlight-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
   gap: 2rem;
-  padding: 0 1rem;
+  justify-content: center;
+  /* padding: 0 1rem; */
 }
   .highlight-card img {
     width: 140px;
