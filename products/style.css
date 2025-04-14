@@ -1164,8 +1164,9 @@ body {
 }
 
 .highlight-card img {
-  width: 60px;
-  height: 60px;
+  width: 300px;
+  height: 150px;
+  object-fit: contain;
   margin-bottom: 1rem;
 }
 
@@ -1179,4 +1180,42 @@ body {
   font-size: 1rem;
   color: #475569;
   line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .highlight-card img {
+    width: 250px;
+    height: 125px;
+  }
+
+  .highlight-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .highlight-card p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  
+.highlight-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2rem;
+  padding: 0 1rem;
+}
+  .highlight-card img {
+    width: 140px;
+    height: 140px;
+  }
+
+  .highlight-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .highlight-card p {
+    font-size: 0.9rem;
+  }
 }
