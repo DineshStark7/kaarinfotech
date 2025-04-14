@@ -50,11 +50,71 @@ body {
   z-index: -1;
 }
 
+.hero-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.overlay {
+  flex: 1;
+  max-width: 600px;
+}
+.hero-logo {
+  height: 300px;         /* Set fixed visual height */
+  width: auto;           /* Let width scale proportionally */
+  object-fit: contain;   /* Ensures full logo fits */
+  flex-shrink: 0;
+  margin-left: 60px;
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+  .hero-inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .overlay {
+    max-width: 700px;
+    position: relative;
+    margin-top: 0px;
+  }
+
+  .hero-logo {
+    margin: 25px 0 0px 0;
+    width: 180px;
+    height: 150px;  
+    order: -1; /* Push image to the top */
+  }
+
+  .overlay {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-logo {
+    width: 140px;
+    margin-top: 45px;
+    height: 100px; 
+  }
+
+  .overlay h1 {
+    font-size: 24px;
+  }
+
+  .overlay p {
+    font-size: 16px;
+  }
+}
 /* Hero Content */
 .overlay {
   max-width: 700px;
   position: relative;
-  margin-top: 60px;
 }
 
 /* Headings & Text */
@@ -150,6 +210,7 @@ body {
 
   .hero h1 {
     font-size: 3rem;
+    line-height: 1.1;
   }
 
   .hero h4 {
@@ -178,6 +239,7 @@ body {
 
   .hero h1 {
     font-size: 2.5rem;
+    line-height: 1.1;
   }
 
   .hero h4 {
