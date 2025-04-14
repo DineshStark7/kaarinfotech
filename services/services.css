@@ -125,6 +125,7 @@ body {
   margin-bottom: 20px;
   position: relative;
   z-index: 1;
+  line-height: 1.1;
 }
 
 .hero h4 {
@@ -157,6 +158,7 @@ body {
 
   .hero h1 {
     font-size: 4rem;
+    line-height: 1;
   }
 
   .hero p {
@@ -176,6 +178,7 @@ body {
 
   .hero h1 {
     font-size: 3.5rem;
+    line-height: 4rem;
   }
 
   .hero h4 {
