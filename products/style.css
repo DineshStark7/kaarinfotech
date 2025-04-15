@@ -1123,7 +1123,150 @@ body {
 
 .features-highlight {
   background: linear-gradient(to right, #ffffff, #f0f7ff);
-  padding: 4rem 2rem;
+  padding: 20px 0px 10px 0px;
+}
+.banner-hero {
+  background-image: url('/assets/img/blue-background.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 90px;
+  color: white;
+  text-align: left;
+  gap: 2rem;
+}
+
+.split-layout {
+  flex-direction: row;
+}
+
+.banner-content {
+  flex: 1;
+  max-width: 50%;
+}
+
+.banner-heading {
+  font-size: 2.5rem;
+  
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
+}
+
+.banner-button {
+  background-color: #ffffff;
+  color: #1a1a1a;
+  padding: 0.75rem 1.75rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.banner-button:hover {
+  background-color: #e0e0e0;
+}
+
+.banner-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-image img {
+  max-height: 300px;
+  max-width: 100%;
+  object-fit: contain;
+  margin-left: 150px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 1024px) {
+  .banner-hero {
+    height: 300px;
+    padding: 2rem 3.5rem;
+    text-align: left;
+  }
+
+  .banner-image {
+    flex: 1;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+  }
+  
+  .banner-image img {
+    max-height: 300px;
+    max-width: 100%;
+    object-fit: contain;
+  }
+
+  .banner-heading {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner-hero {
+    height: 450px;
+    padding:3rem 2rem;
+    text-align: center;
+    flex-direction: column;
+  }
+
+  .banner-content {
+    max-width: 100%;
+  }
+
+  .banner-heading {
+    font-size: 1.8rem;
+  }
+
+  .banner-image {
+    justify-content: center;
+    margin-top: 1rem;
+  }
+
+  .banner-image img {
+    max-height: 237px;
+    justify-content: right;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-hero {
+    flex-direction: column;
+    height: 500px;
+    padding: 2rem 1.5rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .banner-content {
+    max-width: 100%;;
+  }
+
+  .banner-heading {
+    font-size: 1.5rem;
+  }
+
+  .banner-button {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.25rem;
+  }
+
+  .banner-image img {
+    margin-top: 1rem;
+    max-height: 250px;
+    justify-content: right;
+  }
 }
 
 .features-highlight .section-heading {
