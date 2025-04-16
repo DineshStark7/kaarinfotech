@@ -1087,6 +1087,7 @@ body {
   max-width: 400px;
   margin-left: auto;
   margin-right: auto;
+  height: 500px;
 }
 .main-image {
   position: absolute;
@@ -1576,3 +1577,26 @@ body {
     margin-top: 1rem;
   }
 }
+
+.explore-banner-image-container {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.explore-banner-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+/* Responsive tweak */
+@media (max-width: 768px) {
+  .explore-banner-image {
+    border-radius: 8px;
+  }
+}
+
+/*--------------------------------------------------------------*/
