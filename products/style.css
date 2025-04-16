@@ -23,8 +23,22 @@ body {
   justify-content: center;
   color: white;
   position: relative;
-  padding: 0 12%;
+  padding: 0 10%;
   text-align: left;
+}
+.hero-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 40px;
+  margin-top: 40px;
+}
+.hero-logo {
+  height: 400px;         /* Set fixed visual height */
+  width: auto;           /* Let width scale proportionally */
+  object-fit: contain;   /* Ensures full logo fits */
+  flex-shrink: 0;
 }
 
 /* Hero Content */
@@ -35,7 +49,6 @@ body {
   align-items: flex-start;
   width: 70%;
 }
-
 /* Heading & Text */
 .heros h1 {
   font-size: 5rem;
@@ -51,7 +64,7 @@ body {
 }
 
 .heros p {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   color: #ffffff;
   font-weight: 350;
   line-height: 1.6;
@@ -76,6 +89,13 @@ body {
   .heros p {
     font-size: 1.2rem;
   }
+  .hero-inner {
+    gap: 30px;
+  }
+
+  .hero-logo {
+    height: 400px;
+  }
 
   .overlay {
     display: flex;
@@ -95,8 +115,19 @@ body {
     justify-content: center;
     align-items: flex-start;
   }
+  .hero-inner {
+    align-items: flex-start;
+    gap: 25px;
+  }
+
+  .hero-logo {
+    height: 350px;
+   
+    max-width: 100%;
+  }
 
   .heros h1 {
+    padding-top: 50px;
     font-size: 3.5rem;
   }
 
@@ -120,11 +151,10 @@ body {
 @media (max-width: 768px) {
   .heros {
     min-height: 75vh;
-    padding: 0 5%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
   }
 
   .heros h1 {
@@ -137,6 +167,26 @@ body {
 
   .heros p {
     font-size: 1rem;
+    text-align: center;
+  }
+  .hero-inner {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .hero-logo {
+    height: 280px;
+    width: 100%;
+    max-width: 100%;
+  }
+  .overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+   
   }
 }
 
@@ -147,11 +197,23 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
+  }
+  .hero-inner {
+    gap: 15px;
+  }
+
+  .hero-logo {
+    height: 200px;
+    width: 100%;
+    max-width: 100%;
   }
 
   .heros h1 {
     font-size: 2.5rem;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
   }
 
   .heros h4 {
@@ -160,6 +222,14 @@ body {
 
   .heros p {
     font-size: 1rem;
+    align-items: center;
+  }
+  .overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
   }
 }
 
