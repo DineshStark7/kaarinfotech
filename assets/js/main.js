@@ -267,3 +267,12 @@ window.addEventListener("DOMContentLoaded", () => {
     if (!isNaN(index)) showJobDetails(index);
   }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const swipers = document.querySelectorAll(".init-swiper");
+  swipers.forEach((swiperEl) => {
+    const configEl = swiperEl.querySelector(".swiper-config");
+    const config = JSON.parse(configEl.textContent);
+    new Swiper(swiperEl, config);
+  });
+});

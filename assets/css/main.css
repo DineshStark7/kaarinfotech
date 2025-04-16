@@ -2411,7 +2411,7 @@ h6 {
   box-sizing: content-box;
   padding: 30px;
   margin: 40px 30px;
-  min-height: 200px;
+  min-height: 350px;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -2474,7 +2474,7 @@ h6 {
 }
 
 .testimonials .swiper-slide {
-  opacity: 0.3;
+  opacity: 1;
 }
 
 @media (max-width: 1199px) {
