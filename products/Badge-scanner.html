@@ -556,8 +556,65 @@
         <h2 id="product-showcase-heading" class="showcase-heading">
           Explore Our Solution
         </h2>
+        <div class="slider-wrapper">
+          <div class="slider-track" id="sliderTrack">
+            <!-- Images + Clones for loop -->
+            <img
+              src="../assets/img/products/badge-scanner/1.png"
+              alt="1"
+              class="slider-img"
+            />
+            <img
+              src="../assets/img/products/badge-scanner/2.png"
+              alt="2"
+              class="slider-img"
+            />
+            <img
+              src="../assets/img/products/badge-scanner/3.png"
+              alt="3"
+              class="slider-img"
+            />
+            <img
+              src="../assets/img/products/badge-scanner/4.png"
+              alt="4"
+              class="slider-img"
+            />
+            <img
+              src="../assets/img/products/badge-scanner/5.png"
+              alt="5"
+              class="slider-img"
+            />
+
+            <!-- Clones -->
+            <img
+              src="../assets/img/products/badge-scanner/1.png"
+              alt="1"
+              class="slider-img"
+            />
+            <img
+              src="../assets/img/products/badge-scanner/2.png"
+              alt="2"
+              class="slider-img"
+            />
+            <img
+              src="../assets/img/products/badge-scanner/3.png"
+              alt="3"
+              class="slider-img"
+            />
+            <img
+              src="../assets/img/products/badge-scanner/4.png"
+              alt="4"
+              class="slider-img"
+            />
+            <img
+              src="../assets/img/products/badge-scanner/5.png"
+              alt="5"
+              class="slider-img"
+            />
+          </div>
+        </div>
         <!-- Main Image Gallery -->
-        <div class="gallery-container">
+        <div class="gallery-container d-none">
           <!-- Thumbnails -->
           <div class="thumbnail-container">
             <div class="thumbnail-wrapper">
@@ -834,5 +891,44 @@
   <script src="../../assets/js/main.js"></script>
   <script>
     AOS.init();
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const track = document.getElementById("sliderTrack");
+      const slides = track.children;
+      const total = slides.length;
+      let index = 0;
+
+      const update = () => {
+        for (let i = 0; i < total; i++) {
+          slides[i].classList.remove("active");
+        }
+        const center = (index + 1) % total;
+        slides[center].classList.add("active");
+
+        track.style.transform = `translateX(-${index * (100 / 3)}%)`;
+      };
+
+      const nextSlide = () => {
+        index++;
+        if (index > total - 5) {
+          track.style.transition = "none";
+          index = 0;
+          track.style.transform = `translateX(0%)`;
+          setTimeout(() => {
+            track.style.transition = "transform 0.6s ease-in-out";
+            update();
+          }, 50);
+        } else {
+          update();
+        }
+      };
+
+      // Initial setup
+      track.style.transition = "transform 0.6s ease-in-out";
+      update();
+
+      setInterval(nextSlide, 3500);
+    });
   </script>
 </html>
