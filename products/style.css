@@ -1523,16 +1523,6 @@ body {
   max-width: 500px;
 }
 
-.qr-banner-btn {
-  background-color: white;
-  color: #0b1b4d;
-  padding: 10px 24px;
-  border-radius: 6px;
-  font-size: 1rem;
-  text-decoration: none;
-  font-weight: bold;
-}
-
 /* Image Section */
 .qr-banner-image {
   flex: 1;
