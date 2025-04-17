@@ -247,7 +247,6 @@ body {
   gap: 20px;
   flex-wrap: wrap; /* allow wrap on smaller screens */
   padding: 1rem;
-  margin-top: -70px;
 }
 
 .image-container img {
