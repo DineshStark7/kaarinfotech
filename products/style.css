@@ -3,7 +3,6 @@ body {
   font-family: "Segoe UI";
   margin: 0;
   padding: 0;
-
   color: #333;
 }
 
@@ -1561,15 +1560,21 @@ body {
   gap: 1rem;
 }
 
-.qr-banner-text {
+.qr-banner-text h1 {
   background-color: white;
   flex: 1;
-  color: #2d72ba;
+  color: #1a1a1a;
   font-size: 2rem;
-  font-weight: 700;
-  max-width: 500px;
+  font-weight: 800;
+  max-width: 600px;
+  font-family: "Roboto" !important;
+  text-align: center;
 }
-
+.qr-code-scanning-text {
+  color: #2d72ba;
+  font-family: "Roboto" !important;
+  font-size: 2.5rem;
+}
 .qr-image-wrapper {
   flex: 1;
   display: flex;
@@ -1579,7 +1584,7 @@ body {
 }
 
 .qr-image {
-  max-height: 90%;
+  max-height: 60%;
   max-width: 100%;
   object-fit: contain;
 }
