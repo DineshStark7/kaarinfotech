@@ -532,7 +532,7 @@ body {
 }
 
 .scroll-top:hover {
-  background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+  background-color: rgba(45, 114, 186, 0.8); /* Fallback for color-mix */
   color: var(--contrast-color);
 }
 
