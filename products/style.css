@@ -1575,6 +1575,35 @@ body {
   font-family: "Roboto" !important;
   font-size: 2.5rem;
 }
+
+/* Responsive Font Sizes */
+@media (max-width: 1024px) {
+  .qr-banner-text h1 {
+    font-size: 1.75rem;
+  }
+  .qr-code-scanning-text {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .qr-banner-text h1 {
+    font-size: 1.5rem;
+  }
+  .qr-code-scanning-text {
+    font-size: 1.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .qr-banner-text h1 {
+    font-size: 1.3rem;
+  }
+  .qr-code-scanning-text {
+    font-size: 1.6rem;
+  }
+}
+
 .qr-image-wrapper {
   flex: 1;
   display: flex;
