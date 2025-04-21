@@ -489,8 +489,10 @@ h6 {
   position: relative;
   width: 100%;
   height: 40vh;
+  /*
   background-image: url("https://media.istockphoto.com/id/1450344643/photo/business-closeup-concept-image-with-white-glyph-icons.jpg?s=1024x1024&w=is&k=20&c=Ad7t-BeVsXN0XpPE8xAl_Ci6opoIxZkh8jJAUximlpg=");
-  background-image: url("../img/blue-background.jpeg");
+  background-image: url("../img/blue-background.jpeg");*/
+  background-color: #0f1c37;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -544,8 +546,10 @@ h6 {
 --------------------------------------------------------------*/
 
 .footer {
-  color: white;
-  background: linear-gradient(45deg, #2d72ba, #1a4b7a);
+  color: gray;
+  /*
+  background: linear-gradient(45deg, #2d72ba, #1a4b7a);*/
+  background-color: #f2f2f2;
   font-size: 14px;
   position: relative;
 }
@@ -559,7 +563,7 @@ h6 {
 
 .footer .footer-newsletter h4 {
   font-size: 24px;
-  color: white;
+  color: black;
 }
 
 .footer .footer-newsletter .newsletter-form {
@@ -621,6 +625,7 @@ h6 {
   border: 1px solid rgba(255, 255, 255, 0.2);
   font-size: 16px;
   color: white;
+  color: gray;
   margin-right: 10px;
   transition: 0.3s;
 }
@@ -636,6 +641,7 @@ h6 {
   position: relative;
   padding-bottom: 12px;
   color: white;
+  color: black;
 }
 
 .footer .footer-links {
@@ -653,6 +659,7 @@ h6 {
   font-size: 12px;
   line-height: 0;
   color: white;
+  color: gray;
 }
 
 .footer .footer-links ul li {
@@ -668,15 +675,18 @@ h6 {
 .footer .footer-links ul a {
   display: inline-block;
   color: white;
+  color: gray;
   line-height: 1;
 }
 
 .footer .footer-links ul a:hover {
   color: #d9e6f2;
+  color: #000000;
 }
 
 .footer .footer-about a {
   color: white;
+  color: black;
   font-size: 24px;
   font-weight: 600;
   font-family: var(--heading-font);
@@ -685,6 +695,7 @@ h6 {
 .footer .footer-contact p {
   margin-bottom: 5px;
   color: white;
+  color: gray;
 }
 
 .footer .copyright {
@@ -696,12 +707,14 @@ h6 {
 .footer .copyright p {
   margin-bottom: 0;
   color: white;
+  color: gray;
 }
 
 .footer .credits {
   margin-top: 6px;
   font-size: 13px;
   color: white;
+  color: black;
 }
 /*--------------------------------------------------------------
 # Scroll Top Button
@@ -1788,6 +1801,7 @@ h6 {
   font-weight: 600;
   font-size: 16px;
   padding: 8px 20px;
+  /*  color: #0f1c37 !important;*/
 }
 
 .services .service-item .read-more i {
@@ -2406,7 +2420,6 @@ h6 {
 --------------------------------------------------------------*/
 .testimonials .testimonial-item {
   background-color: var(--surface-color);
-  background: linear-gradient(90deg, #2d72ba, #6bb3ff);
   box-shadow: 0px 0 20px rgba(0, 0, 0, 0.1);
   box-sizing: content-box;
   padding: 30px;
@@ -2416,6 +2429,7 @@ h6 {
   flex-direction: column;
   text-align: center;
   transition: 0.3s;
+  border-radius: 25px;
 }
 
 .testimonials .testimonial-item .stars {
@@ -2428,7 +2442,7 @@ h6 {
 }
 
 .testimonials .testimonial-item .testimonial-img {
-  width: 90px;
+  width: 100px;
   border-radius: 50%;
   border: 4px solid var(--background-color);
   margin: 0 auto;
@@ -2438,19 +2452,20 @@ h6 {
   font-size: 18px;
   font-weight: bold;
   margin: 10px 0 5px 0;
+  color: black;
 }
 
 .testimonials .testimonial-item h4 {
   font-size: 14px;
   color: color-mix(in srgb, var(--default-color), transparent 40%);
   margin: 0;
-  color: white;
+  color: black;
 }
 
 .testimonials .testimonial-item p {
   font-style: italic;
   margin: 0 auto 15px auto;
-  color: white;
+  color: black;
 }
 
 .testimonials .swiper-wrapper {
@@ -2497,7 +2512,6 @@ h6 {
     transform: scale(1.12);
   }
 }
-
 /*--------------------------------------------------------------
 # Team Section
 --------------------------------------------------------------*/

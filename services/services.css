@@ -6,22 +6,6 @@ body {
 }
 
 /* Hero Section */
-/*
-.hero {
-  background: url("https://www.aditiconsulting.com/hubfs/10162024_Data%20Analytics_Hero%20Banner%20Image%201.png");
-  background-size: cover;
-  height: 90vh; 
-  display: flex;
-  align-items: center;
-  justify-content: left;
-  color: white;
-  position: relative;
-  padding: 0 200px; 
-  text-align: left;
-  flex-shrink: 1;
-}*/
-
-/* Hero Section */
 .hero {
   background-image: url("../assets/img/services/data-analytics.png");
   background-size: cover;
@@ -64,9 +48,9 @@ body {
   max-width: 600px;
 }
 .hero-logo {
-  height: 300px;         /* Set fixed visual height */
-  width: auto;           /* Let width scale proportionally */
-  object-fit: contain;   /* Ensures full logo fits */
+  height: 400px; /* Set fixed visual height */
+  width: auto; /* Let width scale proportionally */
+  object-fit: contain; /* Ensures full logo fits */
   flex-shrink: 0;
   margin-left: 60px;
 }
@@ -87,7 +71,7 @@ body {
   .hero-logo {
     margin: 25px 0 0px 0;
     width: 180px;
-    height: 150px;  
+    height: 250px;
     order: -1; /* Push image to the top */
   }
 
@@ -100,7 +84,7 @@ body {
   .hero-logo {
     width: 140px;
     margin-top: 45px;
-    height: 100px; 
+    height: 150px;
   }
 
   .overlay h1 {
