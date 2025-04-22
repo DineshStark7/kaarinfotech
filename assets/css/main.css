@@ -525,7 +525,7 @@ h6 {
 
 @media (max-width: 768px) {
   .parallax-container {
-    background-attachment: scroll; /* fallback for mobile */
+    background-attachment: scroll;
   }
 
   .parallax-overlay-content {
@@ -824,26 +824,6 @@ h6 {
 
 /*--------------------------------------------------------------
 # Global Section Titles
-
-.section-title {
-  text-align: center;
-  padding-bottom: 60px;
-  position: relative;
-}
-
-.section-title h2 {
-  font-size: 13px;
-  letter-spacing: 1px;
-  font-weight: 700;
-  padding: 8px 20px;
-  margin: 0;
-  background-color: rgba(45, 114, 186, 1); 
-  color: white;
-  display: inline-block;
-  border-radius: 50px;
-  font-family: var(--default-font);
-}
-
 --------------------------------------------------------------*/
 .section-title p {
   color: var(--heading-color);
@@ -1282,12 +1262,7 @@ h6 {
 .values .card:hover {
   box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
 }
-/*
 
-.values .card:hover img {
-  transform: scale(1.2);
-}
-  */
 @media (max-width: 992px) and (min-width: 768px) {
   .values .card:hover img {
     transform: scale(1);
@@ -1306,21 +1281,8 @@ h6 {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  /* background-color: #234d85;*/
   padding: 20px;
 }
-/*-------------------------------------------------------------
-.stats .stats-item {
-  background-color: var(--surface-color);
-  box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
-  padding: 30px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  border-radius: 10px;
-}
--------------------------------------------------------------*/
 
 .stats .stats-item {
   background: rgba(255, 255, 255, 0.1);
@@ -1335,7 +1297,7 @@ h6 {
 }
 
 .stats .stats-item:hover {
-  box-shadow: 0 0 30px 2px #2d72ba, 0 0 3px 3px #2d72ba; /* Neon glow effect */
+  box-shadow: 0 0 30px 2px #2d72ba, 0 0 3px 3px #2d72ba;
 }
 .stats .stats-item i {
   color: var(--accent-color);
@@ -1578,62 +1540,6 @@ h6 {
 
 /*--------------------------------------------------------------
 # Features Section
-
-.skills-container {
-  background-color: #234d85;
-  border-radius: 20px;
-}
-.features .feature-box {
-  padding: 24px 20px;
-  box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
-  transition: 0.3s;
-  height: 100%;
-  border-radius: 15px;
-}
-
-.features .feature-box {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 20px;
-  padding: 1rem;
-  width: 300px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  display: flex;
-  justify-content: start;
-}
-
-.features .feature-box h3 {
-  font-size: 18px;
-  font-weight: 700;
-  margin: 0;
-  color: white;
-}
-
-.features .feature-box:hover {
-  box-shadow: 0 0 30px 2px #2d72ba, 0 0 3px 3px #2d72ba; 
-}
-
-.features .feature-box i {
-  background: color-mix(in srgb, var(--accent-color), transparent 92%);
-  color: var(--accent-color);
-  line-height: 0;
-  padding: 4px;
-  margin-right: 10px;
-  font-size: 24px;
-  border-radius: 3px;
-  transition: 0.3s;
-  color: white;
-}
-
-.features .feature-box:hover i {
-  background: var(--accent-color);
-  color: var(--contrast-color);
-}
-
-.skill {
-  display: flex;
-  align-items: center;
-}
 --------------------------------------------------------------*/
 /* New Skills container background */
 .skills-container {
@@ -2720,48 +2626,48 @@ body {
   width: 100%;
 }
 .client-logo-new {
-  max-width: 100%; /* ✅ Ensures it never overflows the container */
-  height: auto; /* ✅ Maintains aspect ratio */
-  width: 300px; /* ✅ Default width for larger screens */
-  margin: 20px auto; /* ✅ Centers the logo */
-  display: block; /* ✅ Prevents inline spacing issues */
+  max-width: 100%;
+  height: auto;
+  width: 300px;
+  margin: 20px auto;
+  display: block;
 }
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
   .client-logo-new {
-    width: 80%; /* ✅ Adjust width to 80% for tablets */
-    height: auto; /* ✅ Maintain aspect ratio */
+    width: 80%;
+    height: auto;
   }
 }
 
 @media (max-width: 480px) {
   .client-logo-new {
-    width: 70%; /* ✅ Reduce width further for smaller screens */
-    height: auto; /* ✅ Maintain aspect ratio */
+    width: 70%;
+    height: auto;
   }
 }
 
 .microsoft-logo {
-  max-width: 100%; /* ✅ Ensures it doesn't overflow the container */
-  height: auto; /* ✅ Maintains aspect ratio */
-  width: 380px; /* ✅ Default width for larger screens */
-  display: block; /* ✅ Prevents inline spacing issues */
-  margin: auto; /* ✅ Centers the logo */
+  max-width: 100%;
+  height: auto;
+  width: 380px;
+  display: block;
+  margin: auto;
 }
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
   .microsoft-logo {
-    width: 80%; /* ✅ Reduce width to 80% of the container */
-    height: auto; /* ✅ Maintain aspect ratio */
+    width: 80%;
+    height: auto;
   }
 }
 
 @media (max-width: 480px) {
   .microsoft-logo {
-    width: 70%; /* ✅ Further reduce width for smaller screens */
-    height: auto; /* ✅ Maintain aspect ratio */
+    width: 70%;
+    height: auto;
   }
 }
 
@@ -2928,7 +2834,7 @@ body {
 /* Make the map fully responsive */
 .map-wrapper {
   width: 100%;
-  min-width: 200px; /* Adjust based on your layout */
+  min-width: 200px;
   min-height: 520px;
   border-radius: 10px;
   overflow: hidden;
@@ -2942,17 +2848,16 @@ body {
   border: 0;
 }
 
-/* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
   .map-wrapper {
-    max-width: 100%; /* Take full width on smaller screens */
-    height: 300px; /* Adjust height */
+    max-width: 100%;
+    height: 300px;
   }
 }
 
 @media (max-width: 480px) {
   .map-wrapper {
-    height: 250px; /* Smaller height for mobile screens */
+    height: 250px;
   }
 }
 .custom-map-btn {
@@ -3821,13 +3726,12 @@ a {
         Cookies
 ------------------------------*/
 
-/* Cookie Banner Styling */
 #cookie-banner {
   position: fixed;
   bottom: 0;
   left: 0;
-  width: 100%; /* Full width */
-  background: rgba(255, 255, 255, 0.95); /* Soft white shade */
+  width: 100%;
+  background: rgba(255, 255, 255, 0.95);
   color: #333;
   padding: 15px;
   box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
@@ -4052,7 +3956,7 @@ a {
   display: flex;
   align-items: center;
   color: #2d72ba;
-  gap: 10px; /* Adds space between the icon and the text */
+  gap: 10px;
   padding: 10px;
 }
 
@@ -4072,16 +3976,14 @@ a {
   color: var(--accent-color);
 }
 
-/* Dashed border on click (when the item is active) */
 .faq .faq-container .faq-item.faq-active h3 {
-  border-radius: 6px; /* Rounded corners for the border */
-  padding: 10px; /* Maintain consistent padding */
+  border-radius: 6px;
+  padding: 10px;
 }
 
-/* Arrow rotation when FAQ item is active */
 .faq .faq-container .faq-item.faq-active h3 i {
-  transform: rotate(90deg); /* Rotate the arrow 90 degrees when active */
-  color: var(--accent-color); /* Optional: Change the arrow color when active */
+  transform: rotate(90deg);
+  color: var(--accent-color);
 }
 
 /* Content visibility when active */
@@ -4097,10 +3999,8 @@ a {
   margin-bottom: 0;
   overflow: hidden;
   padding-left: 10px;
-  /* Move the paragraph content to the right */
 }
 
-/* Show content and apply styles when the item is active */
 .faq .faq-container .faq-item.faq-active .faq-content {
   grid-template-rows: 1fr;
   visibility: visible;
@@ -4133,30 +4033,30 @@ a {
 }
 .life-hero-section {
   position: relative;
-  width: 100vw; /* Ensures full screen width */
-  height: 500px; /* Default height */
+  width: 100vw;
+  height: 500px;
   background: url("../../assets/img/life-at-kaar/hero-image.jpg") no-repeat
     center center;
-  background-size: cover; /* Ensures the image covers the section */
+  background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: white;
-  margin: 0; /* Removes unwanted margins */
+  margin: 0;
   padding: 0;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
   .life-hero-section {
-    height: 300px; /* Reduce height on tablets */
+    height: 300px;
   }
 }
 
 @media (max-width: 480px) {
   .life-hero-section {
-    height: 250px; /* Reduce height on smaller screens */
+    height: 250px;
   }
 }
 
@@ -4223,7 +4123,7 @@ a {
   font-size: 16px;
 }
 .life-at-kaar-description {
-  font-size: 1.75rem; /* Base font size */
+  font-size: 1.75rem;
   font-weight: 400;
   font-family: "Segoe UI";
   text-align: center;
@@ -4441,145 +4341,6 @@ a {
   }
 }
 
-/*
-.scroll-track:hover {
-  animation-play-state: paused;
-}
-
-.culture-ribbon {
-  width: 100%;
-  background: linear-gradient(90deg, #2d72ba, #6bb3ff);
-  padding: 50px 10px;
-  box-sizing: border-box;
-  margin-bottom: 60px;
-  margin-top: -60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0;
-}
-
-.culture-container {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  min-height: 200px; 
-}
-
-.culture-text {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem;
-  font-size: 24px;
-  color: white;
-  font-family: "Roboto";
-  justify-content: left;
-  margin: 0 80px;
-}
-.culture-text h2 {
-  font-size: 40px;
-  font-weight: 700;
-  text-align: center;
-  padding-top: 23px;
-}
-.culture-image {
-  flex: 1;
-  height: 100%;
-  padding-top: 40px;
-  overflow: hidden;
-}
-
-.culture-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-@media (max-width: 768px) {
-  .culture-container {
-    flex-direction: column;
-  }
-
-  .culture-text {
-    justify-content: center;
-    text-align: center;
-    padding: 1.5rem;
-  }
-
-  .culture-text h2 {
-    max-width: 100%;
-    text-align: center;
-  }
-
-  .culture-image img {
-    height: auto;
-    object-fit: contain;
-  }
-}
-
-@media (max-width: 600px) {
-  .culture-text {
-    margin: 0 20px;
-    padding: 1rem;
-    font-size: 18px;
-  }
-
-  .culture-text h2 {
-    font-size: 28px;
-  }
-
-  .culture-image {
-    padding-top: 10px;
-  }
-}
-
-@media (max-width: 400px) {
-  .culture-text {
-    font-size: 16px;
-    padding: 0.8rem;
-    margin: 0 10px;
-  }
-
-  .culture-text h2 {
-    font-size: 24px;
-    padding-top: 10px;
-  }
-
-  .culture-image img {
-    width: 100%;
-    height: auto;
-  }
-}
-
-@media (max-width: 1024px) {
-  .culture-container {
-    border: 1px solid red;
-  }
-
-  .culture-text {
-    font-size: 20px;
-    border: 1px solid red;
-  }
-
-  .culture-text h2 {
-    font-size: 32px;
-    padding-top: 15px;
-  }
-
-  .culture-image {
-    border: 1px solid red;
-    height: 100%;
-  }
-
-  .culture-image img {
-    height: 100px;
-    object-fit: contain;
-    border: 1px solid red;
-  }
-}
-*/
 .culture-ribbon {
   width: 100%;
   background: linear-gradient(90deg, #2d72ba, #6bb3ff);
@@ -4631,7 +4392,7 @@ a {
 .culture-image img {
   width: 100%;
   height: 100%;
-  object-fit: contain; /* 👈 ensures no cropping */
+  object-fit: contain;
 }
 
 /* Tablets and below */
