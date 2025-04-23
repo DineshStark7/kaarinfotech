@@ -622,6 +622,9 @@ h4 {
   transform: translateY(0);
 }
 
+.sitename {
+  font-family: "Segoe UI";
+}
 /* Optional: Add transition to the popup */
 .share-popup {
   animation: fadeInOut 2s ease forwards;

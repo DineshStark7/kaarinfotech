@@ -334,8 +334,9 @@ body {
 # Global Footer
 --------------------------------------------------------------*/
 .footer {
-  color: white;
-  background: linear-gradient(45deg, #2d72ba, #1a4b7a);
+  color: gray;
+
+  background-color: #f2f2f2;
   font-size: 14px;
   position: relative;
 }
@@ -363,7 +364,7 @@ body {
 
 .footer .footer-newsletter h4 {
   font-size: 24px;
-  color: white;
+  color: black;
 }
 
 .footer .footer-newsletter .newsletter-form {
@@ -424,7 +425,7 @@ body {
   background-color: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.2);
   font-size: 16px;
-  color: white;
+  color: gray;
   margin-right: 10px;
   transition: 0.3s;
 }
@@ -439,7 +440,7 @@ body {
   font-weight: bold;
   position: relative;
   padding-bottom: 12px;
-  color: white;
+  color: bl;
 }
 
 .footer .footer-links {
@@ -471,16 +472,16 @@ body {
 
 .footer .footer-links ul a {
   display: inline-block;
-  color: white;
+  color: gray;
   line-height: 1;
 }
 
 .footer .footer-links ul a:hover {
-  color: #d9e6f2;
+  color: black;
 }
 
 .footer .footer-about a {
-  color: white;
+  color: black;
   font-size: 24px;
   font-weight: 600;
   font-family: var(--heading-font);
@@ -488,7 +489,7 @@ body {
 
 .footer .footer-contact p {
   margin-bottom: 5px;
-  color: white;
+  color: gray;
 }
 
 .footer .copyright {
@@ -499,13 +500,13 @@ body {
 
 .footer .copyright p {
   margin-bottom: 0;
-  color: white;
+  color: gray;
 }
 
 .footer .credits {
   margin-top: 6px;
   font-size: 13px;
-  color: white;
+  color: gray;
 }
 
 /*--------------------------------------------------------------
