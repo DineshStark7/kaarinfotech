@@ -509,7 +509,7 @@ h6 {
   transform: translate(-50%, -50%);
   text-align: center;
   color: white;
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: bold;
   backdrop-filter: blur(50px);
   padding: 20px;
@@ -518,7 +518,7 @@ h6 {
 }
 @media (max-width: 992px) {
   .parallax-overlay-content {
-    font-size: 2.5rem;
+    font-size: 2rem;
     padding: 16px;
   }
 }
@@ -529,14 +529,14 @@ h6 {
   }
 
   .parallax-overlay-content {
-    font-size: 2rem;
+    font-size: 1.5rem;
     padding: 14px;
   }
 }
 
 @media (max-width: 576px) {
   .parallax-overlay-content {
-    font-size: 1.5rem;
+    font-size: 1rem;
     padding: 12px;
   }
 }
