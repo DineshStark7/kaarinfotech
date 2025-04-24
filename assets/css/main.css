@@ -959,7 +959,6 @@ h6 {
   position: relative;
   left: 50px;
 }
-
 .hero .btn-get-started {
   color: var(--contrast-color);
   background: var(--accent-color);
@@ -984,14 +983,64 @@ h6 {
   transition: 0.3s;
 }
 
-.hero .btn-get-started:hover {
-  color: var(--contrast-color);
-  background: color-mix(in srgb, var(--accent-color), transparent 15%);
-  background-color: #234d85;
-  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
+.hero .btn-get-started:hover i {
+  transform: translateX(5px);
+}
+.btn-primary-custom {
+  background-color: rgb(255, 255, 255);
+  color: #2d72ba;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 12px 36px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 24px rgba(45, 114, 186, 0.3);
 }
 
-.hero .btn-get-started:hover i {
+.btn-primary-custom i {
+  margin-left: 8px;
+  transition: transform 0.3s ease;
+}
+
+.btn-primary-custom:hover {
+  background-color: #234d85;
+  color: #fff;
+}
+
+.btn-primary-custom:hover i {
+  transform: translateX(5px);
+}
+
+.btn-outline-custom {
+  background-color: #c5c6c752;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 12px 36px;
+  border: 2px solid #ffffff;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-outline-custom i {
+  margin-left: 8px;
+  transition: transform 0.3s ease;
+}
+
+.btn-outline-custom:hover {
+  background-color: #234d85;
+  color: #ffffff;
+}
+
+.btn-outline-custom:hover i {
   transform: translateX(5px);
 }
 
@@ -1017,7 +1066,6 @@ h6 {
 .hero .btn-watch-video:hover i {
   color: color-mix(in srgb, var(--accent-color), transparent 15%);
 }
-
 .hero-microsoft {
   height: 300px;
   width: auto;
@@ -4446,5 +4494,84 @@ a {
 
   .culture-text h2 {
     font-size: 24px;
+  }
+}
+
+/*--------------------------------------------------------------*/
+#team {
+  scroll-margin-top: 100px; /* Adjust this value based on your navbar height */
+}
+.section-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* 6 columns always */
+  gap: 30px;
+}
+
+.team-member {
+  text-align: center;
+  padding: 20px;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+}
+
+.team-member img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border: 0.5px solid #ccc;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.team-member h3 {
+  font-size: 18px;
+  margin: 10px 0 5px;
+}
+
+.team-member p {
+  font-size: 14px;
+  color: #555;
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons i {
+  font-size: 14px;
+  color: #555;
+  margin: 0 8px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.social-icons i:hover {
+  color: orange;
+}
+
+/* Responsive */
+
+@media (max-width: 1200px) {
+  .team-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+  }
+}
+
+@media (max-width: 500px) {
+  .team-grid {
+    grid-template-columns: 1fr; /* 1 column on mobile */
   }
 }
