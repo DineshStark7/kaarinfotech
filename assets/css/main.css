@@ -4575,3 +4575,15 @@ a {
     grid-template-columns: 1fr; /* 1 column on mobile */
   }
 }
+.email-text a {
+  color: #2d72ba;
+  text-decoration: none;
+}
+
+.email-text a:hover {
+  text-decoration: underline !important;
+}
+
+.footer-mail {
+  color: red;
+}
