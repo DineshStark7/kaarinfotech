@@ -11,7 +11,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 80vh; /* Ensures visibility */
+  min-height: 75vh; /* Ensures visibility */
   display: flex;
   align-items: center;
   justify-content: left;
